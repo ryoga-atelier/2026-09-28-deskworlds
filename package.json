@@ -1,0 +1,14 @@
+{
+  "name": "guppy-garden-setup",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/lively-bridge.test.mjs",
+    "test:browser": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "esbuild": "0.28.2"
+  },
+  "engines": {"node": ">=22"}
+}

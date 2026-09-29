@@ -1,6 +1,15 @@
+# AIセットアップの入口
+
+- 対応済みの入口は setup.py doctor / build / install / verify。OSを自動判定する。手順の正本はSTART-HERE.md。新しい魚や壁紙ホストを作り直さない。
+- Macは専用アプリ、WindowsはLively Wallpaper。Windowsだけの橋渡しは platforms/windows/。共通の魚の採用版はv29-r16、24匹・8色・24fps。
+- GitHubへのアクセス権、外部ツールの規約同意、OSの許可は本人の操作へ引き継ぐ。認証情報をチャットで求めず、セキュリティ設定を無効化しない。
+- 他の壁紙・OS全体の設定・ライブラリを上書きしない。Macの既存物はrollbackへ退避。Windowsは専用の新フォルダーを追加。
+- doctor/build/CLI命令の送信、ブラウザーでの描画、実デスクトップ、スリープ・ログインを別々に確認する。未実施を合格にしない。
+- 共通検査は setup.py verify。新しいセットアップ部分はPython unittest・npm test・npm run test:browser。GitHub ActionsはWindowsとMacで動かす。
+
 # Deskworlds のローカル導入
 
-親の workspace/apps の規範を継承する。担当はこの案件と、利用者が承認した Deskworlds.app・専用 LaunchAgent の導入先だけ。
+セットアップの依頼では最初に START-HERE.md と対象OSの docs/MACOS.md または docs/WINDOWS.md を読む。他のPCに ~/.agents や作者個人の作業パスを用意する必要はない。このリポジトリだけで手順を完結する。元のworkspace内では親の規範も継承する。
 
 - 上流は `upstream/deskworlds`。commit `3950c45ef5798ed2df9f78037994bcddacebbb01` を維持し、原本を変更しない。
 - 現在の導入済み・既定は `guppy-v29`（`bronze-gradient-guppy-v29-r16`）。共通の基盤は `custom/guppy/`、現在の上書きは `custom/realism-v29/` と `scripts/exhibit_overlay.py`。v16は `--variant guppy-v16`、v14は `--variant guppy`、保存した立体試作v15は `--variant guppy-v15`。ビルド用コピーにだけ適用する。`install --variant original` で上流の外見へ戻せる。
