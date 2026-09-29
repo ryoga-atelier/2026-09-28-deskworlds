@@ -1,0 +1,56 @@
+name: Mac and Windows setup checks
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  setup:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-15, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    env:
+      PYTHONUTF8: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Unit tests
+        run: |
+          python -m unittest discover -s tests -p "test_*.py"
+          npm test
+      - name: Rebuild current scene and run existing checks
+        run: python setup.py verify
+      - name: Build the Windows package
+        run: python scripts/ci-package.py
+      - name: Install test browser
+        run: npx playwright install chromium
+      - name: Render, feed, pause and resume
+        run: npm run test:browser
+      - name: Build and verify the Mac application
+        if: runner.os == 'macOS'
+        run: python setup.py build --platform macos
+      - name: Exercise Windows command entry
+        if: runner.os == 'Windows'
+        shell: cmd
+        run: setup-windows.cmd doctor
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: guppy-setup-${{ matrix.os }}
+          path: |
+            dist/windows/*.zip
+            test-results/
+            evidence/platform-ci.json
+          retention-days: 14

@@ -1,10 +1,24 @@
-# Deskworlds — 写真を参考に調整したグッピー水槽
+# Guppy Garden — Mac / Windows のグッピー水槽
 
-Macのデスクトップで泳ぐ24匹・8色のグッピー水槽です。Chase Lean氏のDeskworldsを固定版で利用し、このセッションで魚の形・鱗・腹・ヒレ・色、水景、軽量化を調整しました。これは利用者自身の非公開保存用リポジトリです。
+Macの専用アプリと、WindowsのLively Wallpaperで泳ぐ24匹・8色のグッピー水槽です。Chase Lean氏のDeskworldsを固定版で利用し、このセッションで魚の形・鱗・腹・ヒレ・色、水景、軽量化を調整しました。これは利用者自身の非公開保存用リポジトリです。
 
 **採用版は `bronze-gradient-guppy-v29-r16`、Balanced・上限24コマ/秒です。** 見た目はr14を保持し、r15で形状・影・隠れた画面のメモリを軽量化、r16で30→24コマへ変更しました。写真との完全一致や全実機項目の合格は宣言していません。
 
 ![採用した水景（r15撮影。r16はコマ数のみ変更）](evidence/v29-r15-wallpaper-1789x1006.png)
+
+
+## このリンクをClaude Code・Codexへ渡す場合
+
+**[START-HERE.md](START-HERE.md) がセットアップの入口です。** OS判定、必要な道具、取得、導入、実画面での確認、元へ戻す手順まで記載しています。非公開リポジトリなので、相手のGitHubアカウントへのアクセス権が必要です。
+
+| 環境 | 入口 | 動かす仕組み |
+|---|---|---|
+| Mac（主対応） | [Macの手順](docs/MACOS.md)、python3 setup.py install | Swift / WKWebViewの専用アプリ |
+| Windows（補足対応） | [Windowsの手順](docs/WINDOWS.md)、py -3 setup.py install | 無料のLively Wallpaper |
+
+まず setup.py doctor で環境を確認します。Windows用ZIPは setup.py build --platform windows で生成でき、PythonやNode.jsを常駐させずにLivelyで再生できます。対応OS・自動検査・実機の確認範囲は [PLATFORM-STATUS.md](docs/PLATFORM-STATUS.md) に分けて記録しています。
+
+Windowsのビルド済み壁紙ZIPは [配布版](https://github.com/ryoga-atelier/2026-09-28-deskworlds/releases/tag/v29-r16-portable.1) から取得できます。Macはこのリポジトリのセットアップで、そのMacのCPUに合わせてビルドします。
 
 ## 元の情報と調整の経緯
 
@@ -17,9 +31,9 @@ Macのデスクトップで泳ぐ24匹・8色のグッピー水槽です。Chase
 
 元写真は観察・比較用です。魚のテクスチャに転用していません。体は3D、植栽と背景は2.5Dで、実写と同じ光学表現や厳密な品種再現には限界があります。
 
-## Macへ導入する
+## Macへ導入する（詳しくはOS別手順）
 
-macOS 13以上、Xcode Command Line Tools（`swiftc`・`git`）、Python 3、検査用Node.jsが必要です。起動後の水槽はネット接続やNode.jsを必要としません。
+macOS 13以上、Xcode Command Line Tools（`swiftc`・`git`）、Python 3.10以上、検査用Node.js 22以上が必要です。起動後の水槽はネット接続やNode.jsを必要としません。
 
 ```sh
 git clone --recurse-submodules https://github.com/ryoga-atelier/2026-09-28-deskworlds.git

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ja" data-fit="fill" data-motion="host">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Guppy Garden — 24fps</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="scenes/riverscape/style.css">
+</head>
+<body>
+  <main id="stage" aria-label="グッピーの水槽">
+    <canvas id="scene" tabindex="-1"></canvas>
+    <div id="loading" role="status"><p>水槽を準備しています…</p></div>
+    <div id="error" role="alert" hidden></div>
+  </main>
+  <script src="lively-bridge.js"></script>
+  <script src="guppy-bundle.js"></script>
+</body>
+</html>
