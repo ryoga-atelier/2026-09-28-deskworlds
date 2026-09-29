@@ -42,6 +42,8 @@ extension Wallpaper {
     return bitmap.pixelsWide * bitmap.pixelsHigh <= 1_800_000
   }
   var testReleased: Bool { released }
+  var testCallbacksReady: Bool { loaded }
+  var testCaptureIdle: Bool { !capturing && releaseWork == nil }
   var testPoster: Bool { !retainedFrame.isHidden && retainedFrame.image != nil }
   var testAttached: Bool { view.superview === surface && window.contentView === surface }
   var testBitmap: Bool {
@@ -69,57 +71,96 @@ func check(_ condition: Bool, _ name: String) {
 func after(_ seconds: Double, _ block: @escaping () -> Void) {
   DispatchQueue.main.asyncAfter(deadline: .now() + seconds, execute: block)
 }
-after(3) {
-  check(wallpaper.testLargeBitmapLimit, "4K snapshot is bounded to 1.8 million pixels")
-  wallpaper.setRate(0) // User Pause never frees the visible scene.
-}
-after(4) {
-  check(!wallpaper.testReleased && wallpaper.testAttached, "pause keeps page")
-  wallpaper.setRate(0, releasable: true)
-}
-after(5.5) {
-  check(wallpaper.testReleased && wallpaper.testPoster, "covered release keeps frame")
-  check(wallpaper.testBitmap, "retained bitmap contains canvas pixels and is bounded")
-  wallpaper.setRate(24)
-  check(wallpaper.testPoster && wallpaper.testAttached, "reload stays behind frame")
-}
-after(6) {
-  check(wallpaper.testPoster, "callback-ready does not expose loading page")
-}
-after(8) {
-  check(!wallpaper.testPoster && wallpaper.testAttached, "first rendered frame replaces poster")
-  wallpaper.setRate(0, releasable: true)
-  after(0.15) { wallpaper.setRate(24) }
-}
-after(9) {
-  check(!wallpaper.testReleased && wallpaper.testAttached, "visibility cancels pending release")
-  wallpaper.view.evaluateJavaScript("document.querySelector('#loading').hidden = false") { _, _ in
-    wallpaper.setRate(0, releasable: true)
-  }
-}
-after(10.5) {
-  check(!wallpaper.testReleased && wallpaper.testAttached, "unready capture preserves page")
-  wallpaper.setRate(24)
-  wallpaper.view.evaluateJavaScript("document.querySelector('#loading').hidden = true") { _, _ in
-    wallpaper.setRate(0, releasable: true)
-  }
-}
-after(12) {
-  check(wallpaper.testReleased && wallpaper.testPoster, "repeat release retains frame")
-  let page = root.appendingPathComponent("scenes/riverscape/wallpaper.html")
-  try! FileManager.default.moveItem(at: page, to: page.appendingPathExtension("saved"))
-  wallpaper.setRate(24)
-}
-after(14) {
-  check(wallpaper.testPoster && wallpaper.testAttached, "failed reload retains aquarium")
-  wallpaper.setRate(0, releasable: true)
-  wallpaper.close()
-}
-after(15) {
-  check(wallpaper.window.contentView == nil, "close cancels pending release")
+func finish() {
   print("RESULT failures=\(failures)")
   exit(failures == 0 ? 0 : 1)
 }
+// WebKit callbacks can arrive late on shared runners. Advance on the observed
+// transition, never on a fixed timestamp measured from process startup.
+func waitFor(_ name: String, _ condition: @escaping () -> Bool,
+             then next: @escaping () -> Void) {
+  let deadline = Date().addingTimeInterval(8)
+  func poll() {
+    if condition() { check(true, name); next() }
+    else if Date() >= deadline { check(false, name); wallpaper.close(); finish() }
+    else { after(0.05, poll) }
+  }
+  poll()
+}
+func checkClose() {
+  wallpaper.setRate(0, releasable: true)
+  wallpaper.close()
+  after(1) {
+    check(wallpaper.window.contentView == nil, "close cancels pending release")
+    finish()
+  }
+}
+func checkFailedReload() {
+  let page = root.appendingPathComponent("scenes/riverscape/wallpaper.html")
+  try! FileManager.default.moveItem(at: page, to: page.appendingPathExtension("saved"))
+  wallpaper.setRate(24)
+  after(2) {
+    check(wallpaper.testPoster && wallpaper.testAttached, "failed reload retains aquarium")
+    checkClose()
+  }
+}
+func checkUnreadyCapture() {
+  wallpaper.view.evaluateJavaScript("document.querySelector('#loading').hidden = false") { _, _ in
+    wallpaper.setRate(0, releasable: true)
+    after(1.5) {
+      waitFor("unready capture preserves page",
+              { !wallpaper.testReleased && wallpaper.testAttached && wallpaper.testCaptureIdle }) {
+        wallpaper.setRate(24)
+        wallpaper.view.evaluateJavaScript("document.querySelector('#loading').hidden = true") { _, _ in
+          wallpaper.setRate(0, releasable: true)
+          waitFor("repeat release retains frame", { wallpaper.testReleased && wallpaper.testPoster },
+                  then: checkFailedReload)
+        }
+      }
+    }
+  }
+}
+func checkCancellation() {
+  wallpaper.setRate(0, releasable: true)
+  after(0.15) {
+    wallpaper.setRate(24)
+    after(1) {
+      check(!wallpaper.testReleased && wallpaper.testAttached, "visibility cancels pending release")
+      checkUnreadyCapture()
+    }
+  }
+}
+func checkReload() {
+  check(wallpaper.testBitmap, "retained bitmap contains canvas pixels and is bounded")
+  wallpaper.setRate(24)
+  check(wallpaper.testPoster && wallpaper.testAttached, "reload stays behind frame")
+  // Check from the page's callback-ready event, not against the runner's speed:
+  // the fixture's delayed first paint hasn't happened when ready is posted.
+  waitFor("callback-ready does not expose loading page",
+          { wallpaper.testCallbacksReady && wallpaper.testPoster }) {
+    waitFor("first rendered frame replaces poster",
+            { !wallpaper.testPoster && wallpaper.testAttached }, then: checkCancellation)
+  }
+}
+func startChecks() {
+  check(wallpaper.testLargeBitmapLimit, "4K snapshot is bounded to 1.8 million pixels")
+  wallpaper.setRate(0)
+  after(1) {
+    check(!wallpaper.testReleased && wallpaper.testAttached, "pause keeps page")
+    wallpaper.setRate(0, releasable: true)
+    waitFor("covered release keeps frame", { wallpaper.testReleased && wallpaper.testPoster },
+            then: checkReload)
+  }
+}
+let startupDeadline = Date().addingTimeInterval(10)
+func waitForInitialPaint() {
+  wallpaper.view.evaluateJavaScript("document.querySelector('#loading')?.hidden === true") { ready, _ in
+    if ready as? Bool == true { startChecks() }
+    else if Date() >= startupDeadline { check(false, "fixture initial paint"); wallpaper.close(); finish() }
+    else { after(0.1, waitForInitialPaint) }
+  }
+}
+waitForInitialPaint()
 app.run()
 '''
 
@@ -138,7 +179,7 @@ with tempfile.TemporaryDirectory(prefix="deskworlds-native-check-") as folder:
     binary = tmp / "RetainedFrameCheck"
     subprocess.run(["swiftc", "-o", str(binary), str(swift), "-framework", "Cocoa",
                     "-framework", "WebKit", "-framework", "IOKit"], check=True)
-    result = subprocess.run([str(binary), str(tmp)], capture_output=True, text=True, timeout=60)
+    result = subprocess.run([str(binary), str(tmp)], capture_output=True, text=True, timeout=90)
     print(result.stdout)
     print(result.stderr, file=sys.stderr)
     (ROOT / "evidence").mkdir(exist_ok=True)
