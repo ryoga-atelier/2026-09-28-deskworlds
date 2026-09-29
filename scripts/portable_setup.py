@@ -98,7 +98,7 @@ def doctor(target, lively=None):
         "platform": target, "python": platform.python_version(),
         "revision": REVISION, "ready_to_build": not problems, "problems": problems,
         "lively": str(find_lively(lively) or "") if platform.system() == "Windows" else None,
-        "access": "Private GitHub access must already be authorized.",
+        "access": "Public repository: GitHub authentication is not required to clone or download.",
     }
 
 

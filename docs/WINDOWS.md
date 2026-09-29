@@ -40,7 +40,7 @@ CLIの終了成功は「表示命令を送れた」までです。ライブラ�
 
 ## ZIPから取り込む方法
 
-1. [配布版](https://github.com/ryoga-atelier/2026-09-28-deskworlds/releases/tag/v29-r16-portable.1)の Guppy-Garden-v29-r16-Windows-Lively.zip を使います。ソースから作る場合はbuildが表示したZIPを使えます。GitHubへのアクセス権はダウンロードにも必要です。
+1. [配布版](https://github.com/ryoga-atelier/2026-09-28-deskworlds/releases/tag/v29-r16-portable.2)の Guppy-Garden-v29-r16-Windows-Lively.zip を使います。ソースから作る場合はbuildが表示したZIPを使えます。ダウンロードにGitHubのログインや招待は不要です。
 2. Livelyを開き「＋ / Add Wallpaper」へ本体ZIPをドラッグします。
 3. ライブラリのGuppy Gardenを選び、目的の画面に適用します。
 

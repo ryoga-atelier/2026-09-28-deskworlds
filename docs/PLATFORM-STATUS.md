@@ -23,6 +23,6 @@
 
 Windowsのソフトウェア描画検査では、専用headless-shellの撮影処理が停止したため、通常版Chromiumで検査し、低速なソフトウェア描画に合わせてフレーム完了の待機時間を設定しています。水槽のソースや見た目は変更していません。この検査は機能確認であり、24fpsの実効速度やGPU負荷の測定ではありません。
 
-検査記録は [portable-ci-20260930.json](../evidence/portable-ci-20260930.json)、Windowsランナーで描いた画像は [portable-windows-ci.png](../evidence/portable-windows-ci.png) です。配布ZIPは [Release](https://github.com/ryoga-atelier/2026-09-28-deskworlds/releases/tag/v29-r16-portable.1) に保存し、SHA-256と構築元も同梱します。ホステッドランナーでの成功はLivelyの実デスクトップの合格ではありません。
+検査記録は [portable-ci-20260930.json](../evidence/portable-ci-20260930.json)、Windowsランナーで描いた画像は [portable-windows-ci.png](../evidence/portable-windows-ci.png) です。配布ZIPは [Release](https://github.com/ryoga-atelier/2026-09-28-deskworlds/releases/tag/v29-r16-portable.2) に保存し、SHA-256と構築元も同梱します。ホステッドランナーでの成功はLivelyの実デスクトップの合格ではありません。
 
 初回Lively導入後は、24匹の水槽表示、カスタマイズのFeedとPlaying、デスクトップアイコン操作、他のアプリに隠れた時の停止・復帰を本人のPCで確認してください。元の壁紙へ戻ること、自動起動の登録と実ログインも分けて記録します。

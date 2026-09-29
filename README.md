@@ -1,6 +1,6 @@
 # Guppy Garden — Mac / Windows のグッピー水槽
 
-Macの専用アプリと、WindowsのLively Wallpaperで泳ぐ24匹・8色のグッピー水槽です。Chase Lean氏のDeskworldsを固定版で利用し、このセッションで魚の形・鱗・腹・ヒレ・色、水景、軽量化を調整しました。これは利用者自身の非公開保存用リポジトリです。
+Macの専用アプリと、WindowsのLively Wallpaperで泳ぐ24匹・8色のグッピー水槽です。Chase Lean氏のDeskworldsを固定版で利用し、魚の形・鱗・腹・ヒレ・色、水景、軽量化を調整しました。公開リポジトリなので、招待やGitHubへのログインなしで閲覧・取得できます。
 
 **採用版は `bronze-gradient-guppy-v29-r16`、Balanced・上限24コマ/秒です。** 見た目はr14を保持し、r15で形状・影・隠れた画面のメモリを軽量化、r16で30→24コマへ変更しました。写真との完全一致や全実機項目の合格は宣言していません。
 
@@ -9,7 +9,7 @@ Macの専用アプリと、WindowsのLively Wallpaperで泳ぐ24匹・8色のグ
 
 ## このリンクをClaude Code・Codexへ渡す場合
 
-**[START-HERE.md](START-HERE.md) がセットアップの入口です。** OS判定、必要な道具、取得、導入、実画面での確認、元へ戻す手順まで記載しています。非公開リポジトリなので、相手のGitHubアカウントへのアクセス権が必要です。
+**[START-HERE.md](START-HERE.md) がセットアップの入口です。** OS判定、必要な道具、取得、導入、実画面での確認、元へ戻す手順まで記載しています。対象PCのClaude Code・Codexにこのリンクを渡し、「このPCにセットアップして」と依頼してください。
 
 | 環境 | 入口 | 動かす仕組み |
 |---|---|---|
@@ -18,7 +18,7 @@ Macの専用アプリと、WindowsのLively Wallpaperで泳ぐ24匹・8色のグ
 
 まず setup.py doctor で環境を確認します。Windows用ZIPは setup.py build --platform windows で生成でき、PythonやNode.jsを常駐させずにLivelyで再生できます。対応OS・自動検査・実機の確認範囲は [PLATFORM-STATUS.md](docs/PLATFORM-STATUS.md) に分けて記録しています。
 
-Windowsのビルド済み壁紙ZIPは [配布版](https://github.com/ryoga-atelier/2026-09-28-deskworlds/releases/tag/v29-r16-portable.1) から取得できます。Macはこのリポジトリのセットアップで、そのMacのCPUに合わせてビルドします。
+Windowsのビルド済み壁紙ZIPは [配布版](https://github.com/ryoga-atelier/2026-09-28-deskworlds/releases/tag/v29-r16-portable.2) から取得できます。Macはこのリポジトリのセットアップで、そのMacのCPUに合わせてビルドします。
 
 ## 元の情報と調整の経緯
 

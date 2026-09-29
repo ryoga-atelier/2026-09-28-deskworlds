@@ -2,7 +2,7 @@
 
 - 対応済みの入口は setup.py doctor / build / install / verify。OSを自動判定する。手順の正本はSTART-HERE.md。新しい魚や壁紙ホストを作り直さない。
 - Macは専用アプリ、WindowsはLively Wallpaper。Windowsだけの橋渡しは platforms/windows/。共通の魚の採用版はv29-r16、24匹・8色・24fps。
-- GitHubへのアクセス権、外部ツールの規約同意、OSの許可は本人の操作へ引き継ぐ。認証情報をチャットで求めず、セキュリティ設定を無効化しない。
+- 公開リポジトリの取得にGitHub認証を求めない。外部ツールの規約同意、OSの許可は本人の操作へ引き継ぐ。認証情報をチャットで求めず、セキュリティ設定を無効化しない。
 - 他の壁紙・OS全体の設定・ライブラリを上書きしない。Macの既存物はrollbackへ退避。Windowsは専用の新フォルダーを追加。
 - doctor/build/CLI命令の送信、ブラウザーでの描画、実デスクトップ、スリープ・ログインを別々に確認する。未実施を合格にしない。
 - 共通検査は setup.py verify。新しいセットアップ部分はPython unittest・npm test・npm run test:browser。GitHub ActionsはWindowsとMacで動かす。
@@ -43,6 +43,6 @@
 
 ## GitHub保存（2026-09-29）
 
-- 本人所有の非公開保存先: https://github.com/ryoga-atelier/2026-09-28-deskworlds 。作者のリポジトリへpushしない。
+- 本人所有の保存・配布先: https://github.com/ryoga-atelier/2026-09-28-deskworlds 。2026-09-30の本人指示で公開へ変更。作者のリポジトリへpushしない。
 - 元Macの作業フォルダでは、保存用の独立Gitチェックアウトは `build/github-session-repo/`。親appsの `web-app` リモートと混同しない。新規cloneした場合はそのclone自身を使用する。
 - `SESSION-HISTORY.md`、`SOURCES-AND-LICENSES.md`、`GITHUB-ARCHIVE-VERIFICATION.md` が経緯・出典・保存検証の入口。過去プレビューは `history/` と `scripts/restore-preview.py` で復元する。大量のbuild/rollbackコピーと全動画はローカルのみ。
