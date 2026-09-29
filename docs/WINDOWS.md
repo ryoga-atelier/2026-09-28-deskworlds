@@ -40,11 +40,13 @@ CLIの終了成功は「表示命令を送れた」までです。ライブラ�
 
 ## ZIPから取り込む方法
 
-1. buildが表示したZIPを使います。GitHub Actionsの成果物にもWindows用ZIPを保存します。ActionsのZIPの中にある、Guppy Garden本体のZIPを取り出してください。
+1. [配布版](https://github.com/ryoga-atelier/2026-09-28-deskworlds/releases/tag/v29-r16-portable.1)の Guppy-Garden-v29-r16-Windows-Lively.zip を使います。ソースから作る場合はbuildが表示したZIPを使えます。GitHubへのアクセス権はダウンロードにも必要です。
 2. Livelyを開き「＋ / Add Wallpaper」へ本体ZIPをドラッグします。
 3. ライブラリのGuppy Gardenを選び、目的の画面に適用します。
 
 GitHubのソース全体のDownload ZIPは、Livelyへ取り込むためのZIPではありません。
+
+配布版の SHA256SUMS.txt はダウンロードの照合用です。PowerShellの Get-FileHash -Algorithm SHA256 で本体ZIPを照合できます。GitHub Actionsにも検査用の成果物を14日間保存しますが、配布リンクは上のReleaseを使います。
 
 ## 操作・省電力・解除
 

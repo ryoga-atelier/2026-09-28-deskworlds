@@ -18,6 +18,8 @@ Macの専用アプリと、WindowsのLively Wallpaperで泳ぐ24匹・8色のグ
 
 まず setup.py doctor で環境を確認します。Windows用ZIPは setup.py build --platform windows で生成でき、PythonやNode.jsを常駐させずにLivelyで再生できます。対応OS・自動検査・実機の確認範囲は [PLATFORM-STATUS.md](docs/PLATFORM-STATUS.md) に分けて記録しています。
 
+Windowsのビルド済み壁紙ZIPは [配布版](https://github.com/ryoga-atelier/2026-09-28-deskworlds/releases/tag/v29-r16-portable.1) から取得できます。Macはこのリポジトリのセットアップで、そのMacのCPUに合わせてビルドします。
+
 ## 元の情報と調整の経緯
 
 - 発端のX投稿: <https://x.com/chaseleantj/status/2100663203076128908>
