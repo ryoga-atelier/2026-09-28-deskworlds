@@ -41,6 +41,7 @@
 - 現行v29-r15はr14の見た目を保った軽量化（魚の三角形約4割、影1024、胴の粒感画像を省略）と、隠れた画面・眠った画面のページを60秒後に破棄する処理（scripts/native_release.py、ビルド用Swiftのみ）。r14時点の「外部モニター停止」は誤りで、止まっていたのは覆われたMac本体の画面。記録はV29-R15-VERIFICATION.md、負荷計測はscripts/measure-r15.py。
 - 現行v29-r16はr15に本人選択の毎秒24コマ（Balanced上限24、カーソル追跡24回/秒）を加えた版。記録はV29-R15-VERIFICATION.mdの末尾。
 - Macの`retained-frame-v1`は魚の版r16を維持した表示保持の修正。隠れて60秒後のページ解放時には水槽の静止画を残し、再読込の初回描画後に切り替える。`scripts/check-native-retained-frame.py`は実際のAppKit/WKWebViewを使う遷移検査（Macデスクトップセッションが必要）。上流やシステム壁紙を変更しない。
+- 現行Macの`background-swimming-v1`は本人の希望に合わせ、被覆だけでは停止せず、露出40%未満で12fps・それ以外は従来の上限（Balanced24fps）で継続する。手動Pause・低電力・画面／セッション休止は停止し、60秒後のページ解放は画面／セッション休止だけに限定。`retained-frame-v1`の静止画保持はその際に使う。魚・水景・Windows版は変更しない。
 
 ## GitHub保存（2026-09-29）
 
