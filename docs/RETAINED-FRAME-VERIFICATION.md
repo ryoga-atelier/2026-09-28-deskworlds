@@ -1,6 +1,6 @@
 # ブラウザの裏に水槽を保つ修正（2026-09-30）
 
-この文書は `retained-frame-v1` 当時の検証記録です。その後、本人の希望で通常の被覆時も24コマ/秒で泳ぐ設定へ変更しました。現在の動作と実機確認は [BACKGROUND-SWIMMING-VERIFICATION.md](BACKGROUND-SWIMMING-VERIFICATION.md) を参照してください。以下のページ解放・静止画保持機構は、現在はスリープ／ロック時に使用します。
+この文書は `retained-frame-v1` 当時の検証記録です。その後、本人の希望で通常の被覆時も12コマ/秒で泳ぐ設定へ変更しました。現在の動作と実機確認は [BACKGROUND-SWIMMING-VERIFICATION.md](BACKGROUND-SWIMMING-VERIFICATION.md) を参照してください。以下のページ解放・静止画保持機構は、現在はスリープ／ロック時に使用します。
 
 魚の採用版は `bronze-gradient-guppy-v29-r16` のまま、Macの表示管理を `retained-frame-v1` に更新しました。WindowsのLively橋渡しと配布ZIPは変更していません。
 
