@@ -109,8 +109,8 @@ def build(variant="guppy-v29"):
         "source_post": "https://x.com/chaseleantj/status/2100663203076128908",
         "variant": variant, "customization": customization,
         "native_diagnostic": "SIGUSR2 passive stats; event-triggered menu/sleep/wake/startup audit v1; SIGUSR1 upstream forced snapshot",
-        "native_revision": "retained-frame-v1",
-        "native_release": "After 60 s covered or asleep, retain a bounded aquarium bitmap and discard the WKWebView page. Reload behind the bitmap when seen; uncover only after the scene renders. Failed capture keeps the paused page. Pause and Low Power keep the still scene.",
+        "native_revision": "background-swimming-v2",
+        "native_release": "Awake aquariums keep swimming at 24 fps when under 40% is exposed; Balanced stays capped at 24 fps otherwise. Pause and Low Power stop drawing. Only display/session sleep for 60 s releases the page, retaining a bounded aquarium bitmap until the reloaded scene renders.",
         "native_source_sha256": hashlib.sha256(swift_source.read_bytes()).hexdigest(),
     }, indent=2) + "\n")
     run("codesign", "--sign", "-", str(out))
