@@ -1,0 +1,26 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><title>水槽の粒子描画検査</title><style>body{background:#182b37;color:white;font:16px system-ui}canvas{width:1200px;height:780px}button{font:inherit;padding:10px}output{display:block;white-space:pre-wrap}</style><button id="check">泡と砂の描画差を検査・保存</button><output id="out">読込中</output><canvas id="c"></canvas><script type="importmap">{"imports":{"three":"/preview/living-blue-water-v13-final/vendor/three.module.js"}}</script><script type="module">
+import * as T from 'three';
+import {createPhotoHabitat} from '/preview/living-blue-water-v13-final/scenes/riverscape/src/photo-habitat.js';
+import {createLivingWater} from '/preview/living-blue-water-v13-final/scenes/riverscape/src/living-water.js';
+import {createComposite} from '/preview/living-blue-water-v13-final/scenes/riverscape/src/composite.js';
+import {groundHeight} from '/preview/living-blue-water-v13-final/scenes/riverscape/src/math.js';
+import {waterTime} from '/preview/living-blue-water-v13-final/scenes/riverscape/src/water.js';
+const canvas=document.querySelector('canvas'),out=document.querySelector('output'),s=new T.Scene(),c=new T.PerspectiveCamera(25.8,1500/975,.2,65);
+c.position.set(0,4.65,20.5);c.lookAt(0,4.15,0);c.updateMatrixWorld();
+const r=new T.WebGLRenderer({canvas,preserveDrawingBuffer:true});r.setSize(1500,975,false);r.setClearColor(0,0);r.toneMapping=T.ACESFilmicToneMapping;r.toneMappingExposure=1.06;r.outputColorSpace=T.SRGBColorSpace;
+const habitat=await createPhotoHabitat(s,c);habitat.resize(1500/975);c.updateProjectionMatrix();const water=createLivingWater(s,{bedAnchor:habitat.bedAnchor});water.resize(975/(2*Math.tan(T.MathUtils.degToRad(c.fov)/2)));
+const {target,post,postScene,postCamera}=createComposite(c,{samples:4,aoSamples:8});habitat.bindComposite(post);target.setSize(1500,975);post.uniforms.size.value.set(1500,975);post.uniforms.aoRadiusScale.value=1;
+const fish={id:0,position:new T.Vector3(0,groundHeight(0,0)+.8,0),velocity:new T.Vector3(.9,0,0)};water.update(1/60,114,[fish]);water.update(1,115,[]);waterTime.value=115;
+const points=s.children.filter(x=>x.isPoints),copy=document.createElement('canvas');copy.width=1500;copy.height=975;const ctx=copy.getContext('2d',{willReadFrequently:true});
+function render(){r.setRenderTarget(target);r.render(s,c);r.setRenderTarget(null);r.render(postScene,postCamera);ctx.clearRect(0,0,1500,975);ctx.drawImage(canvas,0,0);return ctx.getImageData(0,0,1500,975).data;}
+render();out.textContent='検査可能';
+document.querySelector('button').onclick=async()=>{
+ points.forEach(p=>p.visible=false);const before=render();points.forEach(p=>p.visible=true);const after=render();let total=0,bubbles=0,dust=0,max=0;
+ for(let i=0;i<before.length;i+=4){const d=Math.max(...[0,1,2].map(k=>Math.abs(before[i+k]-after[i+k])));max=Math.max(max,d);if(d>8){total++;const x=(i/4)%1500,y=Math.floor(i/4/1500);if(x>1300)bubbles++;if(x<1000&&y>600)dust++;}}
+ points[1].material.depthTest=false;const lifted=render();let dustWithoutDepth=0;
+ for(let i=0;i<lifted.length;i+=4){const x=(i/4)%1500,y=Math.floor(i/4/1500);if(x<1000&&y>600&&Math.max(...[0,1,2].map(k=>Math.abs(lifted[i+k]-before[i+k])))>8)dustWithoutDepth++;}
+ points[1].material.depthTest=true;render();
+ const result={total,bubbles,dust,dustWithoutDepth,max,stats:water.stats()};out.textContent=JSON.stringify(result,null,2);out.dataset.result=JSON.stringify(result);
+ const name='natural-v13-metrics-particles-'+Date.now();await fetch('/capture/'+name+'.json',{method:'POST',body:JSON.stringify(result,null,2)});canvas.toBlob(blob=>fetch('/capture/'+name+'.png',{method:'POST',body:blob}));
+};
+</script></html>

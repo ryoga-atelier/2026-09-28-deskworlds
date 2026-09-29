@@ -1,0 +1,437 @@
+{
+  "method": "90s per state; same two connected screens, Balanced. libproc attributed app + 4 WebKit processes. CPU 100%=one core; physical footprint per PID, no cross-PID memory sum. Actual submission-frame counters, not monitor presentation timing. GPU and battery not measured.",
+  "rows": [
+    {
+      "revision": "v21final",
+      "state": "running",
+      "seconds": 90.005555375,
+      "complete": true,
+      "cpu_percent_one_core": 15.73594264594336,
+      "windows": [
+        {
+          "pixels": [
+            1665,
+            1081
+          ],
+          "seconds": 90.011,
+          "frames_delta": 0,
+          "fps": 0.0,
+          "paused": false,
+          "running": false,
+          "water_delta": 0,
+          "fish_delta": 0
+        },
+        {
+          "pixels": [
+            1789,
+            1006
+          ],
+          "seconds": 90.011,
+          "frames_delta": 2700,
+          "fps": 29.996333781426717,
+          "paused": false,
+          "running": true,
+          "water_delta": 89.99999999999758,
+          "fish_delta": 89.99999999999758
+        }
+      ],
+      "memory_per_pid": [
+        {
+          "pid": 48637,
+          "role": "Deskworlds",
+          "start_MiB": 32.48540496826172,
+          "end_MiB": 31.89165496826172,
+          "max_MiB": 32.48540496826172
+        },
+        {
+          "pid": 48639,
+          "role": "com.apple.WebKit.GPU",
+          "start_MiB": 391.59503173828125,
+          "end_MiB": 326.11065673828125,
+          "max_MiB": 391.59503173828125
+        },
+        {
+          "pid": 48640,
+          "role": "com.apple.WebKit.Networking",
+          "start_MiB": 4.04742431640625,
+          "end_MiB": 3.93804931640625,
+          "max_MiB": 4.04742431640625
+        },
+        {
+          "pid": 48641,
+          "role": "com.apple.WebKit.WebContent",
+          "start_MiB": 419.15718841552734,
+          "end_MiB": 341.79781341552734,
+          "max_MiB": 419.15718841552734
+        },
+        {
+          "pid": 48642,
+          "role": "com.apple.WebKit.WebContent",
+          "start_MiB": 376.32908630371094,
+          "end_MiB": 345.42285919189453,
+          "max_MiB": 376.32908630371094
+        }
+      ]
+    },
+    {
+      "revision": "v21final",
+      "state": "covered",
+      "seconds": 90.0047205,
+      "complete": true,
+      "cpu_percent_one_core": 0.3583512045213487,
+      "windows": [
+        {
+          "pixels": [
+            1665,
+            1081
+          ],
+          "seconds": 90.007,
+          "frames_delta": 0,
+          "fps": 0.0,
+          "paused": false,
+          "running": false,
+          "water_delta": 0,
+          "fish_delta": 0
+        },
+        {
+          "pixels": [
+            1789,
+            1006
+          ],
+          "seconds": 90.008,
+          "frames_delta": 0,
+          "fps": 0.0,
+          "paused": false,
+          "running": false,
+          "water_delta": 0.0,
+          "fish_delta": 0.0
+        }
+      ],
+      "memory_per_pid": [
+        {
+          "pid": 48637,
+          "role": "Deskworlds",
+          "start_MiB": 22.92290496826172,
+          "end_MiB": 22.46977996826172,
+          "max_MiB": 22.92290496826172
+        },
+        {
+          "pid": 48639,
+          "role": "com.apple.WebKit.GPU",
+          "start_MiB": 37.25128173828125,
+          "end_MiB": 37.25128173828125,
+          "max_MiB": 37.25128173828125
+        },
+        {
+          "pid": 48640,
+          "role": "com.apple.WebKit.Networking",
+          "start_MiB": 4.98492431640625,
+          "end_MiB": 4.95367431640625,
+          "max_MiB": 5.03179931640625
+        },
+        {
+          "pid": 48641,
+          "role": "com.apple.WebKit.WebContent",
+          "start_MiB": 343.46968841552734,
+          "end_MiB": 343.37593841552734,
+          "max_MiB": 343.56343841552734
+        },
+        {
+          "pid": 48642,
+          "role": "com.apple.WebKit.WebContent",
+          "start_MiB": 354.53223419189453,
+          "end_MiB": 354.45410919189453,
+          "max_MiB": 354.53223419189453
+        }
+      ]
+    },
+    {
+      "revision": "v21final",
+      "state": "paused",
+      "seconds": 90.005439917,
+      "complete": true,
+      "cpu_percent_one_core": 0.13917158850533726,
+      "windows": [
+        {
+          "pixels": [
+            1665,
+            1081
+          ],
+          "seconds": 90.005,
+          "frames_delta": 0,
+          "fps": 0.0,
+          "paused": false,
+          "running": false,
+          "water_delta": 0,
+          "fish_delta": 0
+        },
+        {
+          "pixels": [
+            1789,
+            1006
+          ],
+          "seconds": 90.004,
+          "frames_delta": 0,
+          "fps": 0.0,
+          "paused": false,
+          "running": false,
+          "water_delta": 0,
+          "fish_delta": 0
+        }
+      ],
+      "memory_per_pid": [
+        {
+          "pid": 63501,
+          "role": "Deskworlds",
+          "start_MiB": 31.266632080078125,
+          "end_MiB": 31.204132080078125,
+          "max_MiB": 31.28227996826172
+        },
+        {
+          "pid": 63503,
+          "role": "com.apple.WebKit.GPU",
+          "start_MiB": 67.71998596191406,
+          "end_MiB": 31.204360961914062,
+          "max_MiB": 67.71998596191406
+        },
+        {
+          "pid": 63504,
+          "role": "com.apple.WebKit.Networking",
+          "start_MiB": 4.07867431640625,
+          "end_MiB": 4.00054931640625,
+          "max_MiB": 4.07867431640625
+        },
+        {
+          "pid": 63505,
+          "role": "com.apple.WebKit.WebContent",
+          "start_MiB": 347.64160919189453,
+          "end_MiB": 341.79785919189453,
+          "max_MiB": 347.64160919189453
+        },
+        {
+          "pid": 63506,
+          "role": "com.apple.WebKit.WebContent",
+          "start_MiB": 326.73533630371094,
+          "end_MiB": 321.56343841552734,
+          "max_MiB": 326.73533630371094
+        }
+      ]
+    },
+    {
+      "revision": "v26final",
+      "state": "running",
+      "seconds": 90.008855917,
+      "complete": true,
+      "cpu_percent_one_core": 16.239727927057938,
+      "windows": [
+        {
+          "pixels": [
+            1789,
+            1006
+          ],
+          "seconds": 90.008,
+          "frames_delta": 2700,
+          "fps": 29.997333570349305,
+          "paused": false,
+          "running": true,
+          "water_delta": 89.99999999999652,
+          "fish_delta": 89.99999999999652
+        },
+        {
+          "pixels": [
+            1665,
+            1081
+          ],
+          "seconds": 90.008,
+          "frames_delta": 0,
+          "fps": 0.0,
+          "paused": false,
+          "running": false,
+          "water_delta": 0,
+          "fish_delta": 0
+        }
+      ],
+      "memory_per_pid": [
+        {
+          "pid": 6894,
+          "role": "Deskworlds",
+          "start_MiB": 31.09473419189453,
+          "end_MiB": 30.56348419189453,
+          "max_MiB": 31.09473419189453
+        },
+        {
+          "pid": 6896,
+          "role": "com.apple.WebKit.GPU",
+          "start_MiB": 459.68875885009766,
+          "end_MiB": 338.04813385009766,
+          "max_MiB": 459.68875885009766
+        },
+        {
+          "pid": 6897,
+          "role": "com.apple.WebKit.Networking",
+          "start_MiB": 4.1098785400390625,
+          "end_MiB": 4.0317535400390625,
+          "max_MiB": 4.1098785400390625
+        },
+        {
+          "pid": 6898,
+          "role": "com.apple.WebKit.WebContent",
+          "start_MiB": 417.95406341552734,
+          "end_MiB": 341.37593841552734,
+          "max_MiB": 417.95406341552734
+        },
+        {
+          "pid": 6899,
+          "role": "com.apple.WebKit.WebContent",
+          "start_MiB": 375.78221130371094,
+          "end_MiB": 343.51660919189453,
+          "max_MiB": 375.78221130371094
+        }
+      ]
+    },
+    {
+      "revision": "v26final",
+      "state": "covered",
+      "seconds": 90.002125375,
+      "complete": true,
+      "cpu_percent_one_core": 0.4218629382205598,
+      "windows": [
+        {
+          "pixels": [
+            1665,
+            1081
+          ],
+          "seconds": 90.006,
+          "frames_delta": 0,
+          "fps": 0.0,
+          "paused": false,
+          "running": false,
+          "water_delta": 0.0,
+          "fish_delta": 0.0
+        },
+        {
+          "pixels": [
+            1789,
+            1006
+          ],
+          "seconds": 90.007,
+          "frames_delta": 0,
+          "fps": 0.0,
+          "paused": false,
+          "running": false,
+          "water_delta": 0.0,
+          "fish_delta": 0.0
+        }
+      ],
+      "memory_per_pid": [
+        {
+          "pid": 6894,
+          "role": "Deskworlds",
+          "start_MiB": 22.15723419189453,
+          "end_MiB": 22.25098419189453,
+          "max_MiB": 22.32910919189453
+        },
+        {
+          "pid": 6896,
+          "role": "com.apple.WebKit.GPU",
+          "start_MiB": 37.32940673828125,
+          "end_MiB": 37.32940673828125,
+          "max_MiB": 37.32940673828125
+        },
+        {
+          "pid": 6897,
+          "role": "com.apple.WebKit.Networking",
+          "start_MiB": 5.0942535400390625,
+          "end_MiB": 5.0473785400390625,
+          "max_MiB": 5.0942535400390625
+        },
+        {
+          "pid": 6898,
+          "role": "com.apple.WebKit.WebContent",
+          "start_MiB": 369.37593841552734,
+          "end_MiB": 367.18843841552734,
+          "max_MiB": 369.37593841552734
+        },
+        {
+          "pid": 6899,
+          "role": "com.apple.WebKit.WebContent",
+          "start_MiB": 352.6728820800781,
+          "end_MiB": 351.4072570800781,
+          "max_MiB": 352.6728820800781
+        }
+      ]
+    },
+    {
+      "revision": "v26final",
+      "state": "paused",
+      "seconds": 90.001753083,
+      "complete": true,
+      "cpu_percent_one_core": 0.1438115869460352,
+      "windows": [
+        {
+          "pixels": [
+            1789,
+            1006
+          ],
+          "seconds": 90.008,
+          "frames_delta": 0,
+          "fps": 0.0,
+          "paused": false,
+          "running": false,
+          "water_delta": 0,
+          "fish_delta": 0
+        },
+        {
+          "pixels": [
+            1665,
+            1081
+          ],
+          "seconds": 90.008,
+          "frames_delta": 0,
+          "fps": 0.0,
+          "paused": false,
+          "running": false,
+          "water_delta": 0,
+          "fish_delta": 0
+        }
+      ],
+      "memory_per_pid": [
+        {
+          "pid": 8890,
+          "role": "Deskworlds",
+          "start_MiB": 30.813507080078125,
+          "end_MiB": 21.688507080078125,
+          "max_MiB": 30.813507080078125
+        },
+        {
+          "pid": 8892,
+          "role": "com.apple.WebKit.GPU",
+          "start_MiB": 70.76692962646484,
+          "end_MiB": 33.391929626464844,
+          "max_MiB": 70.76692962646484
+        },
+        {
+          "pid": 8893,
+          "role": "com.apple.WebKit.Networking",
+          "start_MiB": 3.9536514282226562,
+          "end_MiB": 4.188026428222656,
+          "max_MiB": 4.188026428222656
+        },
+        {
+          "pid": 8894,
+          "role": "com.apple.WebKit.WebContent",
+          "start_MiB": 347.51658630371094,
+          "end_MiB": 342.18846130371094,
+          "max_MiB": 347.51658630371094
+        },
+        {
+          "pid": 8895,
+          "role": "com.apple.WebKit.WebContent",
+          "start_MiB": 328.07908630371094,
+          "end_MiB": 324.14158630371094,
+          "max_MiB": 328.07908630371094
+        }
+      ]
+    }
+  ]
+}

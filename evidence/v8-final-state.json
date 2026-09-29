@@ -1,0 +1,220 @@
+{
+  "observed_at": "2026-09-28T16:36:50.353936+09:00",
+  "revision": "textured-guppy-v8",
+  "preview": "textured-guppy-v8-final-r2",
+  "manifest": {
+    "installed_at": "2026-09-28T16:30:53.720530+09:00",
+    "source_commit": "3950c45ef5798ed2df9f78037994bcddacebbb01",
+    "app": "/Users/ryoga-atelier/Applications/Deskworlds.app",
+    "launch_agent": "/Users/ryoga-atelier/Library/LaunchAgents/com.chaselean.deskworlds.plist",
+    "variant": "guppy",
+    "backup": "/Users/ryoga-atelier/workspace/apps/2026-09-28-deskworlds/rollback/20260928T163053631300+0900",
+    "build": "/Users/ryoga-atelier/workspace/apps/2026-09-28-deskworlds/build/20260928T163052258175+0900/Deskworlds.app",
+    "binary_sha256": "22bf0a300bdd4e3435bfe6dee940a9fd32593708a318cba0ea7870a570fbbbb0"
+  },
+  "cpu_sum_percent_one_core": 18.15450098028951,
+  "processes": [
+    {
+      "pid": 65462,
+      "sample_count": 46,
+      "valid_sample_count": 46,
+      "missing_sample_count": 0,
+      "missing_reasons": [],
+      "complete": true,
+      "observed_span_seconds": 90.005076166,
+      "start_elapsed_seconds": 1.3937e-05,
+      "end_elapsed_seconds": 90.005090103,
+      "cpu": {
+        "start_total_ns": 4583195166,
+        "end_total_ns": 8712302082,
+        "delta_seconds": 4.129106916,
+        "mean_percent_one_core": 4.587637822098523,
+        "reason": null
+      },
+      "physical_footprint": {
+        "start_bytes": 27198496,
+        "end_bytes": 27198496,
+        "min_bytes": 27198496,
+        "max_bytes": 27198496,
+        "delta_bytes": 0,
+        "endpoint_bytes_per_second": 0.0,
+        "ols_bytes_per_second": 0.0,
+        "trend": "flat",
+        "reason": null
+      }
+    },
+    {
+      "pid": 65466,
+      "sample_count": 46,
+      "valid_sample_count": 46,
+      "missing_sample_count": 0,
+      "missing_reasons": [],
+      "complete": true,
+      "observed_span_seconds": 90.005134437,
+      "start_elapsed_seconds": 3.2479e-05,
+      "end_elapsed_seconds": 90.005166916,
+      "cpu": {
+        "start_total_ns": 6005927166,
+        "end_total_ns": 10935096958,
+        "delta_seconds": 4.929169792,
+        "mean_percent_one_core": 5.476542891506064,
+        "reason": null
+      },
+      "physical_footprint": {
+        "start_bytes": 582993216,
+        "end_bytes": 582960448,
+        "min_bytes": 582960448,
+        "max_bytes": 583025984,
+        "delta_bytes": -32768,
+        "endpoint_bytes_per_second": -364.0681190575444,
+        "ols_bytes_per_second": -332.41915034768726,
+        "trend": "decreasing",
+        "reason": null
+      }
+    },
+    {
+      "pid": 65467,
+      "sample_count": 46,
+      "valid_sample_count": 46,
+      "missing_sample_count": 0,
+      "missing_reasons": [],
+      "complete": true,
+      "observed_span_seconds": 90.005153875,
+      "start_elapsed_seconds": 4.2833e-05,
+      "end_elapsed_seconds": 90.005196708,
+      "cpu": {
+        "start_total_ns": 21171333,
+        "end_total_ns": 21171333,
+        "delta_seconds": 0.0,
+        "mean_percent_one_core": 0.0,
+        "reason": null
+      },
+      "physical_footprint": {
+        "start_bytes": 4276800,
+        "end_bytes": 4276800,
+        "min_bytes": 4276800,
+        "max_bytes": 4276800,
+        "delta_bytes": 0,
+        "endpoint_bytes_per_second": 0.0,
+        "ols_bytes_per_second": 0.0,
+        "trend": "flat",
+        "reason": null
+      }
+    },
+    {
+      "pid": 65468,
+      "sample_count": 46,
+      "valid_sample_count": 46,
+      "missing_sample_count": 0,
+      "missing_reasons": [],
+      "complete": true,
+      "observed_span_seconds": 90.005169146,
+      "start_elapsed_seconds": 4.8666e-05,
+      "end_elapsed_seconds": 90.005217812,
+      "cpu": {
+        "start_total_ns": 883280333,
+        "end_total_ns": 921983083,
+        "delta_seconds": 0.03870275,
+        "mean_percent_one_core": 0.043000585818820186,
+        "reason": null
+      },
+      "physical_footprint": {
+        "start_bytes": 377242560,
+        "end_bytes": 377177024,
+        "min_bytes": 377177024,
+        "max_bytes": 377291712,
+        "delta_bytes": -65536,
+        "endpoint_bytes_per_second": -728.1359573214306,
+        "ols_bytes_per_second": -639.0802851272048,
+        "trend": "decreasing",
+        "reason": null
+      }
+    },
+    {
+      "pid": 65469,
+      "sample_count": 46,
+      "valid_sample_count": 46,
+      "missing_sample_count": 0,
+      "missing_reasons": [],
+      "complete": true,
+      "observed_span_seconds": 90.005182834,
+      "start_elapsed_seconds": 5.4041e-05,
+      "end_elapsed_seconds": 90.005236875,
+      "cpu": {
+        "start_total_ns": 8948360999,
+        "end_total_ns": 16191365791,
+        "delta_seconds": 7.243004792,
+        "mean_percent_one_core": 8.047319680866101,
+        "reason": null
+      },
+      "physical_footprint": {
+        "start_bytes": 377897968,
+        "end_bytes": 377848840,
+        "min_bytes": 377766920,
+        "max_bytes": 390923272,
+        "delta_bytes": -49128,
+        "endpoint_bytes_per_second": -545.8352336288084,
+        "ols_bytes_per_second": -10382.169468361184,
+        "trend": "decreasing",
+        "reason": null
+      }
+    }
+  ],
+  "frames": [
+    {
+      "framebuffer": "[1665, 1081]",
+      "fps_measured": 0.0,
+      "intervals": {
+        "kind": "actual CPU render-submission intervals",
+        "samples": 0,
+        "segments": 0,
+        "lastFrameAtMs": 945.0000000000001,
+        "lastGapMs": 0,
+        "windowMs": 0,
+        "fpsMeasured": null,
+        "p50Ms": null,
+        "p95Ms": null,
+        "maxMs": null
+      },
+      "asset_loaded_all": true
+    },
+    {
+      "framebuffer": "[1789, 1006]",
+      "fps_measured": 30.00164585831511,
+      "intervals": {
+        "kind": "actual CPU render-submission intervals",
+        "samples": 4096,
+        "segments": 0,
+        "lastFrameAtMs": 181620,
+        "lastGapMs": 28,
+        "windowMs": 136529,
+        "fpsMeasured": 30.000952178658014,
+        "p50Ms": 28,
+        "p95Ms": 43,
+        "maxMs": 45
+      },
+      "asset_loaded_all": true
+    }
+  ],
+  "gpu": "not measured",
+  "preview_controls": {
+    "fed": 10,
+    "eaten": 10,
+    "paused_frames": 4849,
+    "resumed_frames": 6066
+  },
+  "native_UI": "App window observed; desktop composite and menu controls unverified",
+  "final_runtime_check": {
+    "at": "2026-09-28T16:44:34.021877+09:00",
+    "state": "running",
+    "pid": 65462,
+    "world": "riverscape",
+    "paused": "0",
+    "RunAtLoad": true
+  },
+  "saved_video_playback": {
+    "IAB": "Both videos reached ended=true without media error",
+    "fish_seconds": 24.974953,
+    "tank_seconds": 24.968033
+  }
+}

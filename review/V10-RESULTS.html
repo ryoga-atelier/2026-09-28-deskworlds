@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>グッピー水槽 — 水草・石・砂まで見直した表示</title>
+<style>
+body{margin:0;background:#0e1b1c;color:#eef3ec;font:16px/1.85 system-ui}main{max-width:1160px;margin:auto;padding:32px 24px 70px}h1{font-size:clamp(26px,4vw,38px);line-height:1.45}h2{font-size:23px;margin-top:42px}p{max-width:940px;color:#c5d5cd}figure{margin:0}img,video{display:block;width:100%;height:auto;background:#081212;border-radius:10px}figcaption{padding:9px 0 22px;color:#aec4b7}.pair{display:grid;grid-template-columns:1fr 1fr;gap:20px}.tag{font-size:13px;letter-spacing:.06em;color:#8bb9a4}a{color:#92d8bd}.note{padding:16px 20px;border:1px solid #314d43;border-radius:8px}button{font:inherit;padding:10px 18px;color:#eff5ed;background:#345c4b;border:1px solid #71a68a;border-radius:6px;cursor:pointer}#playback{font-size:13px;color:#a8c6b3}details{margin:24px 0}summary{cursor:pointer}td,th{text-align:left;padding:9px 16px;border-bottom:1px solid #31453d}table{border-collapse:collapse;width:100%}@media(max-width:720px){.pair{grid-template-columns:1fr}}
+</style>
+<main>
+<div class="tag">DESKWORLDS · 2026-09-28 · photo-depth-v10</div>
+<h1>魚だけでなく、水草と砂の質感まで。</h1>
+<p>葉の厚み・細かな枝分かれ、石の表面、砂粒と根元の影を見直しました。赤系モザイクと青系グラスの模様を使った24匹が、開いた水中と植物の間を泳ぎます。Macへの反映は17:15に完了しています。</p>
+<figure><img src="../evidence/photo-depth-v10-full-tank.png" alt="細かな葉の水草、低い流木、自然な石と砂の間を泳ぐ赤・青のグッピー"><figcaption>採用版の描画。下の25秒映像の5秒時点です。</figcaption></figure>
+<h2>泳ぎと餌への反応</h2>
+<p>再生すると、魚の向き・尾の動き・餌を追う様子を確認できます。水草の後ろへ入る魚は、奥行きに応じて隠れます。</p>
+<p>映像の左下の ▶ で再生できます。 <output id="playback">25秒</output></p>
+<video id="movie" aria-label="v10グッピー水槽の泳ぎと給餌" controls preload="metadata" poster="../evidence/photo-depth-v10-full-tank.png" src="../evidence/natural-v10-tank-after-20260928T082122Z.webm"></video>
+<h2>前の表示と比較</h2>
+<div class="pair"><figure><img src="../evidence/natural-v8-after-video-frame.png" alt="v8の手続き生成された水草と石"><figcaption>前 v8：草の反復、薄い輪郭、苔の粒が目立っていました。</figcaption></figure><figure><img src="../evidence/photo-depth-v10-full-tank.png" alt="v10の水槽"><figcaption>今回 v10：葉・石・砂の細部を一体で作り直しています。</figcaption></figure></div>
+<div class="note"><strong>表示の仕組み</strong><p>水槽の背景はAI生成の静止素材に、おおよその奥行きと微かな揺れを加えたものです。魚は動く3Dモデルで、カーソルと餌に反応します。実魚の写真・実写動画ではなく、水草すべてを立体で再現した方式でもありません。</p></div>
+<h2>Mac版の表示</h2><figure><img src="../evidence/photo-depth-v10-native.png" alt="Macアプリ内部で描画された新しい水槽"><figcaption>Mac版の内部WebView画像。Finder・Dockを含む画面全体のキャプチャではありません。</figcaption></figure><p>片画面動作・もう片画面被覆停止の90秒実測で、約30fps、CPU合計12.24%（1コア=100%）。停止設定で再起動後は60秒で0.146%。GPUプロセスのメモリ増加があり、長時間の安定性は未判定です。</p><h2>普段の操作</h2><p>メニューバーのDeskworldsアイコンから、<strong>Feed</strong>で餌やり、<strong>Pause / Resume</strong>で停止・再開、<strong>Quit</strong>で終了できます。終了すると元の壁紙が現れます。Riverbed・Balanced・ログイン時起動の設定を保持しています。</p>
+<details><summary>確認内容と表現上の限界</summary><p>同一のシーン資産を使ったブラウザ検査で、停止中のフレーム固定、再開、カーソル反応、20粒の給餌と摂食を確認。葉の手前・後ろに同じ魚を置いたGPU描画の比較で遮蔽も検査しました。Macアプリのウィンドウ表示、ビルド、署名、登録状態を確認しています。</p><p>奥行きは生成素材による近似で、魚の障害物回避と画面中のすべての葉が厳密に一致するわけではありません。魚の素材は2点を5系統の色に展開しており、24匹すべて異なる写真・正確な5品種ではありません。素材に含まれる光沢や、ヒレの流体表現にも簡略化があります。</p><p>ネイティブのメニュー操作、Finder・Dockを含むデスクトップ全体の合成確認、実スリープ復帰、実再ログインは未確認です。アプリ内部画像やブラウザの検査で代替したとは扱いません。負荷の実測と生データは検証記録へ残しています。</p></details>
+<p><a href="../README.md">操作・退避手順</a> · <a href="../VERIFICATION.md">検証記録</a> · <a href="../custom/guppy/assets/aquarium-provenance-v10.json">水槽素材の由来</a> · <a href="../custom/guppy/assets/aquarium-prompt-v10.txt">生成プロンプト</a></p>
+</main>
+<script>
+const movie=document.querySelector('#movie'),status=document.querySelector('#playback');
+movie.ontimeupdate=()=>status.textContent=`${movie.currentTime.toFixed(1)} / ${movie.duration.toFixed(1)}秒`;
+movie.onended=()=>status.textContent='25秒の再生完了';
+</script></html>

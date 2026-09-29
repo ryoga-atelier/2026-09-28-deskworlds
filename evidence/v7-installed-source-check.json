@@ -1,0 +1,128 @@
+{
+  "source_commit": "3950c45ef5798ed2df9f78037994bcddacebbb01",
+  "upstream_clean": true,
+  "js_files": [
+    {
+      "file": "scenes/riverscape/src/aquarium-details.js",
+      "match": true,
+      "sha256": "2dc3efea0dc97fc9e8960865c2c3112b237a9c7fea71e7840e04cbc3c41145cb"
+    },
+    {
+      "file": "scenes/riverscape/src/aquascape-layout.js",
+      "match": true,
+      "sha256": "9d05e0bff1a318a0a71880f59fb7d19ba782b3faf4ca909f6a9df8290313fecf"
+    },
+    {
+      "file": "scenes/riverscape/src/broadleaf.js",
+      "match": true,
+      "sha256": "c4fb83bf8226204d77f46412705aa02a7bbda2ec465316e191c2aec740c645b7"
+    },
+    {
+      "file": "scenes/riverscape/src/composite.js",
+      "match": true,
+      "sha256": "d549f4bb8f54aed8fb48fdf629a09e575e9baa22a372b7c25bc0ccb306c2e20f"
+    },
+    {
+      "file": "scenes/riverscape/src/environment.js",
+      "match": true,
+      "sha256": "b6922eb0b71b7a1f02324508dca9e2148df3e2f3fa9df95627332bfabd4764fa"
+    },
+    {
+      "file": "scenes/riverscape/src/fish-anatomy-base.js",
+      "match": true,
+      "sha256": "c89ac3cfbb9402da7a1a8bd60042f00c86991b25a6deda792328ba52755499dd"
+    },
+    {
+      "file": "scenes/riverscape/src/fish-anatomy.js",
+      "match": true,
+      "sha256": "984e6d4081a102059031a80376e9757be97551b999e0182e6e0499d9d4f81d3a"
+    },
+    {
+      "file": "scenes/riverscape/src/fish.js",
+      "match": true,
+      "sha256": "4aee66c56e2fd078a8f0aae97d28569c72130936f0513e70f59ac79f26f3d7fc"
+    },
+    {
+      "file": "scenes/riverscape/src/foliage.js",
+      "match": true,
+      "sha256": "237cc67782b95776cf33a11fca6b89de70d64693c7d14a5e1945b02b265b4ac6"
+    },
+    {
+      "file": "scenes/riverscape/src/food.js",
+      "match": true,
+      "sha256": "f022cc28330a59aa997853e9febc5426d97ab0385d02bf07e35f70b1da62871d"
+    },
+    {
+      "file": "scenes/riverscape/src/frame-metrics.js",
+      "match": true,
+      "sha256": "01eb7d3a845aa63c3b458c17f285d61a752528552fb223c69e31266ebaae0a34"
+    },
+    {
+      "file": "scenes/riverscape/src/guppy-swimming.js",
+      "match": true,
+      "sha256": "8d1b1d8658aa9e1f95a44ca1f471bbe5ee62c6c4e7d43ea4004a5369b52fdab5"
+    },
+    {
+      "file": "scenes/riverscape/src/main.js",
+      "match": true,
+      "sha256": "a634ad434d08263f03d0cefba1768b104388e4bfe05ca2b9805360bc16195c46"
+    },
+    {
+      "file": "scenes/riverscape/src/math.js",
+      "match": true,
+      "sha256": "177059274ff9d4aaa23d73e70149c1286507a2ed917fa6810c1ac24d3344a008"
+    },
+    {
+      "file": "scenes/riverscape/src/plants.js",
+      "match": true,
+      "sha256": "6901c00534d908fce95e5b38d6ae7a301c07c4ef2021a12f518e0f435712ebad"
+    },
+    {
+      "file": "scenes/riverscape/src/render-policy.js",
+      "match": true,
+      "sha256": "ceb25bfc21670b4a512bf41ab8954513aa5dbf28c1e644b6a6d935a52dbc578c"
+    },
+    {
+      "file": "scenes/riverscape/src/stemplants.js",
+      "match": true,
+      "sha256": "783305c34d0bc20a4fbf78d2f963f16626c9742e29f276de15c97c6a8d50adb6"
+    },
+    {
+      "file": "scenes/riverscape/src/water.js",
+      "match": true,
+      "sha256": "b1dc50988b8ce645168cfe4746076ee3235d74ac7535079730c739dcf08989c4"
+    }
+  ],
+  "all_match": true,
+  "source": {
+    "url": "https://github.com/chaseleantj/deskworlds",
+    "commit": "3950c45ef5798ed2df9f78037994bcddacebbb01",
+    "source_post": "https://x.com/chaseleantj/status/2100663203076128908",
+    "variant": "guppy",
+    "customization": {
+      "variant": "guppy",
+      "revision": "natural-guppy-v7",
+      "colors": [
+        "blue grass",
+        "red mosaic",
+        "gold snakeskin",
+        "Japan blue",
+        "red blonde"
+      ],
+      "overlay_sha256": "984e6d4081a102059031a80376e9757be97551b999e0182e6e0499d9d4f81d3a",
+      "motion_sha256": "8d1b1d8658aa9e1f95a44ca1f471bbe5ee62c6c4e7d43ea4004a5369b52fdab5",
+      "scope": "Slender male guppy anatomy with seated eyes, mouth detail and physical-coordinate caudal pigment; asymmetric grounded aquascape, connected internal filter, neutral transparent water and GPU surface waves; passive actual-frame diagnostics",
+      "aquascape": {
+        "revision": "natural-guppy-v7",
+        "layout_sha256": "9d05e0bff1a318a0a71880f59fb7d19ba782b3faf4ca909f6a9df8290313fecf",
+        "aquarium_sha256": "2dc3efea0dc97fc9e8960865c2c3112b237a9c7fea71e7840e04cbc3c41145cb",
+        "customizer_sha256": "af55735255198e92c0a4cb6a5d418ab71837f7b2366f47b7ffb78a3fd184a3d2",
+        "description": "Asymmetric planted banks, connected corner filter, GPU surface waves, dark neutral depth backdrop and more anatomical guppies. Near-neutral clear water with very light depth haze, subtle moving surface-light caustics, fewer background stems, restrained particles and an open swim lane; five guppy colour families with connected body and tail pigments and surface-aware aquarium equipment"
+      },
+      "customizer_sha256": "c7f16612c5c8438f86fba21bb6d084f66356fde0e81eb828121fe559b4805a25"
+    },
+    "native_diagnostic": "SIGUSR2 passive stats; SIGUSR1 upstream forced snapshot",
+    "native_source_sha256": "6079dca335c90fcc628667525181d5eb8e29aefcbaccd013a877554c2e710292"
+  },
+  "codesign_exit": 0
+}

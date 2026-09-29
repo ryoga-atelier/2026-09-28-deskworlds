@@ -1,0 +1,17 @@
+{
+  "origin": "built-in image_gen",
+  "real_photograph": false,
+  "inputs": [
+    "evidence/natural-v9-tank-r3-layout.png"
+  ],
+  "assets": {
+    "aquarium-photo-v10.png": "ac71ab9cf4aae920c08f428f760364c7eb2ad881c327a3deb4a7f7cc5fa80feb",
+    "aquarium-depth-v10.png": "97dceee90f635d92ecf6baddb7f0b13619cfc63d09965109be9f42d045f43275"
+  },
+  "prompts": [
+    "aquarium-prompt-v10.txt",
+    "depth-prompt-v10.txt"
+  ],
+  "mode": "Generated color image with artist-estimated depth, not measured 3D. Depth occludes real-time 3D fish. Plant motion is gentle image deformation.",
+  "bitmap_edits": false
+}

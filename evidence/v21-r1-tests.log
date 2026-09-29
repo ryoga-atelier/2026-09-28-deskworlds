@@ -1,0 +1,112 @@
+npm notice run deskworlds@1.1.0 test
+npm notice run node ui/tests/gallery.mjs && node scenes/riverscape/tests/fish-behavior.mjs && node scenes/riverscape/tests/render-policy.mjs && node scenes/riverscape/tests/plant-budget.mjs && node scenes/reefscape/tests/behavior.mjs && node scenes/reefscape/tests/assets.mjs && node scenes/reefscape/tests/locomotion.mjs && node scenes/reefscape/tests/anemone.mjs && node scenes/bettascape/tests/food.mjs
+PASS: gallery axis lock, intent, velocity continuity, gentle completion, interruption, reduced motion, cancellation, ring layout and wrap-around
+PASS: 120 simulated seconds; 24/24 fish explored all three dimensions; 43% of travel was quiet-tail gliding; calm tail beats at most 3.81 Hz; 11261 inspection frames; 36306 fish-frames behind the grass; 74% of hovering fish facing upstream; minimum sampled spacing 0.752; slow approach gave room (1.25 to 1.77) without a startle; a lunge startled 5 fish directly and 19 in all, peaking at 5.17 units per second; a pinch of 8 pellets drew 16 fish over 16.0 seconds, 7 taken in 12 strikes, crowding to 0.65 at the food and opening back out to 1.72.
+(node:44921) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+PASS: render budgets, zero-size/large targets, 20/30/60 fps pacing at 60/120 Hz, stop/resume, reduced motion, hidden invalidation and zero idle callbacks
+PASS: rear ribbons 770 -> 539; rear triangles 277200 -> 43120; foreground attributes and downstream RNG byte-for-byte unchanged
+{
+  "pass": true,
+  "simulatedSeconds": 260.0000000000922,
+  "consumed": 16,
+  "maxClownfishHostDistance": 2.173199927354791,
+  "time": 260.0000000000922,
+  "steps": 15600,
+  "population": {
+    "clownfish": 3,
+    "chromis": 9,
+    "anthias": 7,
+    "shrimp": 2
+  },
+  "food": 0,
+  "maxSpeed": 1.2181632507640368,
+  "finite": true
+}
+(node:44926) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:44927) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{
+  "pass": true,
+  "indexedFishModels": 3,
+  "limestoneVertices": 184195,
+  "limestoneTriangles": 368290,
+  "outwardNormalAgreement": 0.9938255514645987,
+  "attachmentField": [
+    385,
+    193
+  ]
+}
+{
+  "pass": true,
+  "roamingSeconds": 540,
+  "alarmRecoverySeconds": 15,
+  "navigationNodes": 156,
+  "reports": [
+    {
+      "seed": 36719,
+      "minRoamingWidth": 14.5502005505483,
+      "minRoamingDistance": 106.18425287025019,
+      "maxStep": 0.02322736838639383,
+      "maxHost": 1.9751113969338396
+    },
+    {
+      "seed": 42,
+      "minRoamingWidth": 11.173721883479875,
+      "minRoamingDistance": 111.76751150709805,
+      "maxStep": 0.025422118085498675,
+      "maxHost": 1.939062746859442
+    },
+    {
+      "seed": 9001,
+      "minRoamingWidth": 12.79416744019493,
+      "minRoamingDistance": 110.97906932422505,
+      "maxStep": 0.027828201559178065,
+      "maxHost": 1.894170337799194
+    }
+  ]
+}
+(node:44928) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{
+  "pass": true,
+  "total": 385,
+  "anemones": [
+    {
+      "radius": 1.25,
+      "count": 169,
+      "compact": false,
+      "meanLength": 0.8219881997764822
+    },
+    {
+      "radius": 0.7,
+      "count": 96,
+      "compact": true,
+      "meanLength": 0.26541351900848026
+    },
+    {
+      "radius": 0.42,
+      "count": 48,
+      "compact": true,
+      "meanLength": 0.16277806574196976
+    },
+    {
+      "radius": 0.4,
+      "count": 48,
+      "compact": true,
+      "meanLength": 0.15833469615187046
+    },
+    {
+      "radius": 0.26,
+      "count": 24,
+      "compact": true,
+      "meanLength": 0.10528748455843918
+    }
+  ]
+}
+(node:44929) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+betta food ok
+(node:44930) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)

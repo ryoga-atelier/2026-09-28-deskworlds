@@ -1,0 +1,94 @@
+{
+  "cpu_mean_percent_one_core": 16.88551086669142,
+  "duration_seconds": 90.005573084,
+  "conditions": "App restarted; other user apps remained open; v12 browser preview was open during the first portion and closed during measurement. Not a controlled v11 performance comparison.",
+  "screens": {
+    "[1665, 1081]": {
+      "fps_from_total_frames": 4.9997222376534625,
+      "frame_first": 1,
+      "frame_last": 451,
+      "timing_final": {
+        "kind": "actual CPU render-submission intervals",
+        "samples": 449,
+        "segments": 1,
+        "lastFrameAtMs": 27891,
+        "lastGapMs": 33,
+        "windowMs": 14970,
+        "fpsMeasured": 29.993319973279892,
+        "p50Ms": 33,
+        "p95Ms": 34,
+        "maxMs": 39
+      },
+      "loop_final": {
+        "fps": 0,
+        "paused": false,
+        "hidden": false,
+        "running": false,
+        "pending": false
+      },
+      "all_assets_loaded": true
+    },
+    "[1789, 1006]": {
+      "fps_from_total_frames": 29.998333425920777,
+      "frame_first": 34,
+      "frame_last": 2734,
+      "timing_final": {
+        "kind": "actual CPU render-submission intervals",
+        "samples": 2733,
+        "segments": 0,
+        "lastFrameAtMs": 91818,
+        "lastGapMs": 28,
+        "windowMs": 91082,
+        "fpsMeasured": 30.005928723567774,
+        "p50Ms": 28,
+        "p95Ms": 43,
+        "maxMs": 45
+      },
+      "loop_final": {
+        "fps": 30,
+        "paused": false,
+        "hidden": false,
+        "running": true,
+        "pending": true
+      },
+      "all_assets_loaded": true
+    }
+  },
+  "footprints_mib": [
+    {
+      "pid": 33202,
+      "start_bytes": 30.5,
+      "end_bytes": 25.7,
+      "min_bytes": 25.64,
+      "max_bytes": 30.5
+    },
+    {
+      "pid": 33204,
+      "start_bytes": 442.33,
+      "end_bytes": 323.94,
+      "min_bytes": 323.92,
+      "max_bytes": 442.33
+    },
+    {
+      "pid": 33206,
+      "start_bytes": 4.06,
+      "end_bytes": 3.98,
+      "min_bytes": 3.98,
+      "max_bytes": 4.06
+    },
+    {
+      "pid": 33207,
+      "start_bytes": 405.58,
+      "end_bytes": 344.36,
+      "min_bytes": 328.11,
+      "max_bytes": 405.58
+    },
+    {
+      "pid": 33208,
+      "start_bytes": 362.86,
+      "end_bytes": 329.25,
+      "min_bytes": 328.02,
+      "max_bytes": 362.86
+    }
+  ]
+}

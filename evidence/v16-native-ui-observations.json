@@ -1,0 +1,30 @@
+{
+  "revision": "veiled-guppy-v16",
+  "observer": "Codex through native CUA",
+  "actions": [
+    {
+      "action": "Finder new window via Cmd+N",
+      "result": "home window opened"
+    },
+    {
+      "action": "Finder Window menu -> move to VX2407",
+      "result": "next menu offered move to built-in Retina display"
+    },
+    {
+      "action": "Finder Window menu -> fill screen",
+      "result": "window expanded; passive counters measured separately for 90s"
+    },
+    {
+      "action": "Cmd+W on own test window",
+      "result": "desktop restored; prior desktop selection retained"
+    }
+  ],
+  "not_observed": [
+    "Deskworlds status menu",
+    "Dock",
+    "desktop icon drag",
+    "actual pointer response",
+    "sleep/wake",
+    "logout/login"
+  ]
+}

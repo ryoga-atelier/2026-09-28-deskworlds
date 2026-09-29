@@ -1,0 +1,68 @@
+{
+  "variant": "guppy",
+  "revision": "slender-pearl-guppy-v26",
+  "colors": [
+    "水色",
+    "赤",
+    "シャンパン",
+    "青緑",
+    "桃色",
+    "薄紫",
+    "淡い黄土色",
+    "濃い青"
+  ],
+  "counts": [
+    3,
+    3,
+    4,
+    2,
+    2,
+    4,
+    3,
+    3
+  ],
+  "overlay_sha256": "ca933e06396fed15f59e1f4911e264666b95714f5baab8e6e0b8de094e3a4a73",
+  "motion_sha256": "c075822dc5b890060eed4a8ee815ca9994799444091e8887600aa71c82f36bdb",
+  "texture_sha256": "48698e6e5bb989e5c2a393716b688f4ac8e5e5ff21ba57f0480b9d7772588e5c",
+  "scope": "Photo-led slender continuous body profile, flattened elliptical pearl abdomen, silver/grey-lilac head-to-tail gradient rather than a red-brown body, readable fine scale margins. Transparent distal fin zones and V19 habitat retained.",
+  "aquascape": {
+    "revision": "natural-guppy-v7",
+    "layout_sha256": "9d05e0bff1a318a0a71880f59fb7d19ba782b3faf4ca909f6a9df8290313fecf",
+    "aquarium_sha256": "2dc3efea0dc97fc9e8960865c2c3112b237a9c7fea71e7840e04cbc3c41145cb",
+    "customizer_sha256": "af55735255198e92c0a4cb6a5d418ab71837f7b2366f47b7ffb78a3fd184a3d2",
+    "description": "Asymmetric planted banks, connected corner filter, GPU surface waves, dark neutral depth backdrop and more anatomical guppies. Near-neutral clear water with very light depth haze, subtle moving surface-light caustics, fewer background stems, restrained particles and an open swim lane; five guppy colour families with connected body and tail pigments and surface-aware aquarium equipment",
+    "materials": {
+      "revision": "natural-tank-v9",
+      "leaf_sha256": "1962969a3e6051df457910480b7d4aa157d59952e90004c60754178b516f4473",
+      "patch_sha256": "bcd64c7f6acfea3864082bb295cc8126b5c819a5aaf789f9315abb372a9ae1f9"
+    },
+    "photo_habitat": {
+      "revision": "living-blue-water-v13",
+      "module_sha256": "46ea954c7e6fa50a4ee074c3114d109e8edef3f29496be11b00c3883fe4b9120",
+      "living_water_sha256": "6b4578b1a759574cb7481881f4978bc44d95e5b2e5094468197b17518ed2edc7",
+      "mode": "2.5D AI-generated aquarium with depth occlusion; interactive 3D fish; 3D fallback on asset-load failure"
+    }
+  },
+  "customizer_sha256": "aaefcdf460d6caabbe4df3cea929265873a2fa794a7166832531bec1eb7bb215",
+  "status": "user-requested correction of V25 excessive fullness, undergoing verification; not final acceptance",
+  "source_hashes": {
+    "fish-anatomy-base.js": "d284b4c2ec6a0afd28a68de4c5d60396d72d1b11deda914ff86625d90b98f964",
+    "fish-anatomy.js": "057ad7aba0e0d213ebd747a8631d80893d9f95fa45f8e4ab9f600b5ae62528d4",
+    "photo-material.js": "8b280e9f8db69258437d1f2f573d912e90c65e9f49309fa29a81673b3e703ee0",
+    "guppy-palette.js": "8ea541494ad1b3ccc8177509375cd661cfb1d89e8bab9087d33d31e554de9092",
+    "guppy-swimming.js": "c6b2493cb79e00dca51963d864554c50ad4831032972002cdc2dfdd088eacc94",
+    "environment.js": "89515d39768ff4ca5ccb4f749cd339f1e727fddc843a5c89ad50595e4dbacf60",
+    "main.js": "26a2128c8d834d08320fb3314cd07f2c1fdacc100cdce3118f77c1a6f106c391",
+    "water.js": "dee77483885820226e3cfa429943ff80d86f5dc2f995739a55adfac1d1134fc5",
+    "living-water.js": "6b4578b1a759574cb7481881f4978bc44d95e5b2e5094468197b17518ed2edc7",
+    "exhibit-water.js": "43ed25e5aab5beefd640477996b47c244771eb07d974882407b35583912af93a",
+    "photo-habitat.js": "0717d7cbad8dcf9110a7ee1cd17cc19d0cee12d40bc426c7b5ddfac551ee7663",
+    "water-optics.js": "e9a21a630e4844c48cec690afe464dcae5822a0aa9acf633c7193b2fd8767c8d"
+  },
+  "water_reference": {
+    "url": "https://github.com/ScottieFox/caustic-volume",
+    "commit": "d87351bff19831aa9d11c0679605fad6797b133f",
+    "license": "MIT"
+  },
+  "water_reference_status": "MIT spectral-wave idea adapted; fixed-camera depth approximation, not full ray tracing"
+}

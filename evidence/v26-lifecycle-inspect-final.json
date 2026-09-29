@@ -1,0 +1,53 @@
+{
+  "report": "/Users/ryoga-atelier/workspace/apps/2026-09-28-deskworlds/evidence/lifecycle-check-20260929T012218666207.json",
+  "checks": {
+    "login_registration": {
+      "status": "observed",
+      "detail": "Dedicated LaunchAgent and RunAtLoad; registration alone is not login proof."
+    },
+    "startup_rendering": {
+      "status": "observed",
+      "detail": "At least one display advances real frames and all animation clocks."
+    },
+    "native_menu": {
+      "status": "observed",
+      "detail": "Native menu delegate event; not a browser control."
+    },
+    "native_feed": {
+      "status": "pending",
+      "detail": "Native Feed event plus actual food counter; feeding appearance still requires observation."
+    },
+    "native_pause_resume": {
+      "status": "pending",
+      "detail": "At least 5 seconds frozen, followed by actual native Resume and advancing frames."
+    },
+    "native_quit": {
+      "status": "pending",
+      "detail": "Native Quit event followed by application termination."
+    },
+    "system_sleep_wake": {
+      "status": "pending",
+      "detail": "Matched OS system sleep/wake plus subsequent animation; lock/display sleep alone cannot pass."
+    },
+    "relogin_autostart": {
+      "status": "pending",
+      "detail": "New GUI audit session, registered agent process, actual launch rendering, and matching saved settings."
+    },
+    "dock": {
+      "status": "pending",
+      "detail": "Requires user observation; native app logs cannot prove this."
+    },
+    "desktop_drag": {
+      "status": "pending",
+      "detail": "Requires user observation; native app logs cannot prove this."
+    },
+    "visual_after_wake": {
+      "status": "pending",
+      "detail": "Requires user observation; native app logs cannot prove this."
+    },
+    "visual_after_login": {
+      "status": "pending",
+      "detail": "Requires user observation; native app logs cannot prove this."
+    }
+  }
+}

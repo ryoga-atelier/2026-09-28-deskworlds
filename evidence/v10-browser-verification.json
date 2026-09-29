@@ -1,0 +1,55 @@
+{
+  "variant": "photo-depth-v10-final",
+  "verification_surface": "IAB review UI on same adopted scene assets, not macOS status menu",
+  "pause": {
+    "observed_frames": [
+      11610,
+      11610
+    ],
+    "paused": true,
+    "running": false,
+    "pending": false
+  },
+  "resume": {
+    "frames": 12354,
+    "paused": false,
+    "running": true
+  },
+  "cursor": {
+    "action": "CUA drag across fish in review iframe",
+    "pointerResponses": 2,
+    "escapes": 2
+  },
+  "feed": {
+    "dropped": 20,
+    "eaten": 12,
+    "dissolved": 8,
+    "remaining": 0,
+    "foraging": 21,
+    "strikes": 24
+  },
+  "fallback": {
+    "copy": "preview/photo-depth-v10-fallback-check",
+    "change": "color URL deliberately missing",
+    "habitatEnabled": false,
+    "fish": 24,
+    "frames": 242,
+    "proceduralEnvironmentVisible": true,
+    "confirmedBy": "CUA screenshot and DOM stats"
+  },
+  "video": {
+    "file": "natural-v10-tank-after-20260928T082122Z.webm",
+    "duration": 24.967412,
+    "codec": "VP9",
+    "pixels": [
+      1500,
+      975
+    ],
+    "real_player": {
+      "ended": true,
+      "currentTime": 24.967412,
+      "readyState": 4,
+      "surface": "CUA IAB native video controls"
+    }
+  }
+}

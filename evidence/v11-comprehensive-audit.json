@@ -1,0 +1,107 @@
+[
+  {
+    "item": "横向きの体・眼・口",
+    "status": "確認",
+    "basis": "赤・青の拡大比較。胴体と眼の位置はv10を保持。"
+  },
+  {
+    "item": "斜めの厚み・鰭の接続",
+    "status": "確認",
+    "basis": "斜め固定姿勢と実遊泳の映像。"
+  },
+  {
+    "item": "尾の輪郭",
+    "status": "修正・確認",
+    "basis": "過剰な凹凸を抑制。赤・青で前後比較。"
+  },
+  {
+    "item": "鰭の透過・たわみ・光",
+    "status": "修正・確認",
+    "basis": "変形後の面の法線、自由縁の透過と揺らぎ。"
+  },
+  {
+    "item": "模様・個体差",
+    "status": "修正・確認",
+    "basis": "元素材2枚を保持。尾内部の模様座標を個体ごとに変える。"
+  },
+  {
+    "item": "群れ・探索・旋回",
+    "status": "修正・確認",
+    "basis": "探索数12、同調・勧誘低減、間隔増。通常遊泳25秒を再生。"
+  },
+  {
+    "item": "水草・石・砂の構図",
+    "status": "確認・採用",
+    "basis": "左右非対称、底床の接地、開いた遊泳空間。v10背景を維持。"
+  },
+  {
+    "item": "水草と魚の奥行き",
+    "status": "継承・今回も目視",
+    "basis": "深度処理はv10から不変。厳密な葉別衝突ではない。v10のGPU遮蔽比較記録あり。"
+  },
+  {
+    "item": "素材読込失敗時",
+    "status": "継承",
+    "basis": "v10で背景404の代替描画を検査済み。読込処理・背景素材は今回変更なし。"
+  },
+  {
+    "item": "給餌",
+    "status": "ブラウザ確認",
+    "basis": "20粒中17粒摂食、3粒消滅、残り0。"
+  },
+  {
+    "item": "カーソルへの反応",
+    "status": "ブラウザ確認",
+    "basis": "pointerResponses=2、escapes=4。"
+  },
+  {
+    "item": "停止・再開",
+    "status": "ブラウザ確認",
+    "basis": "5753フレームで固定、再開後6981へ。"
+  },
+  {
+    "item": "本番表示",
+    "status": "確認",
+    "basis": "MacアプリのCUA画像。導入した44ファイルと検査版をハッシュ照合。"
+  },
+  {
+    "item": "メニューバー操作",
+    "status": "未確認",
+    "basis": "SystemUIServer取得がCUA timeout -10005。実クリック確認はできない。"
+  },
+  {
+    "item": "デスクトップのアイコン・Dock操作",
+    "status": "コード確認のみ",
+    "basis": "DesktopWindowレベル、ignoresMouseEvents=true。実合成画面での操作未確認。"
+  },
+  {
+    "item": "画面が覆われた時",
+    "status": "実機計測",
+    "basis": "一方の画面が要求fps=0でフレーム固定。アプリ全体ではもう一方が動作。"
+  },
+  {
+    "item": "スリープ復帰",
+    "status": "コード確認のみ",
+    "basis": "NSWorkspaceのscreensDidSleep/Wakeとsession状態でapplyRate。実スリープ未実施。"
+  },
+  {
+    "item": "ログイン時起動",
+    "status": "登録確認",
+    "basis": "RunAtLoad=trueの専用LaunchAgent。実再ログインは未実施。"
+  },
+  {
+    "item": "元の設定と復帰経路",
+    "status": "確認",
+    "basis": "壁紙とアクセシビリティのv10時点ハッシュ一致。削除しないretire/disable-autostartをREADMEへ。"
+  },
+  {
+    "item": "CPUとメモリ",
+    "status": "実機確認",
+    "basis": "動作300秒11.79%、停止60秒0.183%。GPU footprintは最後の4分で324.78〜324.84MiB。詳細はv11-performance-summary.json。"
+  },
+  {
+    "item": "停止設定・再起動後の保持",
+    "status": "実機確認",
+    "basis": "paused=trueで再起動後60秒固定。元のfalseへ復元し、再起動後10秒で300フレーム進行。"
+  }
+]

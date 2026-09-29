@@ -1,0 +1,125 @@
+--- preview/bronze-gradient-guppy-v29-r13/scenes/riverscape/src/photo-material.js	2026-09-29 13:39:12
++++ preview/bronze-gradient-guppy-v29-r14/scenes/riverscape/src/photo-material.js	2026-09-29 13:51:00
+@@ -168,8 +168,8 @@
+       cell-=(vec2(fishHash(id+17.),fishHash(id+31.))-.5)*.48;
+       cell.x+=cell.y*(fishHash(id+43.)-.5)*.85;
+       float aa=clamp(max(fwidth(grid.x),fwidth(grid.y))*.35,.025,.24);
+-      float flake=1.-smoothstep(.13-aa,.39+aa,length(cell*vec2(1.,1.45)));
+-      return flake*smoothstep(.28,.77,fishHash(floor(grid)+7.))
++      float flake=1.-smoothstep(.16-aa,.44+aa,length(cell*vec2(1.,1.45)));
++      return flake*smoothstep(.18,.62,fishHash(floor(grid)+7.))
+         *guppyCheekMask()*fishFade(grid);
+     }
+     float guppyFinFold(float u,float reach) {
+@@ -313,15 +313,17 @@
+       float gill=exp(-pow((x-(fishOpercleX(vSkinPoint.y)+.031))/.033,2.)
+         -pow((vSkinPoint.y+.006)/.038,2.));
+       float gillIridescence=smoothstep(-.015,.027,vSkinPoint.y);
+-      vec3 gillTint=mix(vec3(.60,.34,.30),vec3(.40,.54,.46),gillIridescence);
+-      skin=mix(skin,gillTint,gill*.66);
++      // r14: the gill cover keeps its own gold-olive to sage sheen, distinct
++      // from both the rose head and the bronze back.
++      vec3 gillTint=mix(vec3(.62,.49,.22),vec3(.34,.55,.44),gillIridescence);
++      skin=mix(skin,gillTint,gill*.74);
+       float cheek=exp(-pow((x-.225)/.033,2.)-pow((b-.47)/.19,2.));
+       skin=mix(skin,vec3(.52,.50,.43),cheek*.34);
+       float cheekFlake=guppyCheekFlake()*guppySurfaceDetail;
+       float cheekGrain=fishHash(floor(guppyCheekGrid())+29.);
+-      vec3 cheekSilver=mix(vec3(.57,.69,.64),vec3(.78,.62,.57),cheekGrain);
+-      skin=mix(skin,vec3(.59,.66,.62),guppyCheekMask()*.26);
+-      skin=mix(skin,cheekSilver,cheekFlake*.78);
++      vec3 cheekSilver=mix(vec3(.66,.82,.70),vec3(.92,.78,.58),cheekGrain);
++      skin=mix(skin,vec3(.62,.68,.60),guppyCheekMask()*.30);
++      skin=mix(skin,cheekSilver,min(cheekFlake*1.05,1.));
+       // Both colours occupy the same abdomen: its silver rim encloses the pale
+       // centre and rounded dark marking without a separate outline around either.
+       float bellyRoot=analPigment*bellyOuter;
+@@ -333,7 +335,14 @@
+       // The other dark tissue stays at the caudal attachment and orbital edge.
+       float base=1.-smoothstep(-.284,-.245,x);
+       skin=mix(skin,vec3(.035,.028,.030),base*(.82+.06*guppyDarkRoot()));
+-      skin=mix(skin,vec3(.17,.105,.075),guppyHeadPigment()*.40);
++      skin=mix(skin,vec3(.17,.105,.075),guppyHeadPigment()*.55);
++      // r14: the photograph's slightly darker upper layer over the eye, nape
++      // and dorsal ridge. A soft shade, never a dark cap over the back.
++      float crown=(1.-smoothstep(.10,.30,b))*smoothstep(.12,.24,x)*(1.-smoothstep(.31,.34,x));
++      float browShade=exp(-pow((x-.280)/.030,2.)-pow((vSkinPoint.y-.036)/.014,2.));
++      skin=mix(skin,skin*vec3(.70,.64,.60),max(crown*.55,browShade*.45));
++      float ridge=exp(-pow((b-.055)/.035,2.))*smoothstep(-.27,-.20,x)*(1.-smoothstep(.22,.30,x));
++      skin=mix(skin,skin*vec3(.62,.54,.46),ridge*.55);
+       float margin=x-fishOpercleX(vSkinPoint.y);
+       skin*=1.-.12*exp(-pow(margin/.0028,2.))*(1.-smoothstep(.77,.98,b));
+       skin=mix(skin,vec3(.14,.10,.080),guppyGillCleft(x,vSkinPoint.y)*.42);
+@@ -341,15 +350,17 @@
+       // Thin brown/lilac arc lines, with very little height: skin rather than armour.
+       float mask=fishScaleMask()*guppySurfaceDetail;
+       float grain=fishHash(floor(fishScaleGrid())+seed);
+-      skin*=1.+(grain-.5)*.20*mask;
++      skin*=1.+(grain-.5)*.06*mask; // r14: small per-scale variation, no rectangular tiles
+       // Scale variation inherits the local colour instead of repainting all
+       // eight families with the same warm-brown overlay after the gradient.
+       vec3 scaleTint=skin*mix(.90,1.12,grain)+guppyBodyColor()*.018;
+-      skin=mix(skin,scaleTint,mask*.16*(1.-.62*belly)*(1.-.85*bellyRoot));
+-      float line=guppyScaleEdge()*guppySurfaceDetail*(1.-.62*belly);
++      skin=mix(skin,scaleTint,mask*.07*(1.-.62*belly)*(1.-.85*bellyRoot));
++      vec2 lineCell=fract(fishScaleGrid())-.5;
++      float line=guppyScaleEdge()*guppySurfaceDetail*(1.-.62*belly)
++        *(1.-.55*smoothstep(.40,.50,abs(lineCell.y)));
+       float pocket=guppyScalePocket()*guppySurfaceDetail*(1.-.75*belly)*(1.-bellyRoot);
+       // Darker toward the back and tail, lighter over the head and flank below.
+-      float netStrength=mix(.42,.20,smoothstep(.30,.70,b))*(1.-.35*smoothstep(.10,.22,x));
++      float netStrength=mix(.56,.26,smoothstep(.30,.70,b))*(1.-.30*smoothstep(.10,.22,x));
+       skin*=1.-netStrength*pocket;
+       skin*=1.+.10*guppyScaleHeight()*guppySurfaceDetail*(1.-belly);
+       // Scale margins inherit the local pigment and read as muted tissue, not
+@@ -372,7 +383,7 @@
+       skin=mix(skin,vec3(.029,.023,.018),cleft*.82);
+       float orbit=fishOrbit();
+       float ring=(1.-smoothstep(1.,1.17,orbit))*smoothstep(.89,1.,orbit);
+-      return mix(skin,vec3(.50,.45,.36),ring*.45);
++      return mix(skin,vec3(.16,.13,.11),ring*.55);
+     }
+     void main() {
+   `).replace('#include <alphamap_fragment>', /* glsl */ `
+@@ -454,7 +465,7 @@
+     if(vFishPart<.5) {
+       float reflector=fishReflector(fishBand,fishX);
+       float mask=fishScaleMask()*guppySurfaceDetail;
+-      roughnessFactor=mix(.40,mix(.34,.44,fishHash(floor(fishScaleGrid())+13.)),mask);
++      roughnessFactor=mix(.40,mix(.37,.41,fishHash(floor(fishScaleGrid())+13.)),mask);
+       roughnessFactor=mix(roughnessFactor,.40,smoothstep(.69,.97,fishBand));
+       float bellyRadius=guppyBellyProfile(fishX,vSkinPoint.y)+guppyBellyEdge();
+       float dark=max(max(guppyBackPigment(),guppyHeadPigment()),
+@@ -463,7 +474,7 @@
+       roughnessFactor=mix(roughnessFactor,.51,dark*.70);
+       float cheekFlake=guppyCheekFlake()*guppySurfaceDetail;
+       roughnessFactor=mix(roughnessFactor,.22,cheekFlake*.86);
+-      metalnessFactor=mix(metalnessFactor,.36,cheekFlake*.78);
++      metalnessFactor=mix(metalnessFactor,.50,cheekFlake*.90);
+     } else if(vFishPart<6.5) {
+       roughnessFactor=mix(mix(.49,.34,guppyRays()),.62,guppyTailRoot());
+       metalnessFactor=.015;
+--- preview/bronze-gradient-guppy-v29-r13/scenes/riverscape/src/fish-anatomy-base.js	2026-09-29 13:40:22
++++ preview/bronze-gradient-guppy-v29-r14/scenes/riverscape/src/fish-anatomy-base.js	2026-09-29 13:51:00
+@@ -1034,7 +1034,7 @@
+         // Iris: a guanine ring, brightest below and behind the pupil, with fine fibres.
+         float fibre = 0.5 + 0.5 * cos(vFishUV.x * PI2 * 24.0);
+         // r13: a broad silver-lilac guanine iris around a small black pupil.
+-        vec3 iris = mix(vec3(0.840, 0.815, 0.880), vec3(0.600, 0.585, 0.660), vFishUV.y);
++        vec3 iris = mix(vec3(0.250, 0.242, 0.275), vec3(0.160, 0.155, 0.180), vFishUV.y);
+         diffuseColor.rgb = iris * (0.92 + 0.08 * fibre)
+           * (0.86 + 0.14 * smoothstep(0.034, -0.016, fishY));
+       } else if (vFishPart < 8.5) {
+@@ -1141,8 +1141,10 @@
+           : 0.0;
+         material.iridescence *= 0.12 + sheenBand * 0.88;
+         material.iridescenceThickness = 230.0
+-          + fishHash(floor(fishScaleGrid())) * 160.0
+-          + fishHash(floor(fishScaleGrid() * 0.34)) * 110.0;
++          // r14: mostly continuous along the body, so the film colour never
++          // changes in rectangular scale-cell blocks.
++          + fishHash(floor(fishScaleGrid())) * 30.0
++          + (0.5 + 0.5 * sin(fishX * 38.0 + fishBand * 8.0)) * 120.0;
+       #endif
+     `,
+     )

@@ -1,0 +1,100 @@
+--- r11/photo-material.js
++++ r12/photo-material.js
+@@ -201,11 +201,11 @@
+       // Positive rest-space X is the head; negative X runs to the caudal root.
+       // Keep this broad and smooth so the back reads lighter at the head and
+       // gathers bronze pigment toward the peduncle from ordinary viewing distance.
+-      float headToTail=smoothstep(-.18,.30,x);
++      float headToTail=smoothstep(-.24,.25,x);
+       // Preserve the fish's colour family while making the head-to-peduncle
+       // value change obvious at wallpaper size. The tail stays coloured, never black.
+-      vec3 tailTone=skin*vec3(.60,.58,.56)+vec3(.030,.027,.022);
+-      vec3 headTone=skin*vec3(1.46,1.40,1.30)+vec3(.014,.012,.009);
++      vec3 tailTone=skin*vec3(.39,.37,.36)+vec3(.014,.013,.012);
++      vec3 headTone=skin*vec3(1.48,1.42,1.32)+vec3(.014,.012,.009);
+       return mix(tailTone,headTone,headToTail);
+     }
+     vec3 guppySkin() {
+@@ -227,11 +227,14 @@
+       float islands=smoothstep(.43,.64,gMottle(vec2(x*38.,b*11.)+seed));
+       vec3 pigment=mix(guppyBodyColor(),guppyFinColor(),.36);
+       skin=mix(skin,pigment,rear*flank*(.14+.10*guppyPatternAmount())*islands);
+-      // Preserve the eight individual body colour families over the side flank;
+-      // the warm photographic base remains visible through each fish's pigment.
+-      float familyMask=smoothstep(.11,.26,b)*(1.-smoothstep(.72,.89,b));
++      // Tail-linked colour lives beneath the upper-flank scales, strongest on
++      // the rear dorsum. The head and later pale abdominal layers keep their own tissue.
++      float familyMask=smoothstep(.025,.14,b)*(1.-smoothstep(.61,.81,b));
++      float familyRear=1.-smoothstep(-.13,.23,x);
+       float familyTexture=.74+.26*gMottle(vec2(x*18.,b*6.)+seed+41.);
+-      skin=mix(skin,guppyBodyColor(),familyMask*(.28+.08*guppyPatternAmount())*familyTexture);
++      vec3 familyPigment=mix(guppyBodyColor(),guppyFinColor(),.25);
++      skin=mix(skin,familyPigment,familyMask*familyRear
++        *(.58+.10*guppyPatternAmount())*familyTexture);
+       // Apply after the family colour layer but before the separately shaped belly.
+       skin=guppyLongitudinalTone(skin,x);
+       // A softly lit, slightly lighter head transitions into the bronze back.
+@@ -279,13 +282,13 @@
+       skin=mix(skin,vec3(.59,.66,.62),guppyCheekMask()*.26);
+       skin=mix(skin,cheekSilver,cheekFlake*.78);
+       // Both colours occupy the same abdomen: its silver rim encloses the pale
+-      // centre and grey-brown rear marking without a separate outline around either.
++      // centre and rounded dark marking without a separate outline around either.
+       float bellyRoot=analPigment*bellyOuter;
+       float rootGrain=gMottle(vec2(x*92.,vSkinPoint.y*145.)+seed+23.);
+       float rootTexture=.80+.20*rootGrain;
+-      // A broad, gently edged compartment stays readable at the approved lightness.
+-      // Its outer tissue carries the same colour so a white rear point cannot peek out.
+-      skin=mix(skin,vec3(.105,.097,.079),smoothstep(.07,.42,analPigment+(rootGrain-.5)*.10)*rootTexture*.67*bellyOuter);
++      // Restore the earlier distinct charcoal pigment while keeping r11's shared
++      // curve and inset. Mottling and scale detail remain within the dark tissue.
++      skin=mix(skin,vec3(.041,.038,.031),smoothstep(.07,.42,analPigment+(rootGrain-.5)*.10)*rootTexture*.93*bellyOuter);
+       // The other dark tissue stays at the caudal attachment and orbital edge.
+       float base=1.-smoothstep(-.284,-.245,x);
+       skin=mix(skin,vec3(.035,.028,.030),base*(.82+.06*guppyDarkRoot()));
+@@ -298,14 +301,17 @@
+       float mask=fishScaleMask()*guppySurfaceDetail;
+       float grain=fishHash(floor(fishScaleGrid())+seed);
+       skin*=1.+(grain-.5)*.20*mask;
+-      vec3 scaleTint=mix(vec3(.43,.34,.26),vec3(.61,.51,.40),grain);
++      // Scale variation inherits the local colour instead of repainting all
++      // eight families with the same warm-brown overlay after the gradient.
++      vec3 scaleTint=skin*mix(.90,1.12,grain)+guppyBodyColor()*.018;
+       skin=mix(skin,scaleTint,mask*.16*(1.-.62*belly)*(1.-.85*bellyRoot));
+       float line=guppyScaleEdge()*guppySurfaceDetail*(1.-.35*belly);
+       // Scale margins inherit the local pigment and read as muted tissue, not
+       // as identical black-brown outlines stamped over every colour family.
+       vec3 scaleEdgeColor=skin*vec3(.32,.33,.34)+vec3(.023,.022,.021);
+       skin=mix(skin,scaleEdgeColor,line*.94);
+-      skin+=vec3(.052,.041,.027)*guppyScaleHeight()*guppySurfaceDetail;
++      skin+=mix(vec3(.044,.043,.037),guppyBodyColor()*.085+vec3(.02),.35)
++        *guppyScaleHeight()*guppySurfaceDetail*(1.-.60*bellyRoot);
+       // Optional photographic fine grain. Asset failure leaves the same skin,
+       // palette and geometry rather than switching to a different fish design.
+       if(guppyPlateReady>.5) {
+@@ -327,9 +333,12 @@
+     if(vFishPart<.5) {
+       diffuseColor.rgb=guppySkin();
+       float bellyRadius=guppyBellyProfile(vSkinPoint.x,vSkinPoint.y)+guppyBellyEdge();
+-      float localInk=max(guppyAnalPigment(vSkinPoint.x,vSkinPoint.y)*.72*guppyBellyOuter(bellyRadius),
++      float localInk=max(smoothstep(.07,.42,guppyAnalPigment(vSkinPoint.x,vSkinPoint.y))*.93*guppyBellyOuter(bellyRadius),
+         guppyBellySeam(bellyRadius,vSkinPoint.y)*.72);
+-      gFishThrough*=.65*(1.-.80*max(max(guppyBackPigment(),guppyHeadPigment()),localInk));
++      float rearAbsorption=(1.-smoothstep(-.20,.20,vSkinPoint.x))
++        *(1.-smoothstep(.65,.91,vFishUV.y))*(1.-.90*guppyBellyOuter(bellyRadius));
++      gFishThrough*=.65*(1.-.40*rearAbsorption)
++        *(1.-.88*max(max(guppyBackPigment(),guppyHeadPigment()),localInk));
+     } else if(vFishPart<6.5) {
+       float reach=clamp(vFishUV.y,0.,1.);
+       float ribs=guppyRays();
+@@ -398,7 +407,9 @@
+       float mask=fishScaleMask()*guppySurfaceDetail;
+       roughnessFactor=mix(.44,mix(.38,.47,fishHash(floor(fishScaleGrid())+13.)),mask);
+       roughnessFactor=mix(roughnessFactor,.40,smoothstep(.69,.97,fishBand));
+-      float dark=max(guppyBackPigment(),guppyHeadPigment());
++      float bellyRadius=guppyBellyProfile(fishX,vSkinPoint.y)+guppyBellyEdge();
++      float dark=max(max(guppyBackPigment(),guppyHeadPigment()),
++        .88*smoothstep(.07,.42,guppyAnalPigment(fishX,vSkinPoint.y))*guppyBellyOuter(bellyRadius));
+       metalnessFactor=(.035+.11*reflector)*(1.-.76*dark);
+       roughnessFactor=mix(roughnessFactor,.51,dark*.70);
+       float cheekFlake=guppyCheekFlake()*guppySurfaceDetail;

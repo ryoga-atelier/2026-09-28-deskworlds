@@ -1,0 +1,133 @@
+--- r10/photo-material.js
++++ r11/photo-material.js
+@@ -67,8 +67,9 @@
+     float guppyScaleEdge() {
+       vec2 grid=fishScaleGrid(),cell=fract(grid)-.5;
+       float arc=cell.x+.35-.88*cell.y*cell.y+guppyScaleVariation(grid);
+-      float aa=max(.008,fwidth(arc)*.45);
+-      return (1.-smoothstep(.014-aa,.048+aa,abs(arc)))*fishScaleMask();
++      // Derivatives of the unwrapped grid avoid a wide halo at cell boundaries.
++      float aa=clamp(max(fwidth(grid.x),fwidth(grid.y))*.40,.010,.20);
++      return (1.-smoothstep(.024-aa,.068+aa,abs(arc)))*fishScaleMask();
+     }
+     float guppyScaleHeight() {
+       vec2 grid=fishScaleGrid(),c=fract(grid)-.5;
+@@ -123,6 +124,33 @@
+       // Reaching the outer tissue avoids a pale pointed tip behind the marking.
+       float attachment=exp(-pow(x/.025,2.)-pow((y+.067)/.015,2.));
+       return max(guppyAnalRootIndent(x,y),.70*attachment);
++    }
++    float guppyBellyInset(float radius,float pigment) {
++      // The ivory edge is inset from the SAME outer curve. Its rear boundary
++      // curls around the approved semicircle instead of leaving a white point.
++      return max(radius+.075,1.16*smoothstep(.015,.23,pigment));
++    }
++    float guppyCheekMask() {
++      float x=vSkinPoint.x,y=vSkinPoint.y;
++      float pad=exp(-pow((x-(fishOpercleX(y)+.025))/.027,2.)
++        -pow((y+.017)/.026,2.));
++      return pad*smoothstep(1.15,1.65,fishOrbit());
++    }
++    vec2 guppyCheekGrid() {
++      vec2 grid=vSkinPoint.xy*vec2(215.,285.)+vec2(vGuppySeed*19.,vGuppySeed*7.);
++      grid.x+=mod(floor(grid.y),2.)*.5;
++      return grid;
++    }
++    float guppyCheekFlake() {
++      vec2 grid=guppyCheekGrid(),cell=fract(grid)-.5;
++      // Uneven, staggered platelets rather than rows of identical glitter dots.
++      vec2 id=floor(grid);
++      cell-=(vec2(fishHash(id+17.),fishHash(id+31.))-.5)*.48;
++      cell.x+=cell.y*(fishHash(id+43.)-.5)*.85;
++      float aa=clamp(max(fwidth(grid.x),fwidth(grid.y))*.35,.025,.24);
++      float flake=1.-smoothstep(.13-aa,.39+aa,length(cell*vec2(1.,1.45)));
++      return flake*smoothstep(.28,.77,fishHash(floor(grid)+7.))
++        *guppyCheekMask()*fishFade(grid);
+     }
+     float guppyFinFold(float u,float reach) {
+       // Derivative helper pixels can lie outside the triangle at the fin root.
+@@ -213,12 +241,23 @@
+       float bellyRadius=guppyBellyProfile(x,vSkinPoint.y)+guppyBellyEdge();
+       float bellyOuter=guppyBellyOuter(bellyRadius);
+       float belly=guppyBellyInner(bellyRadius);
++      float analPigment=guppyAnalPigment(x,vSkinPoint.y);
++      float ivoryRadius=guppyBellyInset(bellyRadius,analPigment);
++      float ivory=guppyBellyInner(ivoryRadius);
+       float bellyRim=clamp(bellyOuter-belly,0.,1.);
+       skin=mix(skin,vec3(.52,.51,.44),bellyRim*.82);
+       skin=mix(skin,vec3(.72,.72,.67),belly*.90);
++      // Keep the pale substrate under the rear pigment at its accepted value.
++      // Only the transition follows the inward curve, with a thin silver rim.
++      float insetTransition=clamp(belly-ivory,0.,1.)
++        *(1.-smoothstep(.26,.55,analPigment));
++      skin=mix(skin,vec3(.52,.55,.51),insetTransition*.46);
++      float insetLine=smoothstep(.83,.92,ivoryRadius)
++        *(1.-smoothstep(1.00,1.10,ivoryRadius))*bellyOuter;
++      skin=mix(skin,vec3(.30,.32,.28),insetLine*.32);
+       float bellySeam=guppyBellySeam(bellyRadius,vSkinPoint.y);
+       skin=mix(skin,vec3(.075,.070,.060),bellySeam*.72);
+-      float bellyHighlight=belly*exp(-pow((x-.105)/.074,2.)
++      float bellyHighlight=ivory*exp(-pow((x-.105)/.074,2.)
+         -pow((vSkinPoint.y+.052)/.022,2.));
+       skin=mix(skin,vec3(.80,.79,.74),bellyHighlight*.20);
+       float pearl=exp(-pow((x-.105)/.083,2.)-pow((b-.68)/.15,2.));
+@@ -234,9 +273,13 @@
+       skin=mix(skin,gillTint,gill*.66);
+       float cheek=exp(-pow((x-.225)/.033,2.)-pow((b-.47)/.19,2.));
+       skin=mix(skin,vec3(.52,.50,.43),cheek*.34);
++      float cheekFlake=guppyCheekFlake()*guppySurfaceDetail;
++      float cheekGrain=fishHash(floor(guppyCheekGrid())+29.);
++      vec3 cheekSilver=mix(vec3(.57,.69,.64),vec3(.78,.62,.57),cheekGrain);
++      skin=mix(skin,vec3(.59,.66,.62),guppyCheekMask()*.26);
++      skin=mix(skin,cheekSilver,cheekFlake*.78);
+       // Both colours occupy the same abdomen: its silver rim encloses the pale
+       // centre and grey-brown rear marking without a separate outline around either.
+-      float analPigment=guppyAnalPigment(x,vSkinPoint.y);
+       float bellyRoot=analPigment*bellyOuter;
+       float rootGrain=gMottle(vec2(x*92.,vSkinPoint.y*145.)+seed+23.);
+       float rootTexture=.80+.20*rootGrain;
+@@ -257,11 +300,11 @@
+       skin*=1.+(grain-.5)*.20*mask;
+       vec3 scaleTint=mix(vec3(.43,.34,.26),vec3(.61,.51,.40),grain);
+       skin=mix(skin,scaleTint,mask*.16*(1.-.62*belly)*(1.-.85*bellyRoot));
+-      float line=guppyScaleEdge()*guppySurfaceDetail*(1.-.24*belly);
++      float line=guppyScaleEdge()*guppySurfaceDetail*(1.-.35*belly);
+       // Scale margins inherit the local pigment and read as muted tissue, not
+       // as identical black-brown outlines stamped over every colour family.
+-      vec3 scaleEdgeColor=skin*vec3(.52,.51,.50)+vec3(.043,.037,.031);
+-      skin=mix(skin,scaleEdgeColor,line*.82);
++      vec3 scaleEdgeColor=skin*vec3(.32,.33,.34)+vec3(.023,.022,.021);
++      skin=mix(skin,scaleEdgeColor,line*.94);
+       skin+=vec3(.052,.041,.027)*guppyScaleHeight()*guppySurfaceDetail;
+       // Optional photographic fine grain. Asset failure leaves the same skin,
+       // palette and geometry rather than switching to a different fish design.
+@@ -335,7 +378,7 @@
+   `)
+   .replace('vFishUV * FISH_SCALES', 'vFishUV * vec2(20.0, 7.0)')
+   .replace('float relief = fishScaleRelief() * 0.00030;',
+-    'float relief = guppyScaleHeight() * 0.00016 * guppySurfaceDetail;')
++    'float relief = (guppyScaleHeight() * 0.00016 + guppyCheekFlake() * 0.000025) * guppySurfaceDetail;')
+   .replace('#include <normal_fragment_maps>', /* glsl */ `
+     #include <normal_fragment_maps>
+     #ifdef FISH_MEMBRANE
+@@ -358,6 +401,9 @@
+       float dark=max(guppyBackPigment(),guppyHeadPigment());
+       metalnessFactor=(.035+.11*reflector)*(1.-.76*dark);
+       roughnessFactor=mix(roughnessFactor,.51,dark*.70);
++      float cheekFlake=guppyCheekFlake()*guppySurfaceDetail;
++      roughnessFactor=mix(roughnessFactor,.22,cheekFlake*.86);
++      metalnessFactor=mix(metalnessFactor,.36,cheekFlake*.78);
+     } else if(vFishPart<6.5) {
+       roughnessFactor=mix(mix(.49,.34,guppyRays()),.62,guppyTailRoot());
+       metalnessFactor=.015;
+@@ -366,5 +412,10 @@
+     #ifdef USE_CLEARCOAT
+       if(vFishPart<.5) material.clearcoat*=1.-.70*max(guppyBackPigment(),guppyHeadPigment());
+     #endif
++  `)
++  .replace('material.iridescence *= 0.12 + sheenBand * 0.88;', /* glsl */ `
++    material.iridescence *= 0.12 + sheenBand * 0.88;
++    if(vFishPart<.5) material.iridescence=max(material.iridescence,
++      .22*guppyCheekMask()*guppySurfaceDetail);
+   `);
+ }

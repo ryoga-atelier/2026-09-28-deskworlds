@@ -1,0 +1,25 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><title>水草の前後にいるグッピーの描画検査</title>
+<style>body{margin:0;background:#142420;color:#eee;font:15px system-ui}header{padding:15px}button{padding:10px;margin:4px}canvas{width:1200px;display:block}output{display:block}</style>
+<header><button id="run">奥行きを検査</button><button id="front">葉の手前</button><button id="back">葉の後ろ</button><button id="save">画像を保存</button><output id="result">準備中</output></header><canvas id="scene"></canvas>
+<script type="importmap">{"imports":{"three":"/preview/photo-depth-v10-final/vendor/three.module.js"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import {createFishSchool} from '/preview/photo-depth-v10-final/scenes/riverscape/src/fish.js';
+import {loadPhotoPigment} from '/preview/photo-depth-v10-final/scenes/riverscape/src/photo-material.js';
+import {createPhotoHabitat} from '/preview/photo-depth-v10-final/scenes/riverscape/src/photo-habitat.js';
+import {createComposite} from '/preview/photo-depth-v10-final/scenes/riverscape/src/composite.js';
+const renderer=new THREE.WebGLRenderer({canvas:document.querySelector('canvas'),preserveDrawingBuffer:true});renderer.setSize(1200,780,false);renderer.setClearColor(0,0);renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.06;
+const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(25.8,1200/780,.2,65);camera.position.set(0,4.65,20.5);camera.lookAt(0,4.15,0);camera.updateMatrixWorld();
+scene.add(new THREE.HemisphereLight(0xe9eeeb,0x64635f,.42));const key=new THREE.DirectionalLight(0xfffaf3,2.8);key.position.set(-3,11.5,4.4);scene.add(key);const fill=new THREE.DirectionalLight(0xe1e7e5,.5);fill.position.set(1,5,10);scene.add(fill);
+const habitat=await createPhotoHabitat(scene,camera);habitat.resize(camera.aspect);camera.updateProjectionMatrix();await loadPhotoPigment();
+const school=createFishSchool(scene),body=scene.getObjectByName('Silver-blue freshwater fish'),fins=scene.getObjectByName('Attached translucent fish fins');body.count=fins.count=1;
+const {target,post,postScene,postCamera}=createComposite(camera,{samples:4,aoSamples:6});target.setSize(1200,780);post.uniforms.size.value.set(1200,780);habitat.bindComposite(post);
+const obj=new THREE.Object3D();let where='front',last={};
+function pose(u,v,depth){const hh=Math.tan(THREE.MathUtils.degToRad(camera.fov)/2)*depth;obj.position.set((2*u-1)*hh*camera.aspect,(2*v-1)*hh,-depth).applyMatrix4(camera.matrixWorld);obj.scale.setScalar(depth/20.5);obj.rotation.set(0,0,0);obj.updateMatrix();for(const mesh of [body,fins]){mesh.setMatrixAt(0,obj.matrix);mesh.instanceMatrix.needsUpdate=true;}body.geometry.getAttribute('aSwim').setXYZW(0,0,0,0,0);body.geometry.getAttribute('aSwim').needsUpdate=true;body.geometry.getAttribute('aFinPhase').setX(0,.75);body.geometry.getAttribute('aFinPhase').needsUpdate=true;}
+function render(u=.25,v=.37,depth=18){pose(u,v,depth);renderer.setRenderTarget(target);renderer.render(scene,camera);renderer.setRenderTarget(null);renderer.render(postScene,postCamera);}
+function pixels(u,v,depth){render(u,v,depth);const w=120,h=100,buf=new Uint16Array(w*h*4);renderer.readRenderTargetPixels(target,Math.floor(u*1200-w/2),Math.floor(v*780-h/2),w,h,buf);let visible=0;for(let i=3;i<buf.length;i+=4)if(buf[i]>0x3000)visible++;return visible;}
+document.querySelector('#run').onclick=()=>{last={leafFront:pixels(.25,.37,17),leafBehind:pixels(.25,.37,29),waterFront:pixels(.58,.65,17),waterBehind:pixels(.58,.65,29)};last.pass=last.leafBehind<last.leafFront*.8 && Math.abs(last.waterFront-last.waterBehind)<last.waterFront*.15;document.querySelector('output').textContent=JSON.stringify(last);render();};
+document.querySelector('#front').onclick=()=>{where='front';render(.25,.37,17);};document.querySelector('#back').onclick=()=>{where='back';render(.25,.37,29);};
+document.querySelector('#save').onclick=()=>renderer.domElement.toBlob(async blob=>{const name='natural-v10-metrics-'+where+'-'+Date.now()+'.png';await fetch('/capture/'+name,{method:'POST',body:blob});await fetch('/capture/'+name.replace('.png','.json'),{method:'POST',body:new Blob([JSON.stringify(last)])});document.querySelector('output').textContent=JSON.stringify(last)+' 保存 '+name;});
+render();document.querySelector('output').textContent='同じ画面位置・同じ大きさで距離だけを変え、葉のある位置と開水面の可視画素を照合します。';
+</script></html>
