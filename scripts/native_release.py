@@ -1,7 +1,7 @@
 """Keep covered aquariums swimming; retain a frame when sleeping pages are freed.
 
 Applied to the build copy of Wallpaper.swift only (after the passive probe patch);
-the pinned upstream source is never edited. Awake scenes keep swimming at 12 fps
+the pinned upstream source is never edited. Awake scenes keep swimming at 24 fps
 behind other windows (Balanced stays capped at 24 fps when exposed). Only a display
 or session that is asleep can discard its WKWebView after 60 s, so
 WebKit can free its WebGL/JS memory. A bounded, opaque native bitmap stays on screen
@@ -231,7 +231,7 @@ def apply_native_release(source):
         '      if screen.setRate(rate, releasable: !awake) { changed = true }')
     source = _swap(source,
         '      let rate = still || showing < 0.15 ? 0 : showing < 0.4 ? 20 : full',
-        '      let rate = still ? 0 : showing < 0.4 ? 12 : full')
+        '      let rate = still ? 0 : showing < 0.4 ? 24 : full')
     source = _swap(source,
         '  /// part of it showing, and nothing at all behind a full screen of work or a dark display.',
         '  /// part of it showing or fully covered. Stop only for Pause, Low Power or sleep.')
