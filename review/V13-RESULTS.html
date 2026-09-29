@@ -1,0 +1,12 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>透き通った青い水と、動くグッピー水槽</title>
+<style>body{margin:0;background:#f0f7fa;color:#163449;font:17px/1.75 system-ui}main{max-width:1120px;margin:auto;padding:36px 24px}h1{font-size:clamp(25px,4vw,38px);line-height:1.4}h2{font-size:22px;margin-top:40px}p{max-width:900px}video,img{display:block;width:100%;border-radius:10px;background:#d0eaf6}button{background:#176586;color:white;border:0;border-radius:6px;padding:10px 18px;font:inherit;cursor:pointer}small,figcaption{color:#486778;font-size:14px}figure{margin:18px 0}a{color:#096080}details{margin-top:30px;border-top:1px solid #bcd1dc;padding-top:18px}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:650px){.comparison{grid-template-columns:1fr}}</style>
+<main><small>2026-09-28 · Macへ導入済み · Guppy Garden v13</small>
+<h1>透き通った青い水と、動くグッピー水槽</h1>
+<p>灰緑の後景を明るい青へ変更。水面のさざ波と反射、水草の揺れ、右奥から上がる泡、魚が砂地に近づいた時だけ薄く舞う砂を加えました。</p>
+<button id="play">45秒の動きを見る</button>
+<figure><video id="tankVideo" src="../evidence/natural-v13-tank-after-20260928T103154Z.webm" poster="../evidence/living-blue-water-v13-final-full.png" controls muted playsinline preload="metadata"></video><figcaption>導入版と同じシーンの実時間描画を録画。水面は上端、泡は右奥、水草は左右、砂は底近くを通る魚の下で動きます。</figcaption></figure>
+<h2>今回の変化</h2><div class="comparison"><figure><img src="../evidence/bright-aquarium-v12-preview.png" alt="前の灰緑の水槽"><figcaption>前：灰緑の後景と、弱すぎた水の動き。</figcaption></figure><figure><img src="../evidence/living-blue-water-v13-final-full.png" alt="青く透き通った新しい水槽"><figcaption>現在：明るい青い水と、魚以外にも動きがある水槽。</figcaption></figure></div>
+<p>葉は根元を保って揺れ、水面だけに屈折の揺らぎを加えています。泡は大きさと上昇速度に差をつけ、砂は数秒で沈んで消えます。停止時には魚・水・泡・砂が一緒に止まります。</p>
+<p>実機の90秒計測で、動作画面は約30fps。CPUは関連プロセス合計16.26%（1コア=100%）でした。</p><h2>Macで使う</h2><p>メニューバーのDeskworlds → <strong>Feed</strong>で餌やり、<strong>Pause / Resume</strong>で停止・再開、<strong>Quit</strong>で終了。ログイン時の自動起動設定は維持しています。</p>
+<details><summary>確認範囲・残る制約</summary><p>構文・既存テスト・魚の形状・粒子の発生条件を検査。泡と砂は数値上の発生だけでなく、実GPUの描画差でも確認しました。背景は写真風に生成した2.5Dで、葉と屈折の動き・奥行きには近似があります。実物の流体を完全再現したものではありません。</p><p>MacメニューとDockは操作ツールの応答が得られず未確認。実スリープ復帰と再ログイン、デスクトップのドラッグも未確認です。アイコン選択はv12稼働時に確認しました。</p><p>実測値と根拠は<a href="../VERIFICATION.md">検証記録</a>、自動起動解除と削除せず戻す手順は<a href="../README.md">操作手順</a>に保存しています。</p></details>
+</main><script>const v=document.querySelector('video');document.querySelector('#play').onclick=()=>v.play();</script></html>

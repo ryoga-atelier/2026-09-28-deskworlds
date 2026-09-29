@@ -1,0 +1,86 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><title>Guppy material inspection</title>
+<style>body{margin:0;background:#142623;color:#d6e6dc;font:14px system-ui}canvas{display:block}header{position:absolute;top:24px;left:28px}button{background:#294840;color:inherit;border:1px solid #597268;border-radius:8px;padding:8px 14px;margin-top:12px}</style>
+<header>グッピー質感の拡大確認 — 同じモデル・同じ光源<br><button id="pause">停止</button></header><canvas id="scene"></canvas>
+<script type="importmap">{"imports":{"three":"/vendor/three.module.js"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import {createFishSchool} from './scenes/riverscape/src/fish.js';
+import {waterTime} from './scenes/riverscape/src/water.js';
+const renderer=new THREE.WebGLRenderer({canvas:document.querySelector('canvas'),antialias:true});
+renderer.setSize(innerWidth,innerHeight);renderer.setPixelRatio(devicePixelRatio);
+renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.17;
+const scene=new THREE.Scene();scene.background=new THREE.Color('#142623');
+const camera=new THREE.PerspectiveCamera(25.8,innerWidth/innerHeight,0.1,40);
+camera.position.set(0,4.2,5);camera.lookAt(0,4.15,0);
+const settings={shadowSize:1024};
+  scene.add(new THREE.HemisphereLight(0xc3d7bd, 0x353427, 0.3));
+  const key = new THREE.DirectionalLight(0xfff8ee, 4.5);
+  key.position.set(-3, 11.5, 4.4);
+  key.target.position.set(0, 1, 0);
+  key.castShadow = true;
+  key.shadow.mapSize.set(settings.shadowSize, settings.shadowSize);
+  // The frustum reaches the foot of the backboard behind the right-hand bed; a fragment
+  // outside the shadow map is lit as if nothing stood in front of it.
+  Object.assign(key.shadow.camera, {
+    left: -12,
+    right: 12,
+    top: 14,
+    bottom: -10,
+    near: 1,
+    far: 27,
+  });
+  key.shadow.bias = -0.00012;
+  key.shadow.normalBias = 0.018;
+  // Keep the filter footprint approximately the same in world space.
+  key.shadow.radius = 3 * settings.shadowSize / 4096;
+  scene.add(key, key.target);
+  const fill = new THREE.DirectionalLight(0xc2d8e4, 0.44);
+  fill.position.set(1, 5, 10);
+  scene.add(fill);
+  const back = new THREE.DirectionalLight(0xdbf9ba, 0.8);
+  back.position.set(2, 10, -4);
+  scene.add(back);
+
+  // A compact HDR environment gives silver scales a broad overhead reflection.
+  const envScene = new THREE.Scene();
+  envScene.background = new THREE.Color("#253129");
+  const strip = new THREE.Mesh(
+    new THREE.PlaneGeometry(16, 4),
+    new THREE.MeshBasicMaterial({
+      color: new THREE.Color(3.7, 3.8, 3.4),
+      side: THREE.DoubleSide,
+    }),
+  );
+  strip.position.set(0, 6, 1);
+  strip.rotation.x = Math.PI / 2;
+  envScene.add(strip);
+  const frontBounce = new THREE.Mesh(
+    new THREE.PlaneGeometry(18, 8),
+    new THREE.MeshBasicMaterial({
+      color: new THREE.Color(0.24, 0.32, 0.29),
+      side: THREE.DoubleSide,
+    }),
+  );
+  frontBounce.position.z = 8;
+  envScene.add(frontBounce);
+  const pmrem = new THREE.PMREMGenerator(renderer);
+  const env = pmrem.fromScene(envScene, 0.025, 0.1, 30);
+  scene.environment = env.texture;
+  scene.environmentIntensity = 0.55;
+  pmrem.dispose();
+  strip.geometry.dispose();
+  strip.material.dispose();
+  frontBounce.geometry.dispose();
+  frontBounce.material.dispose();
+
+
+const school=createFishSchool(scene);const bodies=scene.getObjectByName('Silver-blue freshwater fish');
+const fins=scene.getObjectByName('Attached translucent fish fins');bodies.count=fins.count=3;
+const obj=new THREE.Object3D();let t=0,previous=performance.now(),paused=false;
+document.querySelector('#pause').onclick=()=>{paused=!paused;document.querySelector('#pause').textContent=paused?'再開':'停止';};
+function frame(now){if(!paused)t+=Math.min(.03,(now-previous)/1000);previous=now;
+  if(!paused)school.update(.016,t,null);waterTime.value=t;
+  for(let i=0;i<3;i++){obj.position.set((i-1)*1.18,4.10,0);obj.rotation.set(0,Math.sin(t*.25+i)*.24,0);obj.scale.setScalar(1);obj.updateMatrix();bodies.setMatrixAt(i,obj.matrix);fins.setMatrixAt(i,obj.matrix);}
+  bodies.instanceMatrix.needsUpdate=fins.instanceMatrix.needsUpdate=true;renderer.render(scene,camera);requestAnimationFrame(frame);}
+requestAnimationFrame(frame);
+</script></html>

@@ -1,0 +1,75 @@
+{
+  "checked_at": "2026-09-29T09:54:00+09:00",
+  "source_commit": "3950c45ef5798ed2df9f78037994bcddacebbb01",
+  "checks": [
+    {
+      "name": "upstream-npm-run-check",
+      "command": "npm run check",
+      "working_directory": "upstream/deskworlds",
+      "result": "pass"
+    },
+    {
+      "name": "upstream-npm-test",
+      "command": "npm test",
+      "working_directory": "upstream/deskworlds",
+      "result": "pass",
+      "test_scripts": 9
+    },
+    {
+      "name": "photo-guppy-v28-material-contract",
+      "command": "node scripts/check-photo-guppy-v28.mjs preview/bronze-scale-guppy-v28-r1",
+      "result": "pass",
+      "details": "layered bronze pigment, varied scales and belly edge, slender convex body, rounded guppy tail"
+    },
+    {
+      "name": "guppy-mesh-and-variety-contract",
+      "command": "node scripts/check-guppy-v17.mjs preview/bronze-scale-guppy-v28-r1",
+      "result": "pass",
+      "details": "finite meshes and indices, 24 individual patterns, continuous fin phases, attached caudal roots"
+    },
+    {
+      "name": "guppy-dimensions-and-color-counts",
+      "command": "node scripts/check-v17.mjs preview/bronze-scale-guppy-v28-r1",
+      "result": "pass",
+      "tail_depth": 0.10378916561603546,
+      "abdomen_depth": 0.18051264435052872,
+      "width": 0.08306389302015305,
+      "color_counts": [3, 3, 4, 2, 2, 4, 3, 3]
+    },
+    {
+      "name": "living-water-and-sand-contract",
+      "command": "node scripts/check-living-water.mjs preview/bronze-scale-guppy-v28-r1",
+      "result": "pass",
+      "details": "near-bed motion, bounded sand pools, cooldown, zero-dt freeze, settling and disposal"
+    },
+    {
+      "name": "custom-module-syntax",
+      "command": "node --input-type=module --check for photo-material.js and fish-anatomy.js",
+      "result": "pass"
+    },
+    {
+      "name": "native-app-build-signature-plist",
+      "result": "pass",
+      "details": "Swift build completed during v28 install; codesign --verify --deep --strict and plutil -lint passed"
+    },
+    {
+      "name": "installed-webview-render",
+      "result": "pass",
+      "evidence": "evidence/bronze-v28-native-20260929T0948.png",
+      "scope": "app WKWebView snapshot; not a complete macOS desktop screenshot"
+    }
+  ],
+  "not_measured_or_not_confirmed": [
+    "CPU, rendered frame count and memory over 90 seconds in visible, occluded and paused states",
+    "GPU utilization and battery impact",
+    "native menu, Dock, Finder drag and physical cursor behavior",
+    "actual sleep/wake and logout/login",
+    "60-second multi-angle live visual review and user acceptance"
+  ],
+  "execution_incident": {
+    "initial_command_scope_error": "The first npm run check was invoked from the project directory instead of upstream/deskworlds and therefore found no check script. The following npm test resolved the parent workspace/apps package script and ran npm ci for apps/apps/mirai-check.",
+    "corrected_validation": "Both Deskworlds commands were rerun from upstream/deskworlds and passed; only those reruns count as upstream results above.",
+    "side_effect": "apps/apps/mirai-check/node_modules was recreated from its lockfile. No package manifest change was observed; any pre-existing node_modules-only local state is unknown.",
+    "tracked_source_changes_from_test_command": "none observed"
+  }
+}

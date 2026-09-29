@@ -1,0 +1,84 @@
+--- preview/bronze-gradient-guppy-v29-r14/scenes/riverscape/src/fish-anatomy-base.js	2026-09-29 13:51:00
++++ preview/bronze-gradient-guppy-v29-r15/scenes/riverscape/src/fish-anatomy-base.js	2026-09-29 14:17:03
+@@ -45,8 +45,8 @@
+   [-0.265, 2.0],
+   [HYPURAL_X, 2.4],
+ ];
+-const BODY_ROWS = 84;
+-const BODY_COLUMNS = 62;
++const BODY_ROWS = 60; // r15: 84 -> 60; pixel shading carries scales and pigment
++const BODY_COLUMNS = 46; // r15: 62 -> 46
+ 
+ // A small flattened eye, reduced together with its body socket and shader mask.
+ // All three eye patches use the same lens, so the iris never floats above the face.
+@@ -73,8 +73,8 @@
+ // Fin ray counts from the species' fin formulae: dorsal ii,9; anal iii,20;
+ // pectoral i,11; pelvic i,7; caudal 19 principal rays. The adipose fin has none.
+ const FIN_RAYS = { 1: 19, 2: 11, 3: 23, 4: 12, 5: 12, 6: 8, 12: 0 };
+-const MEMBRANE_STEPS = 32;
+-const RAY_SUBDIVISIONS = 4;
++const MEMBRANE_STEPS = 20; // r15: 32 -> 20
++const RAY_SUBDIVISIONS = 2; // r15: 4 -> 2; rays themselves are drawn per pixel
+ 
+ // Scale rows for a 40 mm fish: 34 in the lateral series, 11 from the dorsal midline to
+ // the ventral. Visible only when a scale covers more than a pixel.
+--- preview/bronze-gradient-guppy-v29-r14/scenes/riverscape/src/main.js	2026-09-29 13:48:55
++++ preview/bronze-gradient-guppy-v29-r15/scenes/riverscape/src/main.js	2026-09-29 14:17:03
+@@ -95,7 +95,10 @@
+   key.position.set(-3, 11.5, 4.4);
+   key.target.position.set(0, 1, 0);
+   key.castShadow = true;
+-  key.shadow.mapSize.set(settings.shadowSize, settings.shadowSize);
++  // r15: the wallpaper-size fish shadows read the same at 1024 while the depth pass
++  // and its memory are a quarter of 2048. Balanced only; Reference keeps its own size.
++  const shadowSize = settings.name === 'balanced' ? Math.min(settings.shadowSize, 1024) : settings.shadowSize;
++  key.shadow.mapSize.set(shadowSize, shadowSize);
+   // The frustum reaches the foot of the backboard behind the right-hand bed; a fragment
+   // outside the shadow map is lit as if nothing stood in front of it.
+   Object.assign(key.shadow.camera, {
+@@ -109,7 +112,7 @@
+   key.shadow.bias = -0.00012;
+   key.shadow.normalBias = 0.018;
+   // Keep the filter footprint approximately the same in world space.
+-  key.shadow.radius = 3 * settings.shadowSize / 4096;
++  key.shadow.radius = 3 * shadowSize / 4096;
+   scene.add(key, key.target);
+   const fill = new THREE.DirectionalLight(0xe1e7e5, 0.95);
+   fill.position.set(1, 5, 10);
+@@ -382,7 +385,7 @@
+   window.sceneStats = () => ({
+     profile, onBattery, resolution: settings.resolution,
+     framebuffer: [target.width, target.height], samples: target.samples,
+-    shadowSize: settings.shadowSize,
++    shadowSize: key.shadow.mapSize.x,
+     shadowHz: Number.isFinite(settings.shadowHz) ? settings.shadowHz : "per-frame",
+     renderedFrames, shadowFrames, simulationTime: time, frameTiming: frameMetrics.stats(),
+       pigmentAsset: photoPigmentStatus(), habitat: photoHabitat.stats(), leafAsset: leafMaterialStatus(),
+--- preview/bronze-gradient-guppy-v29-r14/scenes/riverscape/src/photo-material.js	2026-09-29 13:51:00
++++ preview/bronze-gradient-guppy-v29-r15/scenes/riverscape/src/photo-material.js	2026-09-29 14:17:03
+@@ -8,8 +8,12 @@
+ const readyUniform = {value: 0};
+ let finishLoading;
+ const loading = new Promise(resolve => {finishLoading = resolve;});
++// r15: the two plates only added a 10% luminance grain to the skin. They are no longer
++// loaded, which saves their decode and texture memory; the shader already draws the
++// same skin, palette and scales without them (the former asset-failure path).
++const PIGMENT_PLATES_ENABLED = false;
+ export function loadPhotoPigment() {
+-  if (typeof document === "undefined") return Promise.resolve(false);
++  if (typeof document === "undefined" || !PIGMENT_PLATES_ENABLED) return Promise.resolve(false);
+   pigmentPlate();
+   if (!blueLoading) blueLoading = new THREE.TextureLoader().loadAsync(
+     new URL('../assets/blue-grass-material-v9.png', import.meta.url).href,
+@@ -24,9 +28,9 @@
+   return Promise.all([loading, blueLoading]);
+ }
+ let loadError = null;
+-export function photoPigmentStatus() { return {loaded: readyUniform.value===1,blueLoaded:blueReady.value===1,error:loadError,source:"Two AI-generated RGBA pigment plates"}; }
++export function photoPigmentStatus() { return {loaded: readyUniform.value===1,blueLoaded:blueReady.value===1,error:loadError,enabled:PIGMENT_PLATES_ENABLED,source:PIGMENT_PLATES_ENABLED?"Two AI-generated RGBA pigment plates":"Plates skipped in r15 lightweight build; procedural skin only"}; }
+ function pigmentPlate() {
+-  if (plate || typeof document === 'undefined') return plate || null;
++  if (plate || typeof document === 'undefined' || !PIGMENT_PLATES_ENABLED) return plate || null;
+   plate = new THREE.TextureLoader().load(new URL('../assets/red-mosaic-material-v8.png', import.meta.url).href, () => {readyUniform.value=1;finishLoading(true);}, undefined, () => {loadError='load-failed';finishLoading(false);});
+   plate.colorSpace = THREE.SRGBColorSpace;
+   plate.minFilter = THREE.LinearMipmapLinearFilter;

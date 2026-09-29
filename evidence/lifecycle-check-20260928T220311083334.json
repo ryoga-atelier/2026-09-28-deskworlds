@@ -1,0 +1,196 @@
+{
+  "checked_at": "2026-09-28T22:03:11.082991+09:00",
+  "checks": {
+    "login_registration": {
+      "status": "observed",
+      "detail": "Dedicated LaunchAgent and RunAtLoad; registration alone is not login proof."
+    },
+    "startup_rendering": {
+      "status": "pending",
+      "detail": "At least one display advances real frames and all animation clocks."
+    },
+    "native_menu": {
+      "status": "pending",
+      "detail": "Native menu delegate event; not a browser control."
+    },
+    "native_feed": {
+      "status": "pending",
+      "detail": "Native Feed event plus actual food counter; feeding appearance still requires observation."
+    },
+    "native_pause_resume": {
+      "status": "pending",
+      "detail": "At least 5 seconds frozen, followed by actual native Resume and advancing frames."
+    },
+    "native_quit": {
+      "status": "pending",
+      "detail": "Native Quit event followed by application termination."
+    },
+    "system_sleep_wake": {
+      "status": "pending",
+      "detail": "Matched OS system sleep/wake plus subsequent animation; lock/display sleep alone cannot pass."
+    },
+    "relogin_autostart": {
+      "status": "pending",
+      "detail": "New GUI audit session, registered agent process, actual launch rendering, and matching saved settings."
+    },
+    "dock": {
+      "status": "pending",
+      "detail": "Requires user observation; native app logs cannot prove this."
+    },
+    "desktop_drag": {
+      "status": "pending",
+      "detail": "Requires user observation; native app logs cannot prove this."
+    },
+    "visual_after_wake": {
+      "status": "pending",
+      "detail": "Requires user observation; native app logs cannot prove this."
+    },
+    "visual_after_login": {
+      "status": "pending",
+      "detail": "Requires user observation; native app logs cannot prove this."
+    }
+  },
+  "baseline_asid": "100025",
+  "current_asid": "100025",
+  "lifecycle_events": [
+    {
+      "at": "2026-09-28T11:08:49Z",
+      "awake": true,
+      "event": "launch",
+      "eventID": "4FED5551-FF43-40B1-B1EE-EFF20A7AD9F7",
+      "menuVisible": true,
+      "paused": false,
+      "pid": 59415,
+      "requestedRate": 60,
+      "uptime": 159464.10291004166,
+      "world": "riverscape",
+      "log_pid": "59415"
+    },
+    {
+      "at": "2026-09-28T11:33:17Z",
+      "awake": true,
+      "event": "launch",
+      "eventID": "EAFD3025-8AA4-47F0-8BFF-032E8BA66C3B",
+      "menuVisible": true,
+      "paused": false,
+      "pid": 71251,
+      "requestedRate": 60,
+      "uptime": 160931.750482875,
+      "world": "riverscape",
+      "log_pid": "71251"
+    },
+    {
+      "at": "2026-09-28T11:52:34Z",
+      "awake": true,
+      "event": "launch",
+      "eventID": "4E119B17-946B-4AA1-844C-87EEEF2407D2",
+      "menuVisible": true,
+      "paused": true,
+      "pid": 90995,
+      "requestedRate": 0,
+      "uptime": 162088.55688108335,
+      "world": "riverscape",
+      "log_pid": "90995"
+    },
+    {
+      "at": "2026-09-28T11:54:14Z",
+      "awake": true,
+      "event": "launch",
+      "eventID": "C793BCF1-AACC-4B35-A95E-A5CBEF80A4A8",
+      "menuVisible": true,
+      "paused": false,
+      "pid": 91484,
+      "requestedRate": 60,
+      "uptime": 162189.12590470834,
+      "world": "riverscape",
+      "log_pid": "91484"
+    },
+    {
+      "at": "2026-09-28T11:55:06Z",
+      "awake": true,
+      "event": "launch",
+      "eventID": "9A92E20C-D506-4F7E-B647-F7131FAD5AC0",
+      "menuVisible": true,
+      "paused": false,
+      "pid": 91708,
+      "requestedRate": 60,
+      "uptime": 162241.30318358334,
+      "world": "riverscape",
+      "log_pid": "91708"
+    },
+    {
+      "at": "2026-09-28T11:58:59Z",
+      "awake": true,
+      "event": "launch",
+      "eventID": "ECADCDEA-0F5C-4B1F-B5B9-AE28418CCDDF",
+      "menuVisible": true,
+      "paused": false,
+      "pid": 95603,
+      "requestedRate": 60,
+      "uptime": 162473.59176258335,
+      "world": "riverscape",
+      "log_pid": "95603"
+    },
+    {
+      "at": "2026-09-28T12:05:04Z",
+      "awake": true,
+      "event": "launch",
+      "eventID": "34E191DE-272A-42F0-B256-C0D0F8A3F8FE",
+      "menuVisible": true,
+      "paused": true,
+      "pid": 1814,
+      "requestedRate": 0,
+      "uptime": 162839.04236320834,
+      "world": "riverscape",
+      "log_pid": "1814"
+    },
+    {
+      "at": "2026-09-28T12:06:45Z",
+      "awake": true,
+      "event": "launch",
+      "eventID": "32ED0E89-C68B-49A0-8194-3DA2218776F9",
+      "menuVisible": true,
+      "paused": false,
+      "pid": 5090,
+      "requestedRate": 60,
+      "uptime": 162939.59579245833,
+      "world": "riverscape",
+      "log_pid": "5090"
+    },
+    {
+      "at": "2026-09-28T13:02:48Z",
+      "awake": true,
+      "event": "launch",
+      "eventID": "144F7A42-008F-4362-A2E4-DCB9C0192D2B",
+      "menuVisible": true,
+      "paused": false,
+      "pid": 67186,
+      "requestedRate": 60,
+      "uptime": 166303.39764558335,
+      "world": "riverscape",
+      "log_pid": "67186"
+    }
+  ],
+  "page_samples": 319,
+  "current": {
+    "at": "2026-09-28T22:03:11.082991+09:00",
+    "job": {
+      "state": "running",
+      "pid": "67186",
+      "asid": "100025",
+      "runs": "1",
+      "program": "/Users/ryoga-atelier/Applications/Deskworlds.app/Contents/MacOS/Deskworlds",
+      "loaded": true,
+      "run_at_load": true,
+      "agent_program": "/Users/ryoga-atelier/Applications/Deskworlds.app/Contents/MacOS/Deskworlds",
+      "expected_program": "/Users/ryoga-atelier/Applications/Deskworlds.app/Contents/MacOS/Deskworlds",
+      "app_pids": [
+        "67186"
+      ]
+    },
+    "preferences": {
+      "world": "riverscape",
+      "paused": "0"
+    }
+  }
+}

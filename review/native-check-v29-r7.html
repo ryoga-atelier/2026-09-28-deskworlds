@@ -1,0 +1,21 @@
+<!doctype html><meta charset="utf-8"><title>v29 r7 ネイティブ描画の影切り分け</title>
+<style>body{background:#172c36;color:white;font:16px system-ui}button{font:inherit;padding:10px;margin:6px}iframe{width:1512px;height:982px;transform:scale(.27);transform-origin:top left;border:0}.frame{height:275px}output{display:block}</style>
+<p>検査用コピー。ヒレ表示あり／なしを同じ姿勢で保存。アプリ本体は変更しません。</p><button id="capture">ヒレあり・なしを保存</button><output id="status">準備待ち</output><div class="frame"><iframe src="/preview/native-check-v29-r7/scenes/riverscape/wallpaper.html?still=1&quality=balanced"></iframe></div>
+<script>
+const frame=document.querySelector('iframe');
+const status=document.querySelector('output');
+frame.onload=()=>status.textContent='読み込み済み';
+document.querySelector('button').onclick=async()=>{
+try{
+const stamp=new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d+Z/,'Z');
+const result=[];
+for(const shadows of [true,false]){
+const blob=await frame.contentWindow.reviewCapture(shadows);
+const name=`natural-v18-tank-v29-r7-clamped-fin-${shadows?'fins-visible':'fins-hidden'}-${stamp}.png`;
+const r=await fetch('/capture/'+name,{method:'POST',body:blob});
+if(!r.ok)throw Error('保存失敗 '+r.status);result.push(name);
+}
+status.textContent=result.join(' / ');
+}catch(e){status.textContent=e.message;}
+};
+</script>

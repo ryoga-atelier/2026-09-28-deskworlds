@@ -1,0 +1,61 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><title>グッピー v6 → v7：代表個体の比較</title>
+<style>body{margin:0;background:#152722;color:#ebeee8;font:14px system-ui}header{padding:14px 20px}button,select{font:inherit;background:#29433b;border:1px solid #71867b;color:inherit;padding:8px 12px;border-radius:6px;margin:8px 6px 0 0}canvas{display:block;width:1200px;max-width:100%;height:auto}output{display:block;margin-top:10px}</style>
+<header>左：現行 v6　／　右：候補 v7<br>
+<select aria-label="観察方法" id="mode"><option value="side">横向き・同じ姿勢</option><option value="oblique">斜め・同じ姿勢</option><option value="front">正面・同じ姿勢</option><option value="turn">ゆっくり一周（形状確認用）</option><option value="swim">実際の泳ぎ・1匹を追尾</option></select>
+<button id="pause">停止</button><button id="record">25秒の動きを保存</button><button id="photo">比較画像を保存</button><output id="status">読み込み中</output></header><canvas id="scene"></canvas>
+<script type="importmap">{"imports":{"three":"/preview/natural-guppy-v7-final/vendor/three.module.js"}}</script>
+<script type="module">
+import * as THREE from 'three';
+const renderer=new THREE.WebGLRenderer({canvas:document.querySelector('canvas'),antialias:true,preserveDrawingBuffer:true});
+renderer.setSize(1200,500,false);renderer.setPixelRatio(1.5);renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.10;
+const panels=[];
+for(const version of ['clearwater-guppy-v6-crystal-water-r2','natural-guppy-v7-final']) {
+ const {createFishSchool}=await import(`/preview/${version}/scenes/riverscape/src/fish.js`);
+ const {waterTime}=await import(`/preview/${version}/scenes/riverscape/src/water.js`);
+ const scene=new THREE.Scene();scene.background=new THREE.Color('#465b55');
+ scene.add(new THREE.HemisphereLight(0xe2eeeb,0x77705e,.65));
+ for(const [color,power,pos] of [[0xfffaf1,2.8,[-3,11.5,4.4]],[0xdce9ef,.85,[1,5,10]],[0xe4efe1,.55,[2,10,-4]]]){const light=new THREE.DirectionalLight(color,power);light.position.set(...pos);scene.add(light);}
+ const envScene=new THREE.Scene();envScene.background=new THREE.Color('#4f5b59');
+ const strip=new THREE.Mesh(new THREE.PlaneGeometry(16,4),new THREE.MeshBasicMaterial({color:new THREE.Color(3.7,3.8,3.4),side:THREE.DoubleSide}));strip.position.set(0,6,1);strip.rotation.x=Math.PI/2;envScene.add(strip);
+ const pm=new THREE.PMREMGenerator(renderer);scene.environment=pm.fromScene(envScene,.025,.1,30).texture;scene.environmentIntensity=.55;pm.dispose();
+ const camera=new THREE.PerspectiveCamera(25.8,600/500,.1,60);camera.position.set(0,4.15,5);camera.lookAt(0,4.15,0);
+ const school=createFishSchool(scene);const bodies=scene.getObjectByName('Silver-blue freshwater fish'),fins=scene.getObjectByName('Attached translucent fish fins');bodies.count=fins.count=1;
+ bodies.geometry.getAttribute('aGuppyVariant').setX(0,1);
+ bodies.geometry.getAttribute('aGuppySeed').setX(0,0.54);
+ panels.push({scene,camera,school,bodies,fins,waterTime});
+}
+const obj=new THREE.Object3D();let t=0,last=0,paused=false,mode='side',poseStart=0,recorder;
+const status=document.querySelector('#status');status.textContent='同じ光源・解像度・倍率。形状確認時は姿勢を固定し、泳ぎの確認時は実際の挙動を追尾。';
+document.querySelector('#mode').onchange=e=>{mode=e.target.value;poseStart=t;};
+document.querySelector('#pause').onclick=e=>{paused=!paused;e.target.textContent=paused?'再開':'停止';};
+async function save(blob,suffix){const stamp=new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d+Z/,'Z'); const name=`natural-v7-${mode}-${stamp}-${suffix}`;const result=await fetch('/capture/'+name,{method:'POST',body:blob});status.textContent=result.ok?`保存済み：evidence/${name}`:'保存失敗';}
+document.querySelector('#photo').onclick=()=>renderer.domElement.toBlob(blob=>save(blob,'comparison.png'));
+document.querySelector('#record').onclick=()=>{
+ if(recorder?.state==='recording')return; const chunks=[],motion=[];let nextSample=0; const started=performance.now(); const sampleTimer=setInterval(()=>motion.push({atMs:performance.now()-started,panels:panels.map(p=>{const f=p.school.fish[0];return {position:f.position.toArray(),heading:f.heading.toArray(),mode:f.mode,speed:f.velocity.length(),effort:f.effort,bend:f.bend,finPhase:f.finPhase,telemetry:p.school.getTelemetry()};})}),100);
+ recorder=new MediaRecorder(renderer.domElement.captureStream(30),{mimeType:'video/webm;codecs=vp9',videoBitsPerSecond:8000000});
+ recorder.ondataavailable=e=>chunks.push(e.data);recorder.onstop=()=>{clearInterval(sampleTimer);save(new Blob(chunks,{type:'video/webm'}),'comparison.webm');save(new Blob([JSON.stringify({mode,motion},null,2)],{type:'application/json'}),'motion.json');};recorder.start();
+ status.textContent='25秒録画中…';setTimeout(()=>recorder.stop(),25000);
+};
+function frame(now){requestAnimationFrame(frame);if(now-last<1000/30-1)return;const dt=last?Math.min(.05,(now-last)/1000):1/30;last=now;if(!paused)t+=dt;
+ renderer.setScissorTest(true);
+ panels.forEach((p,index)=>{
+  if(!paused)p.school.update(dt,t,null);p.waterTime.value=t;
+  if(mode==='swim'){
+   p.bodies.count=p.fins.count=1;
+   const f=p.school.fish[0];p.camera.position.copy(f.position).add(new THREE.Vector3(0,.3,5));p.camera.lookAt(f.position);
+  }else{
+   p.bodies.count=p.fins.count=1;p.camera.position.set(0,4.15,5);p.camera.lookAt(0,4.15,0);
+   for(let i=0;i<1;i++){
+    p.bodies.geometry.getAttribute('aSwim').setXYZW(i,0,0,0,0);
+    p.bodies.geometry.getAttribute('aFinPhase').setX(i,0.75);
+    p.bodies.geometry.getAttribute('aSwim').needsUpdate=true;
+    p.bodies.geometry.getAttribute('aFinPhase').needsUpdate=true;
+    obj.position.set(0,4.15,0);obj.rotation.set(0,mode==='front'?-Math.PI/2:mode==='oblique'?.72:mode==='turn'?(t-poseStart)*.40:0,0);obj.scale.setScalar(1);obj.updateMatrix();p.bodies.setMatrixAt(i,obj.matrix);p.fins.setMatrixAt(i,obj.matrix);
+   }
+   p.bodies.instanceMatrix.needsUpdate=p.fins.instanceMatrix.needsUpdate=true;
+  }
+  renderer.setViewport(index*600,0,600,500);renderer.setScissor(index*600,0,600,500);renderer.render(p.scene,p.camera);
+ });
+}
+requestAnimationFrame(frame);
+</script></html>

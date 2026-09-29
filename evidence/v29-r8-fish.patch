@@ -1,0 +1,117 @@
+--- r7/fish-anatomy-base.js
++++ r8/fish-anatomy-base.js
+@@ -48,15 +48,14 @@
+ const BODY_ROWS = 84;
+ const BODY_COLUMNS = 62;
+ 
+-// The eyeball is a flattened lens seated in the orbit: 39% of head length across but
+-// only a fifth of that thick, as a small characin's eye is. The body surface takes on
+-// the eyeball's shape inside the orbit, so the eye can never part from the head.
++// A small flattened eye, reduced together with its body socket and shader mask.
++// All three eye patches use the same lens, so the iris never floats above the face.
+ const EYE = {
+   x: 0.280,
+   y: 0.015,
+-  radiusX: 0.0240,
+-  radiusY: 0.0215,
+-  bulge: 0.0030,
++  radiusX: 0.0204,
++  radiusY: 0.018275,
++  bulge: 0.00255,
+   inset: 0.0270,
+   pupil: 0.60,
+   iris: 0.93,
+@@ -66,10 +65,10 @@
+ // Posterior margin of the gill cover: bowed back at mid-height, sloping forward at the
+ // nape and the isthmus. The opercle's free edge overlaps the shoulder, so the surface
+ // carries a raised bony edge and then a groove.
+-const OPERCLE = { x: 0.196, bow: 0.03, y: -0.004, span: 0.078 };
++const OPERCLE = { x: 0.251, bow: 0.044, y: -0.024, span: 0.045 };
+ 
+ // Terminal, slightly upturned mouth: the cleft rises from the corner to the snout tip.
+-const MOUTH = { cornerX: 0.322, cornerY: -0.004, tipX: 0.3495, tipY: 0.019 };
++const MOUTH = { cornerX: 0.324, cornerY: 0.002, tipX: 0.3495, tipY: 0.026 };
+ 
+ // Fin ray counts from the species' fin formulae: dorsal ii,9; anal iii,20;
+ // pectoral i,11; pelvic i,7; caudal 19 principal rays. The adipose fin has none.
+@@ -216,8 +215,9 @@
+   let z = section.width * waist * cheek;
+ 
+   const margin = opercleX(y);
+-  z += 0.0006 * Math.exp(-(((x - margin - 0.009) / 0.008) ** 2));
+-  z -= 0.0009 * Math.exp(-(((x - margin) / 0.005) ** 2));
++  const underEye = 1 - THREE.MathUtils.smoothstep(y, 0.012, 0.048);
++  z += 0.0007 * underEye * Math.exp(-(((x - margin - 0.007) / 0.007) ** 2));
++  z -= 0.0012 * underEye * Math.exp(-(((x - margin) / 0.0045) ** 2));
+ 
+   const cleft = Math.exp(-(((y - mouthCleftY(x)) / 0.0045) ** 2));
+   const gape = THREE.MathUtils.smoothstep(x, MOUTH.cornerX - 0.012, MOUTH.cornerX + 0.006);
+--- r7/photo-material.js
++++ r8/photo-material.js
+@@ -83,21 +83,25 @@
+         *sin(vSkinPoint.y*57.-vGuppySeed*5.);
+       return (broad-.5)*.15+fine*.012;
+     }
+-    // The pale abdomen follows the opercular seam instead of ending in a perfect oval.
+-    // A second, much shallower interruption follows the anal-fin insertion.
++    // Two anatomical cut-ins leave pale tissue concentrated in the central belly:
++    // the sickle-shaped opercular edge in front and rounded anal pigment behind.
+     float guppyGillNotch(float x,float y) {
+       float opercle=fishOpercleX(y);
+-      return exp(-pow((x-(opercle+.005))/.017,2.)
+-        -pow((y+.003)/.018,2.));
++      return exp(-pow((x-(opercle+.008))/.022,2.)
++        -pow((y+.024)/.031,2.));
++    }
++    float guppyGillCleft(float x,float y) {
++      float underEye=smoothstep(-.068,-.051,y)*(1.-smoothstep(.005,.030,y));
++      return exp(-pow((x-fishOpercleX(y))/.0035,2.))*underEye;
+     }
+     float guppyAnalRootIndent(float x,float y) {
+-      return exp(-pow((x-.004)/.019,2.)
+-        -pow((y+.060)/.012,2.));
++      return exp(-pow((x-.010)/.034,2.)
++        -pow((y+.042)/.033,2.));
+     }
+     float guppyBellyProfile(float x,float y) {
+       vec2 bellyCoord=(vec2(x,y)-vec2(.105,-.037))/vec2(.133,.064);
+       float oval=dot(bellyCoord,bellyCoord);
+-      return oval+.92*guppyGillNotch(x,y)+.55*guppyAnalRootIndent(x,y);
++      return oval+1.08*guppyGillNotch(x,y)+2.30*guppyAnalRootIndent(x,y);
+     }
+     // Nested coverage: the silver outer tissue must extend beyond the ivory
+     // centre. Reversing these masks made the old outer-minus-inner rim vanish.
+@@ -114,12 +118,10 @@
+       return band*smoothstep(-.043,-.005,y);
+     }
+     float guppyAnalPigment(float x,float y) {
+-      // The reference's small dark patch sits just above the anal insertion,
+-      // not below the body, where the previous tiny shadow was mostly clipped.
+-      float width=mix(.019,.008,smoothstep(-.068,-.026,y));
+-      float tilted=x-(.001+.18*(y+.045));
+-      float upper=exp(-pow(tilted/width,2.)-pow((y+.048)/.027,2.));
+-      return max(upper,.92*guppyAnalRootIndent(x,y));
++      // A rounded core, shared with the belly cut-out, joins the fin insertion.
++      // Keeping it local preserves the pearl centre rather than shading all the belly.
++      float attachment=exp(-pow(x/.025,2.)-pow((y+.067)/.015,2.));
++      return max(guppyAnalRootIndent(x,y),.70*attachment);
+     }
+     float guppyFinFold(float u,float reach) {
+       // Derivative helper pixels can lie outside the triangle at the fin root.
+@@ -231,7 +233,7 @@
+       skin=mix(skin,gillTint,gill*.66);
+       float cheek=exp(-pow((x-.225)/.033,2.)-pow((b-.47)/.19,2.));
+       skin=mix(skin,vec3(.52,.50,.43),cheek*.34);
+-      // A compact charcoal/olive patch at the pointed rear of the pale belly.
++      // A rounded charcoal/olive patch curves into the rear of the pale belly.
+       // It is pigment beneath the scales, not an all-over lighting shadow.
+       float bellyRoot=guppyAnalPigment(x,vSkinPoint.y);
+       float rootGrain=gMottle(vec2(x*92.,vSkinPoint.y*145.)+seed+23.);
+@@ -243,6 +245,7 @@
+       skin=mix(skin,vec3(.17,.105,.075),guppyHeadPigment()*.40);
+       float margin=x-fishOpercleX(vSkinPoint.y);
+       skin*=1.-.12*exp(-pow(margin/.0028,2.))*(1.-smoothstep(.77,.98,b));
++      skin=mix(skin,vec3(.14,.10,.080),guppyGillCleft(x,vSkinPoint.y)*.42);
+       skin+=vec3(.031,.027,.023)*exp(-pow((margin-.007)/.0045,2.));
+       // Thin brown/lilac arc lines, with very little height: skin rather than armour.
+       float mask=fishScaleMask()*guppySurfaceDetail;

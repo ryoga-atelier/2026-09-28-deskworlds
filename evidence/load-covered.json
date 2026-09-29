@@ -1,0 +1,38 @@
+{
+  "label": "covered",
+  "at": "2026-09-28T01:32:07.175945+09:00",
+  "elapsed_seconds": 12.036149999999907,
+  "processes": [
+    {
+      "pid": 97432,
+      "cpu_seconds": 10.78,
+      "rss_mib": 535.90625,
+      "command": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+      "cpu_percent_one_core": 0.0
+    },
+    {
+      "pid": 97426,
+      "cpu_seconds": 6.84,
+      "rss_mib": 92.640625,
+      "command": "/Users/ryoga-atelier/Applications/Deskworlds.app/Contents/MacOS/Deskworlds",
+      "cpu_percent_one_core": 0.08308304565828661
+    },
+    {
+      "pid": 97430,
+      "cpu_seconds": 7.55,
+      "rss_mib": 141.78125,
+      "command": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU",
+      "cpu_percent_one_core": 0.0
+    },
+    {
+      "pid": 97431,
+      "cpu_seconds": 0.02,
+      "rss_mib": 12.203125,
+      "command": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking",
+      "cpu_percent_one_core": 0.0
+    }
+  ],
+  "total_cpu_percent_one_core": 0.08308304565828661,
+  "sum_rss_mib": 782.53125,
+  "notes": "RSS sum may double-count shared memory; CPU is total CPU time over elapsed time, not GPU utilization or battery life."
+}

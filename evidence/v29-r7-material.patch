@@ -1,0 +1,120 @@
+--- r6/photo-material.js
++++ r7/photo-material.js
+@@ -99,6 +99,33 @@
+       float oval=dot(bellyCoord,bellyCoord);
+       return oval+.92*guppyGillNotch(x,y)+.55*guppyAnalRootIndent(x,y);
+     }
++    // Nested coverage: the silver outer tissue must extend beyond the ivory
++    // centre. Reversing these masks made the old outer-minus-inner rim vanish.
++    float guppyBellyOuter(float radius) {
++      return 1.-smoothstep(1.04,1.28,radius);
++    }
++    float guppyBellyInner(float radius) {
++      return 1.-smoothstep(.72,1.03,radius);
++    }
++    float guppyBellySeam(float radius,float y) {
++      float band=smoothstep(.98,1.07,radius)*(1.-smoothstep(1.17,1.32,radius));
++      // The upper tissue boundary casts a small shadow; the underside is open
++      // and pale, rather than a black outline all around the abdomen.
++      return band*smoothstep(-.043,-.005,y);
++    }
++    float guppyAnalPigment(float x,float y) {
++      // The reference's small dark patch sits just above the anal insertion,
++      // not below the body, where the previous tiny shadow was mostly clipped.
++      float width=mix(.019,.008,smoothstep(-.068,-.026,y));
++      float tilted=x-(.001+.18*(y+.045));
++      float upper=exp(-pow(tilted/width,2.)-pow((y+.048)/.027,2.));
++      return max(upper,.92*guppyAnalRootIndent(x,y));
++    }
++    float guppyFinFold(float u,float reach) {
++      // Derivative helper pixels can lie outside the triangle at the fin root.
++      // Clamp before the fractional power, or their NaNs become black speckles.
++      return sin(u*18.*PI2)*pow(max(reach,0.),1.5)*.00024;
++    }
+     float guppyPatternAmount() { return smoothstep(.20,.70,fract(vGuppySeed*11.31)); }
+     float guppyRays() {
+       float count=vFishPart<1.5?18.:(vFishPart<2.5?9.:vFishPart<3.5?8.:7.);
+@@ -178,31 +205,39 @@
+       skin=guppyLongitudinalTone(skin,x);
+       // A softly lit, slightly lighter head transitions into the bronze back.
+       skin=mix(skin,vec3(.57,.46,.34),smoothstep(.20,.32,x)*.24);
+-      // Three soft tissue layers: a warm outer seam, a pearl-silver belly, and
+-      // a restrained convex highlight. The gill and anal-fin insertions interrupt
+-      // the oval so it reads as anatomy instead of a clean painted circle.
++      // Two visible tissue layers: warm silver outside and pale ivory inside.
++      // The upper seam and fin/gill insertions interrupt their shared contour.
+       float bellyRadius=guppyBellyProfile(x,vSkinPoint.y)+guppyBellyEdge();
+-      float bellyOuter=1.-smoothstep(.63,.97,bellyRadius);
+-      float belly=1.-smoothstep(.78,1.10,bellyRadius);
++      float bellyOuter=guppyBellyOuter(bellyRadius);
++      float belly=guppyBellyInner(bellyRadius);
+       float bellyRim=clamp(bellyOuter-belly,0.,1.);
+-      skin=mix(skin,vec3(.50,.42,.36),bellyRim*.42);
+-      skin=mix(skin,vec3(.72,.72,.67),belly*.88);
++      skin=mix(skin,vec3(.52,.51,.44),bellyRim*.82);
++      skin=mix(skin,vec3(.72,.72,.67),belly*.90);
++      float bellySeam=guppyBellySeam(bellyRadius,vSkinPoint.y);
++      skin=mix(skin,vec3(.075,.070,.060),bellySeam*.72);
+       float bellyHighlight=belly*exp(-pow((x-.105)/.074,2.)
+         -pow((vSkinPoint.y+.052)/.022,2.));
+       skin=mix(skin,vec3(.80,.79,.74),bellyHighlight*.20);
+-      // A localized, muted root tone echoes the small anal-fin insertion shadow.
+-      float bellyRoot=guppyAnalRootIndent(x,vSkinPoint.y);
+-      float rootTexture=.28+.18*gMottle(vec2(x*52.,vSkinPoint.y*118.)+seed+23.);
+-      skin=mix(skin,vec3(.42,.36,.31),bellyRoot*rootTexture*.38);
+       float pearl=exp(-pow((x-.105)/.083,2.)-pow((b-.68)/.15,2.));
+       skin=mix(skin,vec3(.51,.57,.59),pearl*.28);
+       float gold=exp(-pow((x-.016)/.026,2.)-pow((b-.65)/.17,2.));
+       skin=mix(skin,vec3(.48,.30,.13),gold*.55);
+-      float gill=exp(-pow((x-.196)/.030,2.)-pow((b-.63)/.20,2.));
+-      skin=mix(skin,vec3(.56,.285,.21),gill*.28);
++      // The operculum has rose/sage-silver tissue of its own, distinct from the
++      // dorsal bronze. Its rear edge stays anchored to the gill-cover seam.
++      float gill=exp(-pow((x-(fishOpercleX(vSkinPoint.y)+.031))/.033,2.)
++        -pow((vSkinPoint.y+.006)/.038,2.));
++      float gillIridescence=smoothstep(-.015,.027,vSkinPoint.y);
++      vec3 gillTint=mix(vec3(.60,.34,.30),vec3(.40,.54,.46),gillIridescence);
++      skin=mix(skin,gillTint,gill*.66);
+       float cheek=exp(-pow((x-.225)/.033,2.)-pow((b-.47)/.19,2.));
+       skin=mix(skin,vec3(.52,.50,.43),cheek*.34);
+-      // Dark tissue is limited to the caudal attachment and the orbital edge.
++      // A compact charcoal/olive patch at the pointed rear of the pale belly.
++      // It is pigment beneath the scales, not an all-over lighting shadow.
++      float bellyRoot=guppyAnalPigment(x,vSkinPoint.y);
++      float rootGrain=gMottle(vec2(x*92.,vSkinPoint.y*145.)+seed+23.);
++      float rootTexture=.80+.20*rootGrain;
++      skin=mix(skin,vec3(.041,.038,.031),smoothstep(.10,.69,bellyRoot+(rootGrain-.5)*.15)*rootTexture*.93);
++      // The other dark tissue stays at the caudal attachment and orbital edge.
+       float base=1.-smoothstep(-.284,-.245,x);
+       skin=mix(skin,vec3(.035,.028,.030),base*(.82+.06*guppyDarkRoot()));
+       skin=mix(skin,vec3(.17,.105,.075),guppyHeadPigment()*.40);
+@@ -214,7 +249,7 @@
+       float grain=fishHash(floor(fishScaleGrid())+seed);
+       skin*=1.+(grain-.5)*.20*mask;
+       vec3 scaleTint=mix(vec3(.43,.34,.26),vec3(.61,.51,.40),grain);
+-      skin=mix(skin,scaleTint,mask*.16*(1.-.62*belly));
++      skin=mix(skin,scaleTint,mask*.16*(1.-.62*belly)*(1.-.85*bellyRoot));
+       float line=guppyScaleEdge()*guppySurfaceDetail*(1.-.24*belly);
+       // Scale margins inherit the local pigment and read as muted tissue, not
+       // as identical black-brown outlines stamped over every colour family.
+@@ -241,7 +276,10 @@
+   `).replace('#include <alphamap_fragment>', /* glsl */ `
+     if(vFishPart<.5) {
+       diffuseColor.rgb=guppySkin();
+-      gFishThrough*=.65*(1.-.80*max(guppyBackPigment(),guppyHeadPigment()));
++      float bellyRadius=guppyBellyProfile(vSkinPoint.x,vSkinPoint.y)+guppyBellyEdge();
++      float localInk=max(guppyAnalPigment(vSkinPoint.x,vSkinPoint.y),
++        guppyBellySeam(bellyRadius,vSkinPoint.y)*.72);
++      gFishThrough*=.65*(1.-.80*max(max(guppyBackPigment(),guppyHeadPigment()),localInk));
+     } else if(vFishPart<6.5) {
+       float reach=clamp(vFishUV.y,0.,1.);
+       float ribs=guppyRays();
+@@ -297,7 +335,7 @@
+       // A double-sided sheet gets the normal of its actual deformed surface.
+       // dFdx/dFdy are screen-space, so their cross product already faces the eye.
+       normal=normalize(cross(dFdx(vViewPosition),dFdy(vViewPosition)));
+-      float fold=sin(vFishUV.x*18.*PI2)*pow(vFishUV.y,1.5)*.00024;
++      float fold=guppyFinFold(vFishUV.x,vFishUV.y);
+       vec3 dx=dFdx(-vViewPosition),dy=dFdy(-vViewPosition);
+       vec3 rx=cross(dy,normal),ry=cross(normal,dx);
+       float det=dot(dx,rx);

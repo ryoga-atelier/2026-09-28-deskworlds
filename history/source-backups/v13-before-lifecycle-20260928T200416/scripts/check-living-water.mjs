@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import { register } from 'node:module';
+import { resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
+const root=pathToFileURL(resolve(process.argv[2])+'/');
+register(new URL('scenes/riverscape/tests/three-loader.mjs',root));
+const THREE=await import(new URL('vendor/three.module.js',root));
+const {createLivingWater}=await import(new URL('scenes/riverscape/src/living-water.js',root));
+const {groundHeight}=await import(new URL('scenes/riverscape/src/math.js',root));
+const scene=new THREE.Scene(), water=createLivingWater(scene);
+const f={id:0,position:new THREE.Vector3(0,5,0),velocity:new THREE.Vector3(.7,0,0)};
+for(let i=1;i<=600;i++)water.update(1/60,i/60,[f]);
+assert.equal(water.stats().sandEvents,0,'Mid-water movement must not disturb the sand');
+f.position.y=groundHeight(0,0)+.8; f.velocity.set(0,0,0);
+for(let i=601;i<=1200;i++)water.update(1/60,i/60,[f]);
+assert.equal(water.stats().sandEvents,0,'A stationary fish must not emit sand');
+f.velocity.set(.8,0,.1);water.update(1/60,21,[f]);
+assert.equal(water.stats().sandEvents,1);assert.ok(water.stats().activeDust>0);
+const paused=water.stats();water.update(0,100,[f]);assert.deepEqual(water.stats(),paused,'Paused update must not advance particles');
+for(let i=1;i<=1200;i++)water.update(1/30,21+i/30,[f]);
+assert.ok(water.stats().sandEvents>1 && water.stats().sandEvents<40,'Fish cooldown bounds emission');
+assert.ok(water.stats().activeDust<=96);
+for(const object of scene.children){
+ assert.equal(object.material.depthWrite,false);
+ for(const attr of Object.values(object.geometry.attributes))assert.ok(Array.from(attr.array).every(Number.isFinite));
+}
+for(let i=1;i<=240;i++)water.update(1/30,61+i/30,[]);
+assert.equal(water.stats().activeDust,0,'Sediment must settle and vanish after fish leave');
+water.dispose();assert.equal(scene.children.length,0);
+console.log('PASS: near-bed motion triggers sand; stationary/mid-water fish do not; bounded pools, cooldown, finite attributes, zero-dt freeze, settling and disposal');

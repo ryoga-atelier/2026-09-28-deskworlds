@@ -1,0 +1,54 @@
+{
+  "files": [
+    {
+      "file": "evidence/natural-v16-tank-after-20260928T131113Z.webm",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 1500,
+            "height": 975,
+            "r_frame_rate": "30/1"
+          }
+        ],
+        "format": {
+          "duration": "64.958710",
+          "size": "52158315"
+        }
+      }
+    },
+    {
+      "file": "evidence/natural-v16-turn-atlas-turn-1-20260928T131218Z.webm",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 1280,
+            "height": 1280,
+            "r_frame_rate": "120/1"
+          }
+        ],
+        "format": {
+          "duration": "64.966269",
+          "size": "23933788"
+        }
+      }
+    }
+  ],
+  "browser_playback": {
+    "tank": {
+      "ended": true,
+      "duration": 64.95871,
+      "error": null
+    },
+    "atlas": {
+      "ended": true,
+      "duration": 64.966269,
+      "error": null
+    }
+  }
+}

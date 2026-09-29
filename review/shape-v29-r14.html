@@ -1,0 +1,66 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><title>写真参照グッピー v29 r14｜指示と写真の総点検で残った6か所を調整</title>
+<style>body{margin:0;background:#1c303c;color:#eef6fa;font:15px system-ui}header{padding:14px 20px}button,select{font:inherit;padding:8px;margin:4px;background:#375362;color:inherit;border:1px solid #93a9b5;border-radius:5px}canvas{display:block;width:1536px;max-width:100%;height:auto}.labels{display:grid;grid-template-columns:repeat(2,1fr);width:1536px;max-width:100%;text-align:center;padding:8px 0}output{display:block;padding:5px}</style>
+<header>左：r13、右：r14。エラの独自色、頬のきらめき、目を小さく見せる虹彩、目元・頭頂・背の稜線の暗い層、鱗の網目を調整しました。
+<select id="variant" aria-label="色"><option value="5">紫・パステルパープル</option><option value="2">シャンパン・ライム</option><option value="6">淡い黄土色</option><option value="0">水色</option><option value="3">青緑</option><option value="4">桃色</option><option value="1">赤・ワインレッド</option><option value="7" selected>コバルトブルー</option></select>
+<select id="mode" aria-label="姿勢"><option value="side">横</option><option value="oblique">斜め</option><option value="head">顔・エラ拡大</option><option value="front">正面</option><option value="back">背面</option><option value="turn">一周</option><option value="swim">泳ぎ・静止・旋回</option><option value="atlas-turn">8色一覧・一周</option><option value="atlas">8色一覧・横</option><option value="atlas-oblique">8色一覧・斜め</option><option value="atlas-front">8色一覧・正面</option><option value="atlas-back">8色一覧・背面</option></select>
+<select id="detail" aria-label="鱗の表面"><option value="1">鱗の表面あり</option><option value="0">微細な反射なし</option></select><button id="photo">比較を保存</button><button id="record">全周65秒を保存</button><button id="fallback">素材なしを確認</button><output id="status">読み込み中</output></header>
+<figure style="margin:8px 20px"><img src="/evidence/user-selected-guppy-reference.png" width="560" style="max-width:100%;height:auto" alt="本人指定のグッピー写真。丸い腹と銀・薄茶・桃色の肌、青く透ける尾"><figcaption>本人指定の写真（中央上の個体を主な観察対象）</figcaption></figure><div class="labels"><span>変更前 r13</span><span>更新 r14：残り6か所</span></div><canvas id="scene"></canvas><p style="padding:10px 20px"><a style="color:#bceaff" href="/GUPPY-CHECKLIST-V29-R14.md">総点検表（22項目）</a></p>
+<script type="importmap">{"imports":{"three":"/preview/clearwater-guppy-v18-r8/vendor/three.module.js"}}</script>
+<script type="module">
+import * as THREE from 'three';
+const canvas=document.querySelector('canvas'),status=document.querySelector('#status');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,preserveDrawingBuffer:true});
+renderer.setPixelRatio(1);renderer.setSize(1536,750,false);renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.06;renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFShadowMap;
+const panels=[];let surfaceDetail=1;let fallback=false,mode='side',variant=7,t=0,last=0,recording=false;
+for(let index=0;index<2;index++) {
+ const version=['bronze-gradient-guppy-v29-r13','bronze-gradient-guppy-v29-r14'][index];
+ const module=await import(`/preview/${version}/scenes/riverscape/src/fish.js`);
+ await (await import(`/preview/${version}/scenes/riverscape/src/photo-material.js`)).loadPhotoPigment();
+ const scene=new THREE.Scene();scene.background=new THREE.Color('#94bed0');
+ const boosted=true;
+ scene.add(new THREE.HemisphereLight(0xe9eeeb,boosted?0x8b8c84:0x64635f,boosted?.64:.42));
+ const key=new THREE.DirectionalLight(0xfffaf3,2.8);key.position.set(-3,11.5,4.4);key.target.position.set(0,1,0);key.castShadow=true;key.shadow.mapSize.set(2048,2048);Object.assign(key.shadow.camera,{left:-12,right:12,top:14,bottom:-10,near:1,far:27});key.shadow.bias=-.00012;key.shadow.normalBias=.018;scene.add(key,key.target);
+ for(const [power,pos] of [[boosted?.95:.50,[1,5,10]],[boosted?.62:.42,[2,10,-4]]]){const light=new THREE.DirectionalLight(0xe1e7e5,power);light.position.set(...pos);scene.add(light);}
+ const environment=new THREE.Scene();environment.background=new THREE.Color('#373e3c');
+ const strip=new THREE.Mesh(new THREE.PlaneGeometry(16,4),new THREE.MeshBasicMaterial({color:new THREE.Color(3.7,3.8,3.4),side:THREE.DoubleSide}));strip.position.set(0,6,1);strip.rotation.x=Math.PI/2;environment.add(strip);
+ const bounce=new THREE.Mesh(new THREE.PlaneGeometry(18,8),new THREE.MeshBasicMaterial({color:new THREE.Color(.25,.31,.30),side:THREE.DoubleSide}));bounce.position.z=8;environment.add(bounce);
+ const pm=new THREE.PMREMGenerator(renderer);scene.environment=pm.fromScene(environment,.025,.1,30).texture;scene.environmentIntensity=.55;pm.dispose();
+ const camera=new THREE.PerspectiveCamera(25.8,(1536/2)/420,.1,60);camera.position.set(0,4.15,3.8);camera.lookAt(0,4.15,0);
+ const school=module.createFishSchool(scene);const bodies=scene.getObjectByName('Silver-blue freshwater fish'),fins=scene.getObjectByName('Attached translucent fish fins');bodies.count=fins.count=1;
+ const shaders=[];for(const mesh of [bodies,fins]){mesh.material.customProgramCacheKey=()=>version+':'+mesh.name; const compile=mesh.material.onBeforeCompile;mesh.material.onBeforeCompile=function(s,...args){compile.call(this,s,...args);shaders.push(s);};}
+ panels.push({scene,camera,school,bodies,fins,shaders,index});
+}
+const pose=new THREE.Object3D();
+const names=['水色','赤・ワインレッド','シャンパン・ライム','青緑','桃色','紫・パステルパープル','淡い黄土色','コバルトブルー'];
+function draw(){
+ const atlas=mode.startsWith('atlas'),height=atlas?1536:750,angle=atlas?mode.split('-')[1]||'side':mode;
+ if(canvas.height!==height)renderer.setSize(1536,height,false);
+ renderer.setScissorTest(true);
+ panels.forEach((p,index)=>{
+  const rows=atlas?8:1,h=height/rows;
+  for(let row=0;row<rows;row++){
+   const id=atlas?row:variant;
+   const old=[0,1,2,3,4,0,2,0][id];
+   p.bodies.geometry.attributes.aGuppyVariant.setX(0,id);p.bodies.geometry.attributes.aGuppyVariant.needsUpdate=true;
+   p.bodies.geometry.attributes.aGuppySeed.setX(0,.54);p.bodies.geometry.attributes.aGuppySeed.needsUpdate=true;
+   const effort=angle==='swim'?(Math.sin(t*.65)>.25?.60:.10):0;
+   p.bodies.geometry.attributes.aSwim.setXYZW(0,angle==='swim'?t*12:0,effort,angle==='swim'?Math.sin(t*.35)*.60:0,angle==='swim'&&effort<.2?.8:0);p.bodies.geometry.attributes.aSwim.needsUpdate=true;
+   p.bodies.geometry.attributes.aFinPhase.setX(0,angle==='swim'?t*15:.75);p.bodies.geometry.attributes.aFinPhase.needsUpdate=true;
+   pose.position.set(0,4.15,0);pose.rotation.set(0,angle==='front'?-Math.PI/2:angle==='back'?Math.PI/2:angle==='oblique'?.72:angle==='turn'?t*.65:angle==='swim'?Math.sin(t*.25)*.80:0,0);pose.scale.setScalar(1);pose.updateMatrix();
+   for(const mesh of [p.bodies,p.fins]){mesh.setMatrixAt(0,pose.matrix);mesh.instanceMatrix.needsUpdate=true;}
+   for(const s of p.shaders){if(s.uniforms.guppyPlateReady)s.uniforms.guppyPlateReady.value=fallback?0:1;if(s.uniforms.guppySurfaceDetail)s.uniforms.guppySurfaceDetail.value=surfaceDetail;}
+   p.camera.aspect=(1536/2)/h;p.camera.position.set(mode==='head'?.245:0,mode==='head'?4.13:4.15,mode==='head'?.58:atlas?2.75:2.55);p.camera.lookAt(mode==='head'?.245:0,mode==='head'?4.13:4.15,0);p.camera.updateProjectionMatrix();
+   renderer.setViewport(index*(1536/2),height-(row+1)*h,(1536/2),h);renderer.setScissor(index*(1536/2),height-(row+1)*h,(1536/2),h);renderer.render(p.scene,p.camera);
+  }
+ });
+}
+function loop(now){requestAnimationFrame(loop);if(now-last<33)return;t+=last?Math.min(.05,(now-last)/1000):0;last=now;draw();}
+document.querySelector('#detail').onchange=e=>{surfaceDetail=Number(e.target.value);};
+document.querySelector('#variant').onchange=e=>{variant=Number(e.target.value);status.textContent=names[variant];};document.querySelector('#mode').onchange=e=>{mode=e.target.value;t=0;};
+document.querySelector('#fallback').onclick=e=>{fallback=!fallback;e.target.textContent=fallback?'素材を戻す':'素材なしを確認';};
+const stamp=()=>new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d+Z/,'Z');
+async function save(blob,name){const r=await fetch('/capture/'+name,{method:'POST',body:blob});if(!r.ok)throw Error('保存失敗');return name;}
+document.querySelector('#photo').onclick=async()=>{draw();const name=`bronze-gradient-v29-${mode==='head'?'side':mode}-${variant}-${fallback?'fallback':'photo'}-detail${surfaceDetail}-${stamp()}`;await save(await new Promise(r=>canvas.toBlob(r)),name+'.png');status.textContent='保存済み '+name+(mode==='head'?'（顔・エラ拡大）':'');};
+document.querySelector('#record').onclick=()=>{if(recording)return;recording=true;mode=mode.startsWith('atlas')?'atlas-turn':'turn';document.querySelector('#mode').value=mode;t=0;let chunks=[];const recorder=new MediaRecorder(canvas.captureStream(30),{mimeType:'video/webm;codecs=vp9',videoBitsPerSecond:6500000});recorder.ondataavailable=e=>chunks.push(e.data);recorder.onstop=async()=>{const name=`bronze-gradient-v29-turn-${variant}-${stamp()}`;await save(new Blob(chunks,{type:'video/webm'}),name+'.webm');status.textContent='保存済み '+name;recording=false;};recorder.start();status.textContent='全周録画中';setTimeout(()=>recorder.stop(),65000);};
+status.textContent='準備完了。色別・姿勢別に比較できます。';requestAnimationFrame(loop);
+</script></html>

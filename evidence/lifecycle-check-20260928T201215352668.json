@@ -1,0 +1,89 @@
+{
+  "checked_at": "2026-09-28T20:12:15.352552+09:00",
+  "checks": {
+    "login_registration": {
+      "status": "observed",
+      "detail": "Dedicated LaunchAgent and RunAtLoad; registration alone is not login proof."
+    },
+    "startup_rendering": {
+      "status": "observed",
+      "detail": "At least one display advances real frames and all animation clocks."
+    },
+    "native_menu": {
+      "status": "pending",
+      "detail": "Native menu delegate event; not a browser control."
+    },
+    "native_feed": {
+      "status": "pending",
+      "detail": "Native Feed event plus actual food counter; feeding appearance still requires observation."
+    },
+    "native_pause_resume": {
+      "status": "pending",
+      "detail": "At least 5 seconds frozen, followed by actual native Resume and advancing frames."
+    },
+    "native_quit": {
+      "status": "pending",
+      "detail": "Native Quit event followed by application termination."
+    },
+    "system_sleep_wake": {
+      "status": "pending",
+      "detail": "Matched OS system sleep/wake plus subsequent animation; lock/display sleep alone cannot pass."
+    },
+    "relogin_autostart": {
+      "status": "pending",
+      "detail": "New GUI audit session, registered agent process, actual launch rendering, and matching saved settings."
+    },
+    "dock": {
+      "status": "pending",
+      "detail": "Requires user observation; native app logs cannot prove this."
+    },
+    "desktop_drag": {
+      "status": "pending",
+      "detail": "Requires user observation; native app logs cannot prove this."
+    },
+    "visual_after_wake": {
+      "status": "pending",
+      "detail": "Requires user observation; native app logs cannot prove this."
+    },
+    "visual_after_login": {
+      "status": "pending",
+      "detail": "Requires user observation; native app logs cannot prove this."
+    }
+  },
+  "baseline_asid": "100025",
+  "current_asid": "100025",
+  "lifecycle_events": [
+    {
+      "at": "2026-09-28T11:08:49Z",
+      "awake": true,
+      "event": "launch",
+      "eventID": "4FED5551-FF43-40B1-B1EE-EFF20A7AD9F7",
+      "menuVisible": true,
+      "paused": false,
+      "pid": 59415,
+      "requestedRate": 60,
+      "uptime": 159464.10291004166,
+      "world": "riverscape",
+      "log_pid": "59415"
+    }
+  ],
+  "page_samples": 8,
+  "current": {
+    "at": "2026-09-28T20:12:15.352552+09:00",
+    "job": {
+      "state": "running",
+      "pid": "59415",
+      "asid": "100025",
+      "runs": "1",
+      "program": "/Users/ryoga-atelier/Applications/Deskworlds.app/Contents/MacOS/Deskworlds",
+      "loaded": true,
+      "run_at_load": true,
+      "agent_program": "/Users/ryoga-atelier/Applications/Deskworlds.app/Contents/MacOS/Deskworlds",
+      "expected_program": "/Users/ryoga-atelier/Applications/Deskworlds.app/Contents/MacOS/Deskworlds"
+    },
+    "preferences": {
+      "world": "riverscape",
+      "paused": "0"
+    }
+  }
+}

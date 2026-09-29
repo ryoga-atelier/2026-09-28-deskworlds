@@ -1,0 +1,85 @@
+import * as THREE from 'three';
+import { groundHeight, randomGenerator } from './math.js';
+
+// Fixed pools keep particles bounded. No timers: all motion shares the fish's
+// simulation clock, so pause, coverage and sleep stop the whole aquarium.
+export function createLivingWater(scene) {
+  const rng = randomGenerator(0x130928), bubbleCount = 32, dustCount = 96;
+  let projectionScale = 900, time = 0, emitted = 0, cursor = 0, activeDust = 0;
+  const cooldown = new Map();
+  const dust = Array.from({length:dustCount},()=>({age:99,life:1,x:0,y:0,z:0,vx:0,vz:0,r:.04}));
+  const bubbleSeed = Array.from({length:bubbleCount},(_,i)=>({phase:i/bubbleCount,
+    speed:.77+rng()*.3,x:(rng()-.5)*.30,z:(rng()-.5)*.32,r:.032+rng()*.039}));
+  function layer(count, bubble) {
+    const geometry = new THREE.BufferGeometry();
+    const pos = new Float32Array(count*3), sizes = new Float32Array(count), alpha = new Float32Array(count);
+    geometry.setAttribute('position',new THREE.BufferAttribute(pos,3).setUsage(THREE.DynamicDrawUsage));
+    geometry.setAttribute('particleSize',new THREE.BufferAttribute(sizes,1).setUsage(THREE.DynamicDrawUsage));
+    geometry.setAttribute('particleAlpha',new THREE.BufferAttribute(alpha,1).setUsage(THREE.DynamicDrawUsage));
+    const material = new THREE.ShaderMaterial({
+      transparent:true,depthWrite:false,depthTest:true,toneMapped:false,
+      uniforms:{pixelScale:{value:projectionScale}},
+      vertexShader:`attribute float particleSize;attribute float particleAlpha;
+        uniform float pixelScale;varying float opacity;
+        void main(){vec4 eye=modelViewMatrix*vec4(position,1.);gl_Position=projectionMatrix*eye;
+          gl_PointSize=clamp(particleSize*pixelScale/max(1.,-eye.z),1.,15.);opacity=particleAlpha;}`,
+      fragmentShader: bubble ? `varying float opacity;
+        void main(){vec2 p=gl_PointCoord*2.-1.;float r=length(p);if(r>.98)discard;
+          float rim=exp(-pow((r-.76)*10.,2.));
+          float glint=exp(-dot(p-vec2(-.29,-.39),p-vec2(-.29,-.39))*48.);
+          vec3 c=mix(vec3(.15,.36,.45),vec3(.83,.97,1.),smoothstep(-.4,.65,-p.y-p.x*.5));
+          gl_FragColor=vec4(mix(c,vec3(1.),glint),opacity*(rim*.52+glint*.85));}`
+        : `varying float opacity;
+          void main(){vec2 p=gl_PointCoord*2.-1.;float r=dot(p,p);if(r>1.)discard;
+            gl_FragColor=vec4(.63,.56,.39,opacity*exp(-r*4.)*(1.-r));}`,
+    });
+    const points = new THREE.Points(geometry,material);points.frustumCulled=false;
+    points.name=bubble?'Small filter aeration bubbles':'Fish-disturbed sand grains';
+    points.renderOrder=bubble?5:4;scene.add(points);
+    return {geometry,material,points,pos,sizes,alpha};
+  }
+  const bubbles=layer(bubbleCount,true), sand=layer(dustCount,false);
+  function update(dt,now,fish=[]) {
+    if (!(dt>0)) return;
+    time=now;
+    for(let i=0;i<bubbleCount;i++) {
+      const b=bubbleSeed[i], progress=(time*.076*b.speed+b.phase)%1;
+      const y=1.24+progress*8.3;
+      bubbles.pos.set([6.35+b.x-.23*progress+.08*Math.sin(progress*19.+i),y,
+        -.15+b.z+.055*Math.sin(time*.8+i)],i*3);
+      bubbles.sizes[i]=b.r*(.8+progress*.35);
+      bubbles.alpha[i]=Math.min(1,progress*15,(1-progress)*24)*.83;
+    }
+    // Only a moving fish close to the bed can lift grains. A stationary or
+    // mid-water fish cannot create an unrelated sand cloud.
+    for(const f of fish) {
+      const p=f.position, speed=f.velocity.length(), height=p.y-groundHeight(p.x,p.z);
+      if(height<.42 || height>1.48 || speed<.30 || time<(cooldown.get(f.id)||0))continue;
+      cooldown.set(f.id,time+1.5+rng()*.8);
+      const strength=Math.min(1,(1.55-height)*.85)*Math.min(1,speed);
+      for(let k=0;k<5;k++) {
+        const d=dust[cursor++%dustCount];
+        Object.assign(d,{age:0,life:2.5+rng()*1.5,x:p.x+(rng()-.5)*.23,
+          z:p.z+(rng()-.5)*.23,y:groundHeight(p.x,p.z)+.08,
+          vx:-f.velocity.x*.07+(rng()-.5)*.035,vz:-f.velocity.z*.06,
+          r:.09+rng()*.10,strength});
+      }
+      emitted++;
+    }
+    activeDust=0;
+    for(let i=0;i<dustCount;i++) {
+      const d=dust[i];d.age+=dt;
+      if(d.age>=d.life){sand.alpha[i]=0;continue;}
+      activeDust++;
+      const u=d.age/d.life;
+      d.x+=d.vx*dt;d.z+=d.vz*dt;
+      sand.pos.set([d.x,d.y+.20*Math.sin(u*Math.PI),d.z],i*3);
+      sand.sizes[i]=d.r*(1.+u*.9);
+      sand.alpha[i]=Math.sin(u*Math.PI)*d.strength*.40;
+    }
+    for(const l of [bubbles,sand])for(const attr of Object.values(l.geometry.attributes))attr.needsUpdate=true;
+  }
+  return {update,resize(scale){projectionScale=scale;for(const l of [bubbles,sand])l.material.uniforms.pixelScale.value=scale;},
+    stats(){return {time,bubbles:bubbleCount,activeDust,sandEvents:emitted,maxDust:dustCount};},
+    dispose(){for(const l of [bubbles,sand]){scene.remove(l.points);l.geometry.dispose();l.material.dispose();}}};
+}

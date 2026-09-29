@@ -1,0 +1,30 @@
+{
+  "upstream_commit": "3950c45ef5798ed2df9f78037994bcddacebbb01",
+  "syntax_check": {
+    "command": "npm run check",
+    "result": "passed",
+    "exit_code": 0
+  },
+  "upstream_tests": {
+    "command": "npm test",
+    "result": "passed",
+    "suite_count": 9,
+    "exit_code": 0
+  },
+  "project_custom_checks": {
+    "check-guppy-v17.mjs": "passed: finite meshes, valid indices, fan outline, 24 unique patterns, continuous fin phases and attached tail root",
+    "check-v17.mjs": "passed: slim body dimensions, 8-colour allocation and finite unit normals",
+    "check-living-water.mjs": "passed: sand emission, bounded particles, pause freeze, settling and disposal"
+  },
+  "webgl_render": "passed by visual inspection of the installed WKWebView snapshot and the same-condition browser comparison",
+  "app_build": {
+    "command": "python3 scripts/provision.py build --variant guppy-v27",
+    "result": "passed",
+    "artifact": "/Users/ryoga-atelier/workspace/apps/2026-09-28-deskworlds/build/20260929T014853899871+0900/Deskworlds.app"
+  },
+  "install": {
+    "command": "python3 scripts/provision.py install --variant guppy-v27",
+    "result": "passed",
+    "manifest": "evidence/manifest.json"
+  }
+}

@@ -1,0 +1,6766 @@
+{
+  "version": "clearwater-guppy-v18-r8",
+  "elapsedMs": 65091,
+  "samples": [
+    {
+      "elapsedMs": 1009.5999999940395,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 5452,
+        "shadowFrames": 5452,
+        "simulationTime": 181.95009999998996,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 184112.19999998808,
+          "lastGapMs": 33.599999994039536,
+          "windowMs": 136541.60017585754,
+          "fpsMeasured": 29.99818366508517,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 181.95009999998996,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 181.95009999998996,
+          "bubbles": 28,
+          "activeDust": 7,
+          "sandEvents": 85,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 3,
+            "travel": 17,
+            "settle": 2,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.5610679995640065,
+          "maximumSpeed": 1.248056204340242,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 181.95009999998996
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 2010.7999999821186,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 5482,
+        "shadowFrames": 5482,
+        "simulationTime": 182.95019999999005,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 185112,
+          "lastGapMs": 33.10000002384186,
+          "windowMs": 136541.50016975403,
+          "fpsMeasured": 29.998205636437888,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 182.95019999999005,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 182.95019999999005,
+          "bubbles": 28,
+          "activeDust": 14,
+          "sandEvents": 86,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 4,
+            "travel": 15,
+            "settle": 2,
+            "inspect": 3,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 1,
+          "averageSpeed": 0.48212048833648846,
+          "maximumSpeed": 1.2187214283160555,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 182.95019999999005
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 3009.399999976158,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 5512,
+        "shadowFrames": 5512,
+        "simulationTime": 183.94909999999015,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 186112.09999999404,
+          "lastGapMs": 33.400000005960464,
+          "windowMs": 136541.60016822815,
+          "fpsMeasured": 29.998183666761346,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 183.94909999999015,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 183.94909999999015,
+          "bubbles": 28,
+          "activeDust": 9,
+          "sandEvents": 86,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 2,
+            "travel": 18,
+            "settle": 2,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.49904228649168864,
+          "maximumSpeed": 1.4605231159246896,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 183.94909999999015
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 4009.5999999940395,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 5542,
+        "shadowFrames": 5542,
+        "simulationTime": 184.95009999999007,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 187111.79999998212,
+          "lastGapMs": 33.099999994039536,
+          "windowMs": 136541.3001613617,
+          "fpsMeasured": 29.998249578401786,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 184.95009999999007,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 184.95009999999007,
+          "bubbles": 28,
+          "activeDust": 5,
+          "sandEvents": 86,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 1,
+            "travel": 18,
+            "settle": 2,
+            "inspect": 3,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.5194914156660383,
+          "maximumSpeed": 1.4243781021804587,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 184.95009999999007
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 5009.299999982119,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 5572,
+        "shadowFrames": 5572,
+        "simulationTime": 185.95009999999007,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 188111.69999998808,
+          "lastGapMs": 32.900000005960464,
+          "windowMs": 136541.20016670227,
+          "fpsMeasured": 29.998271547336774,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 185.95009999999007,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 185.95009999999007,
+          "bubbles": 28,
+          "activeDust": 2,
+          "sandEvents": 86,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 3,
+            "travel": 18,
+            "settle": 1,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6164541427153682,
+          "maximumSpeed": 1.410064957593728,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 185.95009999999007
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 6009.5999999940395,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 5602,
+        "shadowFrames": 5602,
+        "simulationTime": 186.9499999999901,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 189111.89999997616,
+          "lastGapMs": 33,
+          "windowMs": 136541.30017471313,
+          "fpsMeasured": 29.99824957546846,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 186.9499999999901,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 186.9499999999901,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 86,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 2,
+            "travel": 20,
+            "settle": 0,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.7290735187461158,
+          "maximumSpeed": 1.725369878171555,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 186.9499999999901
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 7008.799999982119,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 5632,
+        "shadowFrames": 5632,
+        "simulationTime": 187.95009999999002,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 190111.69999998808,
+          "lastGapMs": 33.30000001192093,
+          "windowMs": 136541.20017433167,
+          "fpsMeasured": 29.998271545660586,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 187.95009999999002,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 187.95009999999002,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 86,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 2,
+            "travel": 18,
+            "settle": 1,
+            "inspect": 3,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 3,
+          "averageSpeed": 0.54062615474617,
+          "maximumSpeed": 1.4137863013261118,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 187.95009999999002
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 8008,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 5662,
+        "shadowFrames": 5662,
+        "simulationTime": 188.94999999999004,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 191112,
+          "lastGapMs": 33.60000002384186,
+          "windowMs": 136541.4001750946,
+          "fpsMeasured": 29.998227605308514,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 188.94999999999004,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 188.94999999999004,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 86,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 2,
+            "travel": 19,
+            "settle": 0,
+            "inspect": 3,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.5637514481235765,
+          "maximumSpeed": 1.4863531297394426,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 188.94999999999004
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 9009.299999982119,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 5692,
+        "shadowFrames": 5692,
+        "simulationTime": 189.94999999998998,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 192112.09999999404,
+          "lastGapMs": 33.70000001788139,
+          "windowMs": 136541.6001739502,
+          "fpsMeasured": 29.998183665504214,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 189.94999999998998,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 189.94999999998998,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 86,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 2,
+            "travel": 19,
+            "settle": 0,
+            "inspect": 3,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6228284674156334,
+          "maximumSpeed": 1.3361090012978416,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 189.94999999998998
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 10008.399999976158,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 5722,
+        "shadowFrames": 5722,
+        "simulationTime": 190.95009999999007,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 193111.89999997616,
+          "lastGapMs": 33.099999994039536,
+          "windowMs": 136541.40017318726,
+          "fpsMeasured": 29.99822760572756,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 190.95009999999007,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 190.95009999999007,
+          "bubbles": 28,
+          "activeDust": 7,
+          "sandEvents": 87,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 0,
+            "travel": 23,
+            "settle": 0,
+            "inspect": 1,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6035740426675557,
+          "maximumSpeed": 1.5658851662889783,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 190.95009999999007
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 11009.299999982119,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 5752,
+        "shadowFrames": 5752,
+        "simulationTime": 191.94999999998993,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 194111.69999998808,
+          "lastGapMs": 33,
+          "windowMs": 136541.20017051697,
+          "fpsMeasured": 29.99827154649868,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 191.94999999998993,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 191.94999999998993,
+          "bubbles": 28,
+          "activeDust": 7,
+          "sandEvents": 87,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 0,
+            "travel": 22,
+            "settle": 1,
+            "inspect": 1,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.666005626215754,
+          "maximumSpeed": 1.6813104513875894,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 191.94999999998993
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 12009.59999999404,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 5782,
+        "shadowFrames": 5782,
+        "simulationTime": 192.94999999998993,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 195111.79999998212,
+          "lastGapMs": 33.400000005960464,
+          "windowMs": 136532.9001712799,
+          "fpsMeasured": 30.000095177510964,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 192.94999999998993,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 192.94999999998993,
+          "bubbles": 28,
+          "activeDust": 7,
+          "sandEvents": 87,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 1,
+            "travel": 20,
+            "settle": 1,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.661136386397668,
+          "maximumSpeed": 1.4746750877649883,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 192.94999999998993
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 13000.399999976158,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 5812,
+        "shadowFrames": 5812,
+        "simulationTime": 193.95009999998973,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 196111.79999998212,
+          "lastGapMs": 33.29999998211861,
+          "windowMs": 136541.30017471313,
+          "fpsMeasured": 29.99824957546846,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 193.95009999998973,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 193.95009999998973,
+          "bubbles": 28,
+          "activeDust": 7,
+          "sandEvents": 87,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 2,
+            "travel": 19,
+            "settle": 1,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6758849284324976,
+          "maximumSpeed": 1.490524475888854,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 193.95009999998973
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 11,
+        "triangles": 1629508,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 14010.299999982119,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 5842,
+        "shadowFrames": 5842,
+        "simulationTime": 194.95009999998973,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 197111.89999997616,
+          "lastGapMs": 33.29999998211861,
+          "windowMs": 136541.400182724,
+          "fpsMeasured": 29.998227603632333,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 194.95009999998973,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 194.95009999998973,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 87,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 3,
+            "travel": 17,
+            "settle": 1,
+            "inspect": 3,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6376003466861327,
+          "maximumSpeed": 1.6941234031188543,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 194.95009999998973
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 15008.899999976158,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 5872,
+        "shadowFrames": 5872,
+        "simulationTime": 195.9499999999896,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 198111.89999997616,
+          "lastGapMs": 33.19999998807907,
+          "windowMs": 136532.9001674652,
+          "fpsMeasured": 30.00009517834916,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 195.9499999999896,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 195.9499999999896,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 87,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 3,
+            "travel": 18,
+            "settle": 0,
+            "inspect": 3,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 1,
+          "averageSpeed": 0.6590365220250521,
+          "maximumSpeed": 1.8251692684403353,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 195.9499999999896
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 16010.09999999404,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 5902,
+        "shadowFrames": 5902,
+        "simulationTime": 196.94959999998935,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 199111.39999997616,
+          "lastGapMs": 32.69999998807907,
+          "windowMs": 136540.80016708374,
+          "fpsMeasured": 29.99835942800805,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 196.94959999998935,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 196.94959999998935,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 87,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 2,
+            "travel": 17,
+            "settle": 2,
+            "inspect": 3,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6665028992357901,
+          "maximumSpeed": 1.368056786516254,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 196.94959999998935
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 17009.19999998808,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 5932,
+        "shadowFrames": 5932,
+        "simulationTime": 197.9499999999892,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 200112,
+          "lastGapMs": 33.400000005960464,
+          "windowMs": 136533.50017166138,
+          "fpsMeasured": 29.99996334123248,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 197.9499999999892,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 197.9499999999892,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 87,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 3,
+            "travel": 18,
+            "settle": 0,
+            "inspect": 3,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6547530284998982,
+          "maximumSpeed": 1.456534584189646,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 197.9499999999892
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 18011,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 5962,
+        "shadowFrames": 5962,
+        "simulationTime": 198.94489999998896,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 201107.79999998212,
+          "lastGapMs": 33.400000005960464,
+          "windowMs": 136537.2001800537,
+          "fpsMeasured": 29.99915037512518,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 198.94489999998896,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 198.94489999998896,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 87,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 2,
+            "travel": 21,
+            "settle": 0,
+            "inspect": 1,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.7239703642572003,
+          "maximumSpeed": 1.5651392252630347,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 198.94489999998896
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 19010.79999998212,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 5992,
+        "shadowFrames": 5992,
+        "simulationTime": 199.94579999998885,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 202107.79999998212,
+          "lastGapMs": 33.29999998211861,
+          "windowMs": 136537.40017318726,
+          "fpsMeasured": 29.9991064338748,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 199.94579999998885,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 199.94579999998885,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 87,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 2,
+            "travel": 18,
+            "settle": 2,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.5465798860367891,
+          "maximumSpeed": 1.20925096651646,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 199.94579999998885
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 20012.59999999404,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6022,
+        "shadowFrames": 6022,
+        "simulationTime": 200.94589999998865,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 203107.59999999404,
+          "lastGapMs": 33.400000005960464,
+          "windowMs": 136528.7001800537,
+          "fpsMeasured": 30.001018061390795,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 200.94589999998865,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 200.94589999998865,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 87,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 3,
+            "travel": 18,
+            "settle": 1,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.5717387759493742,
+          "maximumSpeed": 1.354821909326218,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 200.94589999998865
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 21000.5,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6052,
+        "shadowFrames": 6052,
+        "simulationTime": 201.9457999999884,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 204107.69999998808,
+          "lastGapMs": 33.599999994039536,
+          "windowMs": 136537.20018577576,
+          "fpsMeasured": 29.999150373867966,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 201.9457999999884,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 201.9457999999884,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 87,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 3,
+            "travel": 19,
+            "settle": 1,
+            "inspect": 1,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6334644942625447,
+          "maximumSpeed": 1.4478184975668575,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 201.9457999999884
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 22011,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6082,
+        "shadowFrames": 6082,
+        "simulationTime": 202.9457999999884,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 205107.69999998808,
+          "lastGapMs": 33.19999998807907,
+          "windowMs": 136537.20018577576,
+          "fpsMeasured": 29.999150373867966,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 202.9457999999884,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 202.9457999999884,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 87,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 2,
+            "travel": 19,
+            "settle": 2,
+            "inspect": 1,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.5391680492807014,
+          "maximumSpeed": 1.1240733381740493,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 202.9457999999884
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 23010.899999976158,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6112,
+        "shadowFrames": 6112,
+        "simulationTime": 203.9458999999881,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 206107.69999998808,
+          "lastGapMs": 33.400000005960464,
+          "windowMs": 136537.10018730164,
+          "fpsMeasured": 29.9991723449605,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 203.9458999999881,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 203.9458999999881,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 87,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 4,
+            "travel": 17,
+            "settle": 1,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.4860692643442332,
+          "maximumSpeed": 1.1167434580744282,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 203.9458999999881
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 24009.69999998808,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6142,
+        "shadowFrames": 6142,
+        "simulationTime": 204.94579999998788,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 207108,
+          "lastGapMs": 33.80000001192093,
+          "windowMs": 136537.50018119812,
+          "fpsMeasured": 29.999084460783465,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 204.94579999998788,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 204.94579999998788,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 87,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 3,
+            "travel": 19,
+            "settle": 0,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 1,
+          "averageSpeed": 0.6972708811994385,
+          "maximumSpeed": 1.4782939706791178,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 204.94579999998788
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 25000.69999998808,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6172,
+        "shadowFrames": 6172,
+        "simulationTime": 205.94579999998777,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 208107.79999998212,
+          "lastGapMs": 33.5,
+          "windowMs": 136537.4001903534,
+          "fpsMeasured": 29.99910643010317,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 205.94579999998777,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 205.94579999998777,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 87,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 2,
+            "travel": 21,
+            "settle": 0,
+            "inspect": 1,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.7002014947143528,
+          "maximumSpeed": 1.2739005297063768,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 205.94579999998777
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 26011,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6202,
+        "shadowFrames": 6202,
+        "simulationTime": 206.94579999998754,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 209107.79999998212,
+          "lastGapMs": 33.29999998211861,
+          "windowMs": 136537.30019950867,
+          "fpsMeasured": 29.99912839945505,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 206.94579999998754,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 206.94579999998754,
+          "bubbles": 28,
+          "activeDust": 7,
+          "sandEvents": 88,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 2,
+            "travel": 21,
+            "settle": 0,
+            "inspect": 1,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6571593380960868,
+          "maximumSpeed": 1.3986977080954544,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 206.94579999998754
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 27013.5,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6232,
+        "shadowFrames": 6232,
+        "simulationTime": 207.9457999999872,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 210107.79999998212,
+          "lastGapMs": 33.5,
+          "windowMs": 136537.40021133423,
+          "fpsMeasured": 29.999106425493395,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 207.9457999999872,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 207.9457999999872,
+          "bubbles": 28,
+          "activeDust": 7,
+          "sandEvents": 88,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 1,
+            "travel": 20,
+            "settle": 0,
+            "inspect": 3,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.5726054930186544,
+          "maximumSpeed": 1.2497745396538256,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 207.9457999999872
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 28013.19999998808,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6262,
+        "shadowFrames": 6262,
+        "simulationTime": 208.94499999998695,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 211107.79999998212,
+          "lastGapMs": 33.400000005960464,
+          "windowMs": 136537.30020713806,
+          "fpsMeasured": 29.999128397778765,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 208.94499999998695,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 208.94499999998695,
+          "bubbles": 28,
+          "activeDust": 4,
+          "sandEvents": 88,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 0,
+            "travel": 22,
+            "settle": 0,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.669080704128544,
+          "maximumSpeed": 1.2113399564113971,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 208.94499999998695
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 29009.19999998808,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6292,
+        "shadowFrames": 6292,
+        "simulationTime": 209.9457999999868,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 212107.69999998808,
+          "lastGapMs": 33.400000005960464,
+          "windowMs": 136528.8002166748,
+          "fpsMeasured": 30.00099607921215,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 209.9457999999868,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 209.9457999999868,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 88,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 0,
+            "travel": 22,
+            "settle": 0,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.7018175456420365,
+          "maximumSpeed": 1.341778154414113,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 209.9457999999868
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 30010.29999998212,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6322,
+        "shadowFrames": 6322,
+        "simulationTime": 210.94579999998658,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 213107.39999997616,
+          "lastGapMs": 33,
+          "windowMs": 136536.80021476746,
+          "fpsMeasured": 29.999238253402307,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 210.94579999998658,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 210.94579999998658,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 88,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 0,
+            "travel": 22,
+            "settle": 0,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6710841830078677,
+          "maximumSpeed": 1.3183758889769777,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 210.94579999998658
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 31009.09999999404,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6352,
+        "shadowFrames": 6352,
+        "simulationTime": 211.94589999998632,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 214107.59999999404,
+          "lastGapMs": 33.400000005960464,
+          "windowMs": 136537.10022354126,
+          "fpsMeasured": 29.99917233699813,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 211.94589999998632,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 211.94589999998632,
+          "bubbles": 28,
+          "activeDust": 7,
+          "sandEvents": 89,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 0,
+            "travel": 22,
+            "settle": 0,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6584278405141474,
+          "maximumSpeed": 1.2813549404573061,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 211.94589999998632
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 32010.29999998212,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6382,
+        "shadowFrames": 6382,
+        "simulationTime": 212.94489999998623,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 215107.69999998808,
+          "lastGapMs": 33.400000005960464,
+          "windowMs": 136537.2002468109,
+          "fpsMeasured": 29.99915036045768,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 212.94489999998623,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 212.94489999998623,
+          "bubbles": 28,
+          "activeDust": 14,
+          "sandEvents": 90,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 0,
+            "travel": 22,
+            "settle": 1,
+            "inspect": 1,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6572696436166979,
+          "maximumSpeed": 1.601023771800195,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 212.94489999998623
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 33001.29999998212,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6412,
+        "shadowFrames": 6412,
+        "simulationTime": 213.94579999998606,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 216107.69999998808,
+          "lastGapMs": 33.5,
+          "windowMs": 136537.300239563,
+          "fpsMeasured": 29.999128390654562,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 213.94579999998606,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 213.94579999998606,
+          "bubbles": 28,
+          "activeDust": 14,
+          "sandEvents": 90,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 0,
+            "travel": 20,
+            "settle": 3,
+            "inspect": 1,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6727753641341626,
+          "maximumSpeed": 1.554887379023801,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 213.94579999998606
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 34009,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6442,
+        "shadowFrames": 6442,
+        "simulationTime": 214.9456999999858,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 217107.79999998212,
+          "lastGapMs": 33.5,
+          "windowMs": 136537.20023918152,
+          "fpsMeasured": 29.999150362133964,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 214.9456999999858,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 214.9456999999858,
+          "bubbles": 28,
+          "activeDust": 10,
+          "sandEvents": 90,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 2,
+            "travel": 19,
+            "settle": 2,
+            "inspect": 1,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6877611373897344,
+          "maximumSpeed": 1.4459140925567289,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 214.9456999999858
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 35012.69999998808,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6472,
+        "shadowFrames": 6472,
+        "simulationTime": 215.9456999999857,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 218107.59999999404,
+          "lastGapMs": 33.20000001788139,
+          "windowMs": 136537.10023117065,
+          "fpsMeasured": 29.99917233532184,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 215.9456999999857,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 215.9456999999857,
+          "bubbles": 28,
+          "activeDust": 5,
+          "sandEvents": 90,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 2,
+            "travel": 21,
+            "settle": 1,
+            "inspect": 0,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 2,
+          "averageSpeed": 0.6127617228945187,
+          "maximumSpeed": 1.4206174722564089,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 215.9456999999857
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 36012.5,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6502,
+        "shadowFrames": 6502,
+        "simulationTime": 216.9457999999856,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 219107.59999999404,
+          "lastGapMs": 33.5,
+          "windowMs": 136537.20023918152,
+          "fpsMeasured": 29.999150362133964,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 216.9457999999856,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 216.9457999999856,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 90,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 1,
+            "travel": 22,
+            "settle": 0,
+            "inspect": 1,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 1,
+          "averageSpeed": 0.7383645747569699,
+          "maximumSpeed": 1.5487014524706486,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 216.9457999999856
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 37000.5,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6532,
+        "shadowFrames": 6532,
+        "simulationTime": 217.9457999999855,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 220107.59999999404,
+          "lastGapMs": 33.30000001192093,
+          "windowMs": 136537.00024795532,
+          "fpsMeasured": 29.99919430309396,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 217.9457999999855,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 217.9457999999855,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 90,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 0,
+            "travel": 22,
+            "settle": 1,
+            "inspect": 1,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 2,
+          "averageSpeed": 0.6692250771009648,
+          "maximumSpeed": 1.2238620471893094,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 217.9457999999855
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 38009.69999998808,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6562,
+        "shadowFrames": 6562,
+        "simulationTime": 218.94579999998533,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 221107.5,
+          "lastGapMs": 33.30000001192093,
+          "windowMs": 136537.00024604797,
+          "fpsMeasured": 29.999194303513033,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 218.94579999998533,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 218.94579999998533,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 90,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 0,
+            "travel": 20,
+            "settle": 2,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6034301773103624,
+          "maximumSpeed": 1.3574858062393844,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 218.94579999998533
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 11,
+        "triangles": 1629508,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 39008.79999998212,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6592,
+        "shadowFrames": 6592,
+        "simulationTime": 219.94539999998526,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 222106.89999997616,
+          "lastGapMs": 32.599999994039536,
+          "windowMs": 136536.50024223328,
+          "fpsMeasured": 29.99930416213372,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 219.94539999998526,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 219.94539999998526,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 90,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 2,
+            "travel": 20,
+            "settle": 0,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.5558726740335843,
+          "maximumSpeed": 1.4119318843151165,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 219.94539999998526
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 40008.79999998212,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6622,
+        "shadowFrames": 6622,
+        "simulationTime": 220.9457999999851,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 223107.59999999404,
+          "lastGapMs": 33.599999994039536,
+          "windowMs": 136537.20023727417,
+          "fpsMeasured": 29.99915036255304,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 220.9457999999851,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 220.9457999999851,
+          "bubbles": 28,
+          "activeDust": 7,
+          "sandEvents": 91,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 1,
+            "travel": 21,
+            "settle": 0,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6483964712741958,
+          "maximumSpeed": 1.2688237779662022,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 220.9457999999851
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 41010,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6652,
+        "shadowFrames": 6652,
+        "simulationTime": 221.94569999998507,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 224107.5,
+          "lastGapMs": 33.400000005960464,
+          "windowMs": 136537.10023880005,
+          "fpsMeasured": 29.999172333645554,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 221.94569999998507,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 221.94569999998507,
+          "bubbles": 28,
+          "activeDust": 7,
+          "sandEvents": 91,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 1,
+            "travel": 17,
+            "settle": 3,
+            "inspect": 3,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6893836456664194,
+          "maximumSpeed": 1.7142967981148223,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 221.94569999998507
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 42009.09999999404,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6682,
+        "shadowFrames": 6682,
+        "simulationTime": 222.9456999999849,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 225107.59999999404,
+          "lastGapMs": 33.30000001192093,
+          "windowMs": 136536.70023155212,
+          "fpsMeasured": 29.999260221270966,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 222.9456999999849,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 222.9456999999849,
+          "bubbles": 28,
+          "activeDust": 7,
+          "sandEvents": 91,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 0,
+            "travel": 17,
+            "settle": 3,
+            "inspect": 4,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.644426645778704,
+          "maximumSpeed": 1.7227629479311903,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 222.9456999999849
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 43009.39999997616,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6712,
+        "shadowFrames": 6712,
+        "simulationTime": 223.945699999985,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 226107.5,
+          "lastGapMs": 33.30000001192093,
+          "windowMs": 136536.9002342224,
+          "fpsMeasured": 29.999216277603427,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 223.945699999985,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 223.945699999985,
+          "bubbles": 28,
+          "activeDust": 2,
+          "sandEvents": 91,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 3,
+            "travel": 19,
+            "settle": 0,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.678259986184016,
+          "maximumSpeed": 1.5742399365740953,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 223.945699999985
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 44010.29999998212,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6742,
+        "shadowFrames": 6742,
+        "simulationTime": 224.9456999999849,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 227107.69999998808,
+          "lastGapMs": 33.69999998807907,
+          "windowMs": 136537.00024414062,
+          "fpsMeasured": 29.999194303932107,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 224.9456999999849,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 224.9456999999849,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 91,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 2,
+            "travel": 19,
+            "settle": 1,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.5459684258835773,
+          "maximumSpeed": 1.649040630999681,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 224.9456999999849
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 45000.89999997616,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6772,
+        "shadowFrames": 6772,
+        "simulationTime": 225.94579999998464,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 228107.59999999404,
+          "lastGapMs": 33.30000001192093,
+          "windowMs": 136536.90024757385,
+          "fpsMeasured": 29.999216274669912,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.79999923706055,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 225.94579999998464,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 225.94579999998464,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 91,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 2,
+            "travel": 20,
+            "settle": 0,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6577800667444551,
+          "maximumSpeed": 1.6074954243700597,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 225.94579999998464
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 46010.69999998808,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6802,
+        "shadowFrames": 6802,
+        "simulationTime": 226.94979999998438,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 229111.79999998212,
+          "lastGapMs": 33.400000005960464,
+          "windowMs": 136541.00025177002,
+          "fpsMeasured": 29.99831546896041,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.70000076293945,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 226.94979999998438,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 226.94979999998438,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 91,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 1,
+            "travel": 21,
+            "settle": 1,
+            "inspect": 1,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6660577316479596,
+          "maximumSpeed": 1.458412957605469,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 226.94979999998438
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 47010.29999998212,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6832,
+        "shadowFrames": 6832,
+        "simulationTime": 227.94979999998432,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 230111.79999998212,
+          "lastGapMs": 33.5,
+          "windowMs": 136540.90026664734,
+          "fpsMeasured": 29.998337435896666,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.70000076293945,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 227.94979999998432,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 227.94979999998432,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 91,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 2,
+            "travel": 21,
+            "settle": 0,
+            "inspect": 1,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.7110913379831137,
+          "maximumSpeed": 1.455550644317492,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 227.94979999998432
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 48009.69999998808,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6862,
+        "shadowFrames": 6862,
+        "simulationTime": 228.94919999998424,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 231111.69999998808,
+          "lastGapMs": 32.69999998807907,
+          "windowMs": 136541.30026435852,
+          "fpsMeasured": 29.998249555773288,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.70000076293945,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 228.94919999998424,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 228.94919999998424,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 91,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 1,
+            "travel": 22,
+            "settle": 0,
+            "inspect": 1,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.7989788938746759,
+          "maximumSpeed": 1.6014985389354446,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 228.94919999998424
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 49009,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6892,
+        "shadowFrames": 6892,
+        "simulationTime": 229.9497999999842,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 232111.79999998212,
+          "lastGapMs": 33.5,
+          "windowMs": 136541.00027656555,
+          "fpsMeasured": 29.998315463512785,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.70000076293945,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 229.9497999999842,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 229.9497999999842,
+          "bubbles": 28,
+          "activeDust": 7,
+          "sandEvents": 92,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 1,
+            "travel": 21,
+            "settle": 2,
+            "inspect": 0,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6584956920349967,
+          "maximumSpeed": 1.4075433162577318,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 229.9497999999842
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 50010.09999999404,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6922,
+        "shadowFrames": 6922,
+        "simulationTime": 230.94979999998426,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 233111.79999998212,
+          "lastGapMs": 33.099999994039536,
+          "windowMs": 136541.10026741028,
+          "fpsMeasured": 29.998293495351568,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.70000076293945,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 230.94979999998426,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 230.94979999998426,
+          "bubbles": 28,
+          "activeDust": 7,
+          "sandEvents": 92,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 3,
+            "travel": 19,
+            "settle": 0,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 2,
+          "averageSpeed": 0.5539229430991878,
+          "maximumSpeed": 1.2665520382972315,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 230.94979999998426
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 51011,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6952,
+        "shadowFrames": 6952,
+        "simulationTime": 231.9456999999842,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 234107.59999999404,
+          "lastGapMs": 33.099999994039536,
+          "windowMs": 136537.2002544403,
+          "fpsMeasured": 29.999150358781392,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.70000076293945,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 231.9456999999842,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 231.9456999999842,
+          "bubbles": 28,
+          "activeDust": 7,
+          "sandEvents": 92,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 0,
+            "travel": 20,
+            "settle": 2,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.5093063529341428,
+          "maximumSpeed": 1.2650985814880118,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 231.9456999999842
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 52008.89999997616,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 6982,
+        "shadowFrames": 6982,
+        "simulationTime": 232.9456999999842,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 235107.69999998808,
+          "lastGapMs": 33.400000005960464,
+          "windowMs": 136537.00024414062,
+          "fpsMeasured": 29.999194303932107,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.70000076293945,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 232.9456999999842,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 232.9456999999842,
+          "bubbles": 28,
+          "activeDust": 3,
+          "sandEvents": 92,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 0,
+            "travel": 20,
+            "settle": 2,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.4832532614146378,
+          "maximumSpeed": 1.298358837227717,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 232.9456999999842
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 53008.59999999404,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 7012,
+        "shadowFrames": 7012,
+        "simulationTime": 233.94569999998416,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 236108,
+          "lastGapMs": 33.5,
+          "windowMs": 136537.1002445221,
+          "fpsMeasured": 29.999172332388337,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.70000076293945,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 233.94569999998416,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 233.94569999998416,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 92,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 0,
+            "travel": 22,
+            "settle": 0,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.577840270351719,
+          "maximumSpeed": 1.54068239834427,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 233.94569999998416
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 54012.19999998808,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 7042,
+        "shadowFrames": 7042,
+        "simulationTime": 234.9456999999841,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 237107.79999998212,
+          "lastGapMs": 33.29999998211861,
+          "windowMs": 136536.90025520325,
+          "fpsMeasured": 29.99921627299362,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.70000076293945,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 234.9456999999841,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 234.9456999999841,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 92,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 0,
+            "travel": 21,
+            "settle": 1,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6033069594201056,
+          "maximumSpeed": 1.206068331206454,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 234.9456999999841
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 55011.09999999404,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 7072,
+        "shadowFrames": 7072,
+        "simulationTime": 235.94569999998387,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 238107.39999997616,
+          "lastGapMs": 33.29999998211861,
+          "windowMs": 136528.70026397705,
+          "fpsMeasured": 30.001018042949354,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.70000076293945,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 235.94569999998387,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 235.94569999998387,
+          "bubbles": 28,
+          "activeDust": 0,
+          "sandEvents": 92,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 0,
+            "travel": 21,
+            "settle": 1,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6797698059498894,
+          "maximumSpeed": 1.460885736713929,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 235.94569999998387
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 56011.19999998808,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 7102,
+        "shadowFrames": 7102,
+        "simulationTime": 236.94489999998356,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 239106.5,
+          "lastGapMs": 32.20000001788139,
+          "windowMs": 136536.20027160645,
+          "fpsMeasured": 29.999370070735658,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.70000076293945,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 236.94489999998356,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 236.94489999998356,
+          "bubbles": 28,
+          "activeDust": 7,
+          "sandEvents": 93,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 0,
+            "travel": 23,
+            "settle": 0,
+            "inspect": 1,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6722598230618871,
+          "maximumSpeed": 1.5009571826877703,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 236.94489999998356
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 57010.5,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 7132,
+        "shadowFrames": 7132,
+        "simulationTime": 237.94569999998342,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 240107.5,
+          "lastGapMs": 33.30000001192093,
+          "windowMs": 136536.80028152466,
+          "fpsMeasured": 29.99923823873472,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.70000076293945,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 237.94569999998342,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 237.94569999998342,
+          "bubbles": 28,
+          "activeDust": 7,
+          "sandEvents": 93,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 0,
+            "travel": 21,
+            "settle": 1,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6700605577414782,
+          "maximumSpeed": 1.3206756365690064,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 237.94569999998342
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 58009.69999998808,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 7162,
+        "shadowFrames": 7162,
+        "simulationTime": 238.94569999998325,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 241107.5,
+          "lastGapMs": 33.60000002384186,
+          "windowMs": 136528.90028953552,
+          "fpsMeasured": 30.000974089102396,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.70000076293945,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 238.94569999998325,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 238.94569999998325,
+          "bubbles": 28,
+          "activeDust": 14,
+          "sandEvents": 94,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 1,
+            "travel": 21,
+            "settle": 0,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 2,
+          "averageSpeed": 0.6074049228576753,
+          "maximumSpeed": 1.197738333325335,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 238.94569999998325
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 59011.69999998808,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 7192,
+        "shadowFrames": 7192,
+        "simulationTime": 239.94569999998308,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 242107.29999998212,
+          "lastGapMs": 33.400000005960464,
+          "windowMs": 136536.80030822754,
+          "fpsMeasured": 29.999238232867686,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.70000076293945,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 239.94569999998308,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 239.94569999998308,
+          "bubbles": 28,
+          "activeDust": 7,
+          "sandEvents": 94,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 1,
+            "travel": 21,
+            "settle": 0,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.5389280358118987,
+          "maximumSpeed": 0.9871998690961368,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 239.94569999998308
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 60009.69999998808,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 7222,
+        "shadowFrames": 7222,
+        "simulationTime": 240.94559999998282,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 243107.69999998808,
+          "lastGapMs": 33.5,
+          "windowMs": 136537.100315094,
+          "fpsMeasured": 29.99917231688267,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.70000076293945,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 240.94559999998282,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 240.94559999998282,
+          "bubbles": 28,
+          "activeDust": 7,
+          "sandEvents": 94,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 0,
+            "travel": 21,
+            "settle": 0,
+            "inspect": 3,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.5730194684284732,
+          "maximumSpeed": 1.1656080650304312,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 240.94559999998282
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 61009.59999999404,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 7252,
+        "shadowFrames": 7252,
+        "simulationTime": 241.94559999998253,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 244107.39999997616,
+          "lastGapMs": 33.29999998211861,
+          "windowMs": 136537.10033035278,
+          "fpsMeasured": 29.999172313530096,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.70000076293945,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 241.94559999998253,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 241.94559999998253,
+          "bubbles": 28,
+          "activeDust": 7,
+          "sandEvents": 95,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 0,
+            "travel": 20,
+            "settle": 2,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.5913185664176078,
+          "maximumSpeed": 1.4545618698694547,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 241.94559999998253
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 62010,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 7282,
+        "shadowFrames": 7282,
+        "simulationTime": 242.9455999999823,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 245107.69999998808,
+          "lastGapMs": 33.69999998807907,
+          "windowMs": 136528.700340271,
+          "fpsMeasured": 30.00101802618441,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.70000076293945,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 242.9455999999823,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 242.9455999999823,
+          "bubbles": 28,
+          "activeDust": 7,
+          "sandEvents": 95,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 2,
+            "travel": 20,
+            "settle": 1,
+            "inspect": 1,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.5993109526518288,
+          "maximumSpeed": 1.3609012866523111,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 242.9455999999823
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 63008.89999997616,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 7312,
+        "shadowFrames": 7312,
+        "simulationTime": 243.94559999998214,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 246107.19999998808,
+          "lastGapMs": 33.099999994039536,
+          "windowMs": 136536.8003578186,
+          "fpsMeasured": 29.999238221971765,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.70000076293945,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 243.94559999998214,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 243.94559999998214,
+          "bubbles": 28,
+          "activeDust": 6,
+          "sandEvents": 95,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 3,
+            "travel": 17,
+            "settle": 2,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.5536636548163111,
+          "maximumSpeed": 1.0830708865479997,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 243.94559999998214
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 11,
+        "triangles": 1629508,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 64008.29999998212,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 7342,
+        "shadowFrames": 7342,
+        "simulationTime": 244.94559999998208,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 247107.69999998808,
+          "lastGapMs": 33.099999994039536,
+          "windowMs": 136537.5003643036,
+          "fpsMeasured": 29.999084420552784,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.599998474121094,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 244.94559999998208,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 244.94559999998208,
+          "bubbles": 28,
+          "activeDust": 10,
+          "sandEvents": 96,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 4,
+            "travel": 17,
+            "settle": 1,
+            "inspect": 2,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.5893633785596569,
+          "maximumSpeed": 1.3761570710395188,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 244.94559999998208
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    },
+    {
+      "elapsedMs": 65000.29999998212,
+      "stats": {
+        "profile": "balanced",
+        "onBattery": false,
+        "resolution": 1.25,
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "samples": 4,
+        "shadowSize": 2048,
+        "shadowHz": "per-frame",
+        "renderedFrames": 7372,
+        "shadowFrames": 7372,
+        "simulationTime": 245.94559999998185,
+        "frameTiming": {
+          "kind": "actual CPU render-submission intervals",
+          "samples": 4096,
+          "segments": 0,
+          "lastFrameAtMs": 248107.79999998212,
+          "lastGapMs": 33.599999994039536,
+          "windowMs": 136537.20038414001,
+          "fpsMeasured": 29.999150330284536,
+          "p50Ms": 33.29999923706055,
+          "p95Ms": 41.599998474121094,
+          "maxMs": 42.79999923706055
+        },
+        "pigmentAsset": {
+          "loaded": true,
+          "blueLoaded": true,
+          "error": null,
+          "source": "Two AI-generated RGBA pigment plates"
+        },
+        "habitat": {
+          "enabled": true,
+          "mode": "2.5D planted habitat; shared spectral water, depth-projected caustics, surface reflection, soft shafts; 3D fish",
+          "motionTime": 245.94559999998185,
+          "plantOpening": "0.043 UV at mid-height, zero at bed and surface; original asset retained",
+          "photo": [
+            1554,
+            1012
+          ],
+          "depth": [
+            1554,
+            1012
+          ]
+        },
+        "leafAsset": {
+          "loaded": true,
+          "error": null
+        },
+        "livingWater": {
+          "time": 245.94559999998185,
+          "bubbles": 28,
+          "activeDust": 7,
+          "sandEvents": 96,
+          "maxDust": 96
+        },
+        "fish": {
+          "count": 24,
+          "states": {
+            "hover": 3,
+            "travel": 18,
+            "settle": 0,
+            "inspect": 3,
+            "feed": 0,
+            "escape": 0
+          },
+          "twitching": 0,
+          "averageSpeed": 0.6262157576775043,
+          "maximumSpeed": 1.535671493089389,
+          "pointerResponses": 0,
+          "escapes": 0,
+          "foraging": 19,
+          "strikes": 12,
+          "bites": 6,
+          "simulationTime": 245.94559999998185
+        },
+        "food": {
+          "dropped": 10,
+          "eaten": 6,
+          "dissolved": 4,
+          "pellets": 0
+        },
+        "drawCalls": 9,
+        "triangles": 1628740,
+        "plants": {
+          "backgroundCandidates": 827,
+          "backgroundKept": 370,
+          "backgroundVertices": 23310,
+          "backgroundTriangles": 29600,
+          "vertices": 191808,
+          "triangles": 294512
+        },
+        "loop": {
+          "fps": 30,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      }
+    }
+  ]
+}

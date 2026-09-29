@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>グッピー v28 — 写真比較とMac表示</title>
+<style>
+:root{color-scheme:light;--ink:#17353d;--muted:#4e6970;--line:#cadadc;--sea:#e8f4f7;--panel:#fff}
+*{box-sizing:border-box}body{margin:0;background:#f4f8f8;color:var(--ink);font:16px/1.7 system-ui,-apple-system,sans-serif}
+main{max-width:1180px;margin:auto;padding:34px 24px 72px}h1{font-size:clamp(28px,4vw,42px);line-height:1.25;margin:.25em 0}h2{margin-top:40px;font-size:24px}
+p{max-width:900px}.lead,.note{background:var(--sea);padding:16px 20px;border-radius:10px}.meta,figcaption{color:var(--muted);font-size:14px}
+figure{margin:24px 0}img{display:block;max-width:100%;height:auto;border-radius:8px;background:#d9edf4}.reference{max-width:800px}.comparison{width:100%}
+.native{width:100%}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.grid figure{margin:0;background:var(--panel);padding:14px;border:1px solid var(--line);border-radius:10px}
+table{width:100%;border-collapse:collapse;background:white}th,td{border-bottom:1px solid var(--line);padding:12px;text-align:left;vertical-align:top}th{width:20%;background:#edf5f6}a{color:#075c7d}
+@media(max-width:720px){main{padding:24px 16px}.grid{grid-template-columns:1fr}table,tbody,tr,th,td{display:block}th{width:auto}}
+</style>
+<main>
+<p class="meta">Deskworlds · 2026-09-29 · guppy-v28 · 写真参照の調整候補</p>
+<h1>ブロンズの背側、真珠色の腹、青いヒレへ</h1>
+<p class="lead">v28をMacアプリへ導入し、WebView上の水槽描画を確認しました。前版より体色と腹境界は参照写真へ寄っています。まだ鱗が整いすぎ、ヒレの青い条が弱いため、実写に近い完成形とは判定していません。</p>
+
+<h2>参照写真と同じ条件の魚比較</h2>
+<figure><img class="reference" src="../evidence/user-selected-guppy-reference.png" alt="本人が参考として提示したグッピーの写真"><figcaption>本人指定の写真。色の配置と形、鱗、ヒレの質感を参照します。</figcaption></figure>
+<figure><img class="comparison" src="../evidence/bronze-scale-v28-side-7-photo-detail1-20260929T005031Z.png" alt="同じ角度のv26、v27、v28を左から並べた魚の比較"><figcaption>左からv26・v27・v28。同じ姿勢、カメラ、照明。v28は暖色ブロンズの背側と明るい腹を持たせ、赤茶のベタ塗りや黒い帯を避けています。</figcaption></figure>
+
+<h2>導入後のMacアプリ</h2>
+<figure><img class="native" src="../evidence/bronze-v28-native-20260929T0948.png" alt="MacアプリのWebViewに描画された青い水と水草、24匹のグッピー"><figcaption>3024×1964のアプリ内WKWebViewスナップショット。左右の植栽と中央の明るい砂道、水面、24匹の魚が描画されています。DockやFinderを含むデスクトップ全体の画像ではありません。</figcaption></figure>
+
+<h2>写真に寄ったところと、残る違和感</h2>
+<table><tbody>
+<tr><th>胴体の色</th><td>v28はブロンズ〜銀色の地肌にし、尾柄側へわずかに濃くなる色調を残しました。画面サイズでは色変化が控えめで、写真の鱗ごとの反射や陰影ほど複雑ではありません。</td></tr>
+<tr><th>腹</th><td>明るい真珠色に、わずかな濁りと不規則な縁、後方付け根の柔らかい陰を加えました。輪郭の自然さは改善しましたが、写真よりまだ均質です。</td></tr>
+<tr><th>鱗</th><td>個別の色差を加えて均一な格子感を弱めました。ただし弧の並び自体は規則的で、写真の細かな重なりには届いていません。</td></tr>
+<tr><th>ヒレ</th><td>尾の青みと透ける縁を残しました。青い鰭条が通常の壁紙サイズでは薄く、写真の放射状の線と透明な膜が十分に読み取れません。</td></tr>
+<tr><th>全体の印象</th><td>写真は細身で自然な生体の質感です。v28はそこへ色の配置を近づけましたが、まだ整った3Dモデルの印象があり、写実性の最終合格ではありません。</td></tr>
+</tbody></table>
+
+<h2>実装・確認状況</h2>
+<p>固定上流版の構文検査・9テストスクリプト、v28の材質・体型・色割当・水中動作の専用チェック、Swiftビルド・署名・plist検査に成功しました。インストール済みのシーンファイル107個はビルド成果物と一致し、自動起動Agentは登録・稼働中です。</p>
+<p class="note">Macメニュー、Dock、ドラッグ、実カーソル、実スリープ復帰、実再ログインと、v28の3状態負荷測定は未確認です。比較画像や起動状態は、本人による操作確認・最終評価の代わりにはなりません。</p>
+<p><a href="../V28-VERIFICATION.md">V28-VERIFICATION.md（確認項目・未確認事項）</a> · <a href="../SETUP-VERIFICATION.md">Mac上での操作確認手順</a></p>
+</main>
+</html>

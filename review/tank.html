@@ -1,0 +1,17 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><title>水槽全体の比較</title><style>body{margin:0;background:#162820;color:#eef3e7;font:14px system-ui}header{padding:10px}button,select{font:inherit;padding:7px;margin:4px;background:#304a3e;color:inherit;border:1px solid #718576;border-radius:5px}iframe{display:block;width:1200px;height:780px;border:0;max-width:none}output{margin-left:10px}</style>
+<header><select id="version" aria-label="水槽の版"><option value="planted-tank-v3">変更前</option><option value="livebearer-v4" selected>変更後</option></select><button id="pause">停止</button><button id="feed">餌やり</button><button id="photo">水槽画像を保存</button><button id="record">水槽動画を20秒保存</button><output id="status">読み込み中</output></header>
+<iframe title="実際の水槽" id="tank"></iframe>
+<script>
+let paused=false,ready=false;const frame=document.querySelector('iframe'),status=document.querySelector('output'),select=document.querySelector('select');
+function load(){ready=false;frame.src='/preview/'+select.value+'/scenes/riverscape/wallpaper.html?quality=balanced';}
+frame.onload=()=>{ready=false;};select.onchange=load;load();
+setInterval(()=>{if(!ready){if(!frame.contentWindow.sceneRate)return;frame.contentWindow.sceneRate(30);ready=true;}const s=frame.contentWindow.sceneStats?.();if(s)status.textContent=`${select.value} / ${s.framebuffer.join('×')} / ${s.loop.fps} fps / ${s.loop.running?'動作中':'停止'} / ${s.renderedFrames} frames`;},1000);
+document.querySelector('#pause').onclick=e=>{paused=!paused;frame.contentWindow.scenePause(paused);e.target.textContent=paused?'再開':'停止';};document.querySelector('#feed').onclick=()=>frame.contentWindow.sceneFeed();
+function save(blob,suffix){const name='guppy-tank-'+(select.value==='livebearer-v4'?'after':'before')+'.'+suffix;return fetch('/capture/'+name,{method:'POST',body:blob});}
+document.querySelector('#photo').onclick=()=>{
+ const win=frame.contentWindow,old=win.sceneStats().renderedFrames;
+ if(!win.sceneStats().loop.running){status.textContent='再開してから保存してください';return;}
+ const capture=()=>{if(win.sceneStats().renderedFrames===old){win.requestAnimationFrame(capture);return;}frame.contentDocument.querySelector('canvas').toBlob(blob=>save(blob,'png'));};win.requestAnimationFrame(capture);
+};
+document.querySelector('#record').onclick=e=>{const chunks=[];const recorder=new MediaRecorder(frame.contentDocument.querySelector('canvas').captureStream(30),{mimeType:'video/webm;codecs=vp9',videoBitsPerSecond:7000000});recorder.ondataavailable=e=>chunks.push(e.data);recorder.onstop=()=>save(new Blob(chunks,{type:'video/webm'}),'webm').then(()=>{e.target.textContent='保存済み';e.target.disabled=false;});recorder.start();e.target.disabled=true;e.target.textContent='録画中';setTimeout(()=>recorder.stop(),20000);};
+</script></html>

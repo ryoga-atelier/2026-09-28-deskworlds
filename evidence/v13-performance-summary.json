@@ -1,0 +1,124 @@
+{
+  "cpu_mean_percent_one_core": 16.258164856523774,
+  "duration_seconds": 90.002415666,
+  "conditions": "Own live WebGL preview/probe tabs closed; video playback ended before this window; other user apps untouched. Not a matched v11 comparison.",
+  "screens": {
+    "[1789, 1006]": {
+      "fps_from_total_frames": 29.998000133324446,
+      "frame_first": 26,
+      "frame_last": 2726,
+      "timing_final": {
+        "kind": "actual CPU render-submission intervals",
+        "samples": 2725,
+        "segments": 0,
+        "lastFrameAtMs": 91612.00000000001,
+        "lastGapMs": 42,
+        "windowMs": 90816,
+        "fpsMeasured": 30.005725863284002,
+        "p50Ms": 28,
+        "p95Ms": 43,
+        "maxMs": 49
+      },
+      "loop_final": {
+        "fps": 30,
+        "paused": false,
+        "hidden": false,
+        "running": true,
+        "pending": true
+      },
+      "water_first": {
+        "time": 0.909,
+        "bubbles": 28,
+        "activeDust": 0,
+        "sandEvents": 0,
+        "maxDust": 96
+      },
+      "water_last": {
+        "time": 90.90999999999666,
+        "bubbles": 28,
+        "activeDust": 12,
+        "sandEvents": 2,
+        "maxDust": 96
+      },
+      "habitat_time_final": 90.90999999999666,
+      "all_assets_loaded": true
+    },
+    "[1665, 1081]": {
+      "fps_from_total_frames": 0.3333074094237115,
+      "frame_first": 1,
+      "frame_last": 31,
+      "timing_final": {
+        "kind": "actual CPU render-submission intervals",
+        "samples": 29,
+        "segments": 1,
+        "lastFrameAtMs": 9821,
+        "lastGapMs": 33,
+        "windowMs": 979,
+        "fpsMeasured": 29.622063329928498,
+        "p50Ms": 33,
+        "p95Ms": 34,
+        "maxMs": 49
+      },
+      "loop_final": {
+        "fps": 0,
+        "paused": false,
+        "hidden": false,
+        "running": false,
+        "pending": false
+      },
+      "water_first": {
+        "time": 0,
+        "bubbles": 28,
+        "activeDust": 0,
+        "sandEvents": 0,
+        "maxDust": 96
+      },
+      "water_last": {
+        "time": 0.9799999999999998,
+        "bubbles": 28,
+        "activeDust": 0,
+        "sandEvents": 0,
+        "maxDust": 96
+      },
+      "habitat_time_final": 0.9799999999999998,
+      "all_assets_loaded": true
+    }
+  },
+  "footprints_mib": [
+    {
+      "pid": 51391,
+      "start_bytes": 28.28,
+      "end_bytes": 22.42,
+      "min_bytes": 22.31,
+      "max_bytes": 28.28
+    },
+    {
+      "pid": 51393,
+      "start_bytes": 394.58,
+      "end_bytes": 311.53,
+      "min_bytes": 282.58,
+      "max_bytes": 394.58
+    },
+    {
+      "pid": 51394,
+      "start_bytes": 4.17,
+      "end_bytes": 4.03,
+      "min_bytes": 4.03,
+      "max_bytes": 4.17
+    },
+    {
+      "pid": 51395,
+      "start_bytes": 423.91,
+      "end_bytes": 354.95,
+      "min_bytes": 345.88,
+      "max_bytes": 423.91
+    },
+    {
+      "pid": 51396,
+      "start_bytes": 374.66,
+      "end_bytes": 342.47,
+      "min_bytes": 342.31,
+      "max_bytes": 374.66
+    }
+  ]
+}

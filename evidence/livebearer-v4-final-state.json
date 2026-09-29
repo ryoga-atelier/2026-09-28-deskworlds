@@ -1,0 +1,67 @@
+{
+  "at": "2026-09-28T08:58:07.353092+09:00",
+  "source": {
+    "url": "https://github.com/chaseleantj/deskworlds",
+    "commit": "3950c45ef5798ed2df9f78037994bcddacebbb01",
+    "source_post": "https://x.com/chaseleantj/status/2100663203076128908",
+    "variant": "guppy",
+    "customization": {
+      "variant": "guppy",
+      "revision": "livebearer-v4",
+      "colors": [
+        "red grass inspired",
+        "gold snakeskin inspired",
+        "blue grass inspired"
+      ],
+      "overlay_sha256": "f97da30c44e233640d6b0edcfe79d4604b568b02c7a934a7228c4c1bb27cb28e",
+      "motion_sha256": "4311902d85383133814443f4cd221a2901aab5e7e14384381313880d52e25a97",
+      "scope": "Livebearer body profile, deforming tail with moving surface normals, individual pectoral rhythm; upstream interactive behavior retained",
+      "aquascape": {
+        "revision": "layered-plants-v4",
+        "layout_sha256": "044f839cf1680075a9e17659339d306df9fdaa71d438c7fc0be08d8322015e26",
+        "customizer_sha256": "7b5bb2df4bca93c784143d733330e73a8223de3f8b38044379c063e79ac278f6",
+        "description": "Layered planting with fine ribbons and feathery clusters, open central swimming area, softer distant contrast, compact attached wood/moss habitat"
+      },
+      "customizer_sha256": "8b2f37d8a865a32e1c05d181565168d5335fa08352230b859816bc32213ddd72"
+    }
+  },
+  "byte_matched_sources": [
+    "scenes/riverscape/src/plants.js",
+    "scenes/riverscape/src/fish-anatomy.js",
+    "scenes/riverscape/src/render-policy.js",
+    "scenes/riverscape/src/water.js",
+    "scenes/riverscape/src/guppy-swimming.js",
+    "scenes/riverscape/src/main.js",
+    "scenes/riverscape/src/fish-anatomy-base.js",
+    "scenes/riverscape/src/math.js",
+    "scenes/riverscape/src/fish.js",
+    "scenes/riverscape/src/food.js",
+    "scenes/riverscape/src/stemplants.js",
+    "scenes/riverscape/src/aquascape-layout.js",
+    "scenes/riverscape/src/broadleaf.js",
+    "scenes/riverscape/src/composite.js",
+    "scenes/riverscape/src/environment.js",
+    "scenes/riverscape/src/foliage.js"
+  ],
+  "system_settings": {
+    "/Users/ryoga-atelier/Library/Application Support/com.apple.wallpaper/Store/Index.plist": {
+      "before": "529bf149302c2a0ff91a51dde7e736f6d61d4dd7f9ca600bfb636007984e4238",
+      "now": "529bf149302c2a0ff91a51dde7e736f6d61d4dd7f9ca600bfb636007984e4238"
+    },
+    "/Users/ryoga-atelier/Library/Preferences/com.apple.universalaccess.plist": {
+      "before": "ee07787e4e98e6a501b8ce8e46571e9c4fb88548dbeba5fcd9c3ff53fd4e311c",
+      "now": "ee07787e4e98e6a501b8ce8e46571e9c4fb88548dbeba5fcd9c3ff53fd4e311c"
+    }
+  },
+  "upstream_clean": true,
+  "prefs": "{\n    paused = 0;\n    world = riverscape;\n}\n",
+  "launchagent": "gui/501/com.chaselean.deskworlds = {\n\tactive count = 4\n\tpath = /Users/ryoga-atelier/Library/LaunchAgents/com.chaselean.deskworlds.plist\n\ttype = LaunchAgent\n\tstate = running\n\n\tprogram = /Users/ryoga-atelier/Applications/Deskworlds.app/Contents/MacOS/Deskworlds\n\targuments = {\n\t\t/Users/ryoga-atelier/Applications/Deskworlds.app/Contents/MacOS/Deskworlds\n\t}\n\n\tstderr path = /Users/ryoga-atelier/workspace/apps/2026-09-28-deskworlds/evidence/deskworlds-runtime.log\n\tinherited environment = {\n\t\tSSH_AUTH_SOCK => /var/run/com.apple.launchd.llaM5QmOxu/Listeners\n\t}\n\n\tdefault environment = {\n\t\tPATH => /usr/bin:/bin:/usr/sbin:/sbin\n\t}\n\n\tenvironment = {\n\t\tOSLogRateLimit => 64\n\t\tXPC_SERVICE_NAME => com.chaselean.deskworlds\n\t}\n\n\tdomain = gui/501 [100025]\n\tasid = 100025\n\tminimum runtime = 10\n\texit timeout = 5\n\truns = 1\n\tpid = 7110\n\timmediate reason = speculative\n\tforks = 0\n\texecs = 1\n\tinitialized = 1\n\ttrampolined = 1\n\tstarted suspended = 0\n\tproxy started suspended = 0\n\tchecked allocations = 0 (queried = 1)\n\tchecked allocations reason = no host\n\tchecked allocations flags = 0x0\n\tlast exit code = (never exited)\n\n\tsemaphores = {\n\t\tsuccessful exit => 0\n\t}\n\n\tpid-local endpoints = {\n\t\t\"com.apple.coredrag\" = {\n\t\t\tport = 0xee02f\n\t\t\tactive = 1\n\t\t\tmanaged = 0\n\t\t\treset = 0\n\t\t\thide = 0\n\t\t\twatching = 0\n\t\t}\n\t\t\"com.apple.tsm.portname\" = {\n\t\t\tport = 0x127f73\n\t\t\tactive = 1\n\t\t\tmanaged = 0\n\t\t\treset = 0\n\t\t\thide = 0\n\t\t\twatching = 0\n\t\t}\n\t\t\"com.apple.axserver\" = {\n\t\t\tport = 0xbab37\n\t\t\tactive = 1\n\t\t\tmanaged = 0\n\t\t\treset = 0\n\t\t\thide = 0\n\t\t\twatching = 0\n\t\t}\n\t}\n\n\tresource coalition = {\n\t\tID = 13173\n\t\ttype = resource\n\t\tstate = active\n\t\tactive count = 1\n\t\tname = com.chaselean.deskworlds\n\t}\n\n\tjetsam coalition = {\n\t\tID = 13174\n\t\ttype = jetsam\n\t\tstate = active\n\t\tactive count = 1\n\t\tname = com.chaselean.deskworlds\n\t}\n\n\tspawn type = interactive (4)\n\tjetsam priority = 40\n\tjetsam memory limit (active) = (unlimited)\n\tjetsam memory limit (inactive) = (unlimited)\n\tjetsamproperties category = daemon\n\tjetsam thread limit = 32\n\tcpumon = default\n\tjob state = running\n\n\tproperties = runatload | inferred program\n}\n",
+  "artifacts": {
+    "review/RESULTS.html": "bcf498728df74575f9f05c0a9ce0cf40dd92fdb0c4da5caa655b1be53b68fc56",
+    "VISUAL-REVIEW.md": "e987c882b784a3c30a33293883da0302434d64719174b6009d75cf164497bf49",
+    "evidence/guppy-swim-comparison.mp4": "e32199889b43958af705f9e0aec5cd839a9e9e3d23e9f9bf1e107be614550a74",
+    "evidence/guppy-turn-comparison.mp4": "16dd9cc229469c51ec2ef071dc0ac1ab6f92b33feeb19352643e894f7ab0eb34",
+    "evidence/guppy-tank-before.mp4": "f286271ac1701ded6463fdc196cf8400830f36e95ab77738ed811621aa36191e",
+    "evidence/guppy-tank-after.mp4": "26ad8d5d9564caa64431d52a877c492c1376cba165e7e2efeaf2625a119215c7"
+  }
+}

@@ -1,0 +1,538 @@
+{
+ "summary": {
+  "label": "r15-paused",
+  "at": "2026-09-29T14:45:20.505155+09:00",
+  "seconds": 90.1,
+  "cpu_percent_one_core_mean": 0.07,
+  "gpu_device_percent_median": 18,
+  "footprint_last_mib": {
+   "Deskworlds:70661": 21.4,
+   "com.apple.WebKit.GPU:70664": 37.6,
+   "com.apple.WebKit.Networking:70665": 5.0,
+   "com.apple.WebKit.WebContent:70666": 292.4,
+   "com.apple.WebKit.WebContent:70667": 274.1
+  },
+  "footprint_gpu_plus_webcontent_last_mib": 604.1,
+  "frames": {
+   "2388C1A2-1BA2-4687-B3B5-EFAFB54805D7": {
+    "pixels": [
+     1665,
+     1081
+    ],
+    "frames": 0,
+    "fps": 0.0,
+    "running": false
+   },
+   "2601B457-08F1-4972-8B67-8FAE948AF11E": {
+    "pixels": [
+     1789,
+     1006
+    ],
+    "frames": 0,
+    "fps": 0.0,
+    "running": false
+   }
+  },
+  "members": {
+   "70661": "Deskworlds",
+   "70664": "com.apple.WebKit.GPU",
+   "70665": "com.apple.WebKit.Networking",
+   "70666": "com.apple.WebKit.WebContent",
+   "70667": "com.apple.WebKit.WebContent"
+  }
+ },
+ "samples": [
+  {
+   "t": 2.07,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 29,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.3,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 293.4,
+    "com.apple.WebKit.WebContent:70667": 275.1
+   }
+  },
+  {
+   "t": 4.29,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 17,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.3,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 293.5,
+    "com.apple.WebKit.WebContent:70667": 275.1
+   }
+  },
+  {
+   "t": 6.51,
+   "cpu_percent": 0.45,
+   "gpu_device_percent": 0,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.3,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 293.5,
+    "com.apple.WebKit.WebContent:70667": 275.1
+   }
+  },
+  {
+   "t": 8.7,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 29,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.3,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 293.4,
+    "com.apple.WebKit.WebContent:70667": 275.1
+   }
+  },
+  {
+   "t": 10.9,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 27,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.3,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 293.4,
+    "com.apple.WebKit.WebContent:70667": 275.1
+   }
+  },
+  {
+   "t": 13.11,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 36,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.3,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 293.4,
+    "com.apple.WebKit.WebContent:70667": 275.1
+   }
+  },
+  {
+   "t": 15.3,
+   "cpu_percent": 0.46,
+   "gpu_device_percent": 29,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.2,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.4,
+    "com.apple.WebKit.WebContent:70667": 274.8
+   }
+  },
+  {
+   "t": 17.51,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 23,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.2,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.4,
+    "com.apple.WebKit.WebContent:70667": 274.1
+   }
+  },
+  {
+   "t": 19.71,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 19,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.2,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.4,
+    "com.apple.WebKit.WebContent:70667": 274.1
+   }
+  },
+  {
+   "t": 21.91,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 20,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.2,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.4,
+    "com.apple.WebKit.WebContent:70667": 274.1
+   }
+  },
+  {
+   "t": 24.11,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 20,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.2,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.3,
+    "com.apple.WebKit.WebContent:70667": 274.1
+   }
+  },
+  {
+   "t": 26.3,
+   "cpu_percent": 0.46,
+   "gpu_device_percent": 18,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.2,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.3,
+    "com.apple.WebKit.WebContent:70667": 274.0
+   }
+  },
+  {
+   "t": 28.5,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 23,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.2,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.3,
+    "com.apple.WebKit.WebContent:70667": 274.0
+   }
+  },
+  {
+   "t": 30.7,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 23,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.2,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.3,
+    "com.apple.WebKit.WebContent:70667": 274.0
+   }
+  },
+  {
+   "t": 32.9,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 0,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.2,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.3,
+    "com.apple.WebKit.WebContent:70667": 274.0
+   }
+  },
+  {
+   "t": 35.1,
+   "cpu_percent": 0.45,
+   "gpu_device_percent": 22,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.3,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.3,
+    "com.apple.WebKit.WebContent:70667": 274.0
+   }
+  },
+  {
+   "t": 37.29,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 17,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.3,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.3,
+    "com.apple.WebKit.WebContent:70667": 274.0
+   }
+  },
+  {
+   "t": 39.5,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 18,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.3,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.3,
+    "com.apple.WebKit.WebContent:70667": 274.0
+   }
+  },
+  {
+   "t": 41.69,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 0,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.3,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.3,
+    "com.apple.WebKit.WebContent:70667": 274.0
+   }
+  },
+  {
+   "t": 43.89,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 18,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.2,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.3,
+    "com.apple.WebKit.WebContent:70667": 274.0
+   }
+  },
+  {
+   "t": 46.09,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 0,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.3,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.3,
+    "com.apple.WebKit.WebContent:70667": 274.0
+   }
+  },
+  {
+   "t": 48.29,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 17,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.3,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.3,
+    "com.apple.WebKit.WebContent:70667": 274.0
+   }
+  },
+  {
+   "t": 50.49,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 0,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.3,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.3,
+    "com.apple.WebKit.WebContent:70667": 274.0
+   }
+  },
+  {
+   "t": 52.72,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 16,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.3,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.3,
+    "com.apple.WebKit.WebContent:70667": 274.0
+   }
+  },
+  {
+   "t": 54.92,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 0,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.3,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.3,
+    "com.apple.WebKit.WebContent:70667": 274.0
+   }
+  },
+  {
+   "t": 57.11,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 18,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.2,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.3,
+    "com.apple.WebKit.WebContent:70667": 274.0
+   }
+  },
+  {
+   "t": 59.31,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 22,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.2,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.3,
+    "com.apple.WebKit.WebContent:70667": 274.1
+   }
+  },
+  {
+   "t": 61.51,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 0,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.3,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.4,
+    "com.apple.WebKit.WebContent:70667": 274.1
+   }
+  },
+  {
+   "t": 63.71,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 22,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.2,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.4,
+    "com.apple.WebKit.WebContent:70667": 274.1
+   }
+  },
+  {
+   "t": 65.89,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 0,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.2,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.4,
+    "com.apple.WebKit.WebContent:70667": 274.1
+   }
+  },
+  {
+   "t": 68.1,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 22,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.2,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.4,
+    "com.apple.WebKit.WebContent:70667": 274.1
+   }
+  },
+  {
+   "t": 70.31,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 0,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.2,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.4,
+    "com.apple.WebKit.WebContent:70667": 274.1
+   }
+  },
+  {
+   "t": 72.51,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 20,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.2,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.4,
+    "com.apple.WebKit.WebContent:70667": 274.1
+   }
+  },
+  {
+   "t": 74.71,
+   "cpu_percent": 0.45,
+   "gpu_device_percent": 0,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.2,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.4,
+    "com.apple.WebKit.WebContent:70667": 274.1
+   }
+  },
+  {
+   "t": 76.91,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 22,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.2,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.4,
+    "com.apple.WebKit.WebContent:70667": 274.1
+   }
+  },
+  {
+   "t": 79.1,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 21,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.2,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.4,
+    "com.apple.WebKit.WebContent:70667": 274.1
+   }
+  },
+  {
+   "t": 81.3,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 23,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.2,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.4,
+    "com.apple.WebKit.WebContent:70667": 274.1
+   }
+  },
+  {
+   "t": 83.5,
+   "cpu_percent": 0.45,
+   "gpu_device_percent": 28,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.7,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.4,
+    "com.apple.WebKit.WebContent:70667": 274.1
+   }
+  },
+  {
+   "t": 85.7,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 0,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.7,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.4,
+    "com.apple.WebKit.WebContent:70667": 274.1
+   }
+  },
+  {
+   "t": 87.91,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 0,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.4,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.4,
+    "com.apple.WebKit.WebContent:70667": 274.1
+   }
+  },
+  {
+   "t": 90.11,
+   "cpu_percent": 0.0,
+   "gpu_device_percent": 0,
+   "footprint_mib": {
+    "Deskworlds:70661": 21.4,
+    "com.apple.WebKit.GPU:70664": 37.6,
+    "com.apple.WebKit.Networking:70665": 5.0,
+    "com.apple.WebKit.WebContent:70666": 292.4,
+    "com.apple.WebKit.WebContent:70667": 274.1
+   }
+  }
+ ]
+}

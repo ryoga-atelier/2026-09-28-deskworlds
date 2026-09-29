@@ -1,0 +1,51 @@
+--- r9/photo-material.js
++++ r10/photo-material.js
+@@ -95,9 +95,9 @@
+       return exp(-pow((x-fishOpercleX(y))/.0035,2.))*underEye;
+     }
+     float guppyAnalRootIndent(float x,float y) {
+-      // Compress vertically toward the fin insertion, keeping its width and root.
++      // Broad rounded rear compartment, using the r8 semicircle's proportions.
+       return exp(-pow((x-.010)/.034,2.)
+-        -pow((y+.0545)/.0165,2.));
++        -pow((y+.042)/.033,2.));
+     }
+     float guppyBellyProfile(float x,float y) {
+       vec2 bellyCoord=(vec2(x,y)-vec2(.105,-.037))/vec2(.133,.064);
+@@ -119,9 +119,9 @@
+       return band*smoothstep(-.043,-.005,y);
+     }
+     float guppyAnalPigment(float x,float y) {
+-      // This compact marking is clipped to the shared inner abdomen in guppySkin.
+-      // Its short height leaves the upper belly pale and joins the fin insertion.
+-      float attachment=exp(-pow(x/.025,2.)-pow((y+.067)/.0075,2.));
++      // Both pale tissue and this marking share the full abdominal boundary.
++      // Reaching the outer tissue avoids a pale pointed tip behind the marking.
++      float attachment=exp(-pow(x/.025,2.)-pow((y+.067)/.015,2.));
+       return max(guppyAnalRootIndent(x,y),.70*attachment);
+     }
+     float guppyFinFold(float u,float reach) {
+@@ -237,10 +237,12 @@
+       // Both colours occupy the same abdomen: its silver rim encloses the pale
+       // centre and grey-brown rear marking without a separate outline around either.
+       float analPigment=guppyAnalPigment(x,vSkinPoint.y);
+-      float bellyRoot=analPigment*belly;
++      float bellyRoot=analPigment*bellyOuter;
+       float rootGrain=gMottle(vec2(x*92.,vSkinPoint.y*145.)+seed+23.);
+       float rootTexture=.80+.20*rootGrain;
+-      skin=mix(skin,vec3(.105,.097,.079),smoothstep(.10,.69,analPigment+(rootGrain-.5)*.15)*rootTexture*.67*belly);
++      // A broad, gently edged compartment stays readable at the approved lightness.
++      // Its outer tissue carries the same colour so a white rear point cannot peek out.
++      skin=mix(skin,vec3(.105,.097,.079),smoothstep(.07,.42,analPigment+(rootGrain-.5)*.10)*rootTexture*.67*bellyOuter);
+       // The other dark tissue stays at the caudal attachment and orbital edge.
+       float base=1.-smoothstep(-.284,-.245,x);
+       skin=mix(skin,vec3(.035,.028,.030),base*(.82+.06*guppyDarkRoot()));
+@@ -282,7 +284,7 @@
+     if(vFishPart<.5) {
+       diffuseColor.rgb=guppySkin();
+       float bellyRadius=guppyBellyProfile(vSkinPoint.x,vSkinPoint.y)+guppyBellyEdge();
+-      float localInk=max(guppyAnalPigment(vSkinPoint.x,vSkinPoint.y)*.72*guppyBellyInner(bellyRadius),
++      float localInk=max(guppyAnalPigment(vSkinPoint.x,vSkinPoint.y)*.72*guppyBellyOuter(bellyRadius),
+         guppyBellySeam(bellyRadius,vSkinPoint.y)*.72);
+       gFishThrough*=.65*(1.-.80*max(max(guppyBackPigment(),guppyHeadPigment()),localInk));
+     } else if(vFishPart<6.5) {

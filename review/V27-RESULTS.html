@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>グッピー v27 — 写真比較と実機表示</title>
+<style>
+:root{color-scheme:light;--ink:#17353d;--muted:#4e6970;--line:#cadadc;--sea:#e8f4f7}
+*{box-sizing:border-box}body{margin:0;background:#f4f8f8;color:var(--ink);font:16px/1.7 system-ui,-apple-system,sans-serif}
+main{max-width:1180px;margin:auto;padding:34px 24px 72px}h1{font-size:clamp(28px,4vw,42px);line-height:1.25;margin:.25em 0}h2{margin-top:40px;font-size:24px}p{max-width:900px}.lead,.note{background:var(--sea);padding:16px 20px;border-radius:10px}.meta,figcaption{color:var(--muted);font-size:14px}figure{margin:24px 0}img{display:block;max-width:100%;height:auto;border-radius:8px}.reference{max-width:800px}.comparison{width:100%;background:#9fc2d1}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.grid figure{margin:0}.grid img{width:100%}table{width:100%;border-collapse:collapse;background:white}th,td{border-bottom:1px solid var(--line);padding:12px;text-align:left;vertical-align:top}th{width:20%;background:#edf5f6}a{color:#075c7d}@media(max-width:720px){main{padding:24px 16px}.grid{grid-template-columns:1fr}table,tbody,tr,th,td{display:block}th{width:auto}}
+</style>
+<main>
+<p class="meta">Deskworlds · 2026-09-29 · guppy-v27</p>
+<h1>写真の「透けるヒレ・腹の陰・鱗の重なり」を反映</h1>
+<p class="lead">現在のMacアプリへv27を導入し、実機のWebView描画を確認しました。三つの質感は見えやすくなりましたが、鱗の並びはまだ規則的で、写真のような自然な質感には差が残っています。</p>
+
+<h2>参照写真と同じ条件の魚比較</h2>
+<figure><img class="reference" src="../evidence/user-selected-guppy-reference.png" alt="本人が選んだグッピー写真"><figcaption>本人指定の参照写真。暗い水槽で撮られているため、絶対色ではなく模様と質感を比較。</figcaption></figure>
+<figure><img class="comparison" src="../evidence/natural-v18-metrics-pearl27-side-7-photo-detail1-20260928T164531Z.png" alt="同じ姿勢と照明で左からv25、v26、v27を並べた魚比較"><figcaption>左からv25、v26、v27。同じ姿勢・カメラ・照明。色補正なし。</figcaption></figure>
+<figure><img src="../evidence/pearl-v27-native.png" alt="導入後のMacアプリWebViewの水槽表示"><figcaption>導入後のMacアプリ。左右に茂み、中央に砂の道。これはアプリ内WebViewの画像で、デスクトップ全体ではありません。</figcaption></figure>
+
+<h2>ご希望をこう読み取りました</h2>
+<table><tbody>
+<tr><th>透けるヒレ</th><td>透明部分を消し切らず、青系の薄い色膜・鰭条・細い横脈で輪郭を残す。v27で反映済みですが、通常壁紙サイズではまだ淡い。</td></tr>
+<tr><th>腹の根元</th><td>白い腹全体を暗くせず、後方の腹鰭付近に小さな灰茶色の陰を置く。v27で柔らかい斑として反映。</td></tr>
+<tr><th>鱗</th><td>黒い帯ではなく、背側の色地に重なる鱗の弧を腹側にも少し続ける。v27で明瞭になった一方、写真より格子が均一で人工的。</td></tr>
+</tbody></table>
+
+<h2>導入・検査</h2>
+<p>上流固定版の構文検査・9テスト、魚形状・8色割当・水中砂の専用チェック、Swiftビルドと署名、107個の実行ファイル比較に成功。自動起動の登録は稼働中です。元の壁紙とアクセシビリティ設定は変更されていません。詳しくは <a href="../V27-VERIFICATION.md">V27-VERIFICATION.md</a> を参照してください。</p>
+<p class="note">v27の負荷3状態測定とMacメニュー・Dock・ドラッグ・実カーソル・スリープ復帰・実再ログインは未確認です。比較画像は最終的な本人合格の代わりにはしていません。</p>
+<p><a href="shape-v27.html">色・角度を変えて魚を比べる</a> · <a href="../SETUP-VERIFICATION.md">残るMac操作の確認手順</a></p>
+</main>
+</html>

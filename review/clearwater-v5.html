@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>水槽壁紙 v6 比較・実動作確認</title>
+<style>
+  :root { color-scheme: dark; font: 14px system-ui, sans-serif; }
+  body { margin: 0; background: #17221d; color: #e7ede8; }
+  header { width: 1200px; box-sizing: border-box; height: 62px; display: flex; align-items: center; gap: 8px; padding: 8px 12px; }
+  h1 { margin: 0 auto 0 0; font-size: 15px; font-weight: 600; }
+  button, select { font: inherit; padding: 7px 9px; background: #283b31; color: inherit; border: 1px solid #64786b; border-radius: 5px; }
+  label { white-space: nowrap; color: #d3ddd6; }
+  button:disabled { opacity: .5; }
+  output { min-width: 240px; color: #b9cabe; }
+  iframe { display: block; width: 1200px; height: 780px; border: 0; }
+</style>
+<header>
+  <h1>水槽の同条件比較</h1>
+  <select id="version" aria-label="表示する版">
+    <option value="livebearer-v4">変更前: livebearer-v4</option>
+    <option value="clearwater-shrimp-v5e">前回: clearwater-shrimp-v5e</option>
+    <option value="clearwater-shrimp-v5f">前回: clearwater-shrimp-v5f</option>
+    <option value="clearwater-shrimp-v5g">前回: clearwater-shrimp-v5g</option>
+    <option value="clearwater-guppy-v6">前回: clearwater-guppy-v6（霧調整前）</option>
+    <option value="clearwater-guppy-v6-clear-water" selected>今回: clearwater-guppy-v6（透明度調整）</option>
+    <option value="clearwater-guppy-v6-crystal-water">今回: clearwater-guppy-v6（澄み水調整）</option>
+    <option value="clearwater-guppy-v6-crystal-water-r2">今回: clearwater-guppy-v6（澄み水調整2）</option>
+  </select>
+  <label><input id="same-start" type="checkbox"> 同じ初期配置で比較</label>
+  <button id="pause">停止</button>
+  <button id="feed">餌やり</button>
+  <button id="photo">比較画像</button>
+  <button id="record">20秒泳ぎ動画</button>
+  <output id="status">準備中</output>
+</header>
+<iframe id="tank" title="水槽の動作プレビュー"></iframe>
+<script>
+  const select = document.querySelector('#version');
+  const frame = document.querySelector('#tank');
+  const status = document.querySelector('#status');
+  const pauseButton = document.querySelector('#pause');
+  const sameStart = document.querySelector('#same-start');
+  let ready = false, paused = false, rateSet = false, capturing = false, stickyStatus = false;
+
+  function load() {
+    ready = paused = rateSet = false;
+    capturing = stickyStatus = false;
+    pauseButton.textContent = '停止';
+    const still = sameStart.checked ? '&still=1' : '';
+    frame.src = `/preview/${select.value}/scenes/riverscape/wallpaper.html?quality=balanced${still}`;
+    status.value = status.textContent = '読み込み中';
+  }
+  function poll() {
+    const win = frame.contentWindow;
+    const s = win?.sceneStats?.();
+    if (!s) { setTimeout(poll, 250); return; }
+    if (!rateSet) { win.sceneRate(30); rateSet = true; }
+    ready = true;
+    if (!capturing && !stickyStatus) status.value = status.textContent = `${select.value} / ${s.framebuffer.join('×')} / request ${s.loop.fps} fps / ${s.renderedFrames} frames`;
+    setTimeout(poll, 500);
+  }
+  frame.addEventListener('load', () => setTimeout(poll, 250));
+  select.addEventListener('change', load);
+  sameStart.addEventListener('change', load);
+  pauseButton.addEventListener('click', () => {
+    if (!ready) return;
+    paused = !paused;
+    frame.contentWindow.scenePause(paused);
+    pauseButton.textContent = paused ? '再開' : '停止';
+  });
+  document.querySelector('#feed').addEventListener('click', () => frame.contentWindow?.sceneFeed?.());
+
+  function stamp() {
+    return new Date().toISOString().replaceAll('-', '').replaceAll(':', '').replace(/\.\d{3}Z$/, 'Z');
+  }
+  async function save(blob, kind) {
+    const before = select.value === 'livebearer-v4' || select.value === 'clearwater-shrimp-v5g';
+    const side = before ? 'before' : 'after';
+    const ext = kind === 'swim' ? 'webm' : 'png';
+    const prefix = select.value.startsWith('clearwater-guppy-v6') ? 'clearwater-guppy-v6' : 'clearwater-shrimp-v5';
+    const name = `${prefix}-${stamp()}-${kind === 'swim' ? 'swim' : side}.${ext}`;
+    const response = await fetch(`/capture/${name}`, { method: 'POST', body: blob });
+    if (!response.ok) throw new Error(`保存できませんでした (${response.status})`);
+    capturing = false; stickyStatus = true;
+    status.value = status.textContent = `保存: evidence/${name}`;
+  }
+  document.querySelector('#photo').addEventListener('click', async () => {
+    if (!ready || paused) { status.value = status.textContent = '描画中に押してください'; return; }
+    capturing = true; stickyStatus = false;
+    status.value = status.textContent = '比較画像を撮影中';
+    const source = frame.contentDocument.querySelector('canvas');
+    let stream, track, video, sceneToPause;
+    const finish = () => {
+      stream?.getTracks().forEach((streamTrack) => streamTrack.stop());
+      if (video) { video.pause(); video.srcObject = null; video.remove(); }
+    };
+    try {
+      // Capture from the continuously rendered scene; paused stills are requested
+      // only after a one-frame redraw below.
+      stream = source.captureStream(30);
+      [track] = stream.getVideoTracks();
+      video = document.createElement('video');
+      video.muted = video.playsInline = true;
+      video.style.cssText = 'position:fixed;left:-10000px;top:0;width:2px;height:2px';
+      video.srcObject = stream;
+      document.body.append(video);
+      await video.play();
+      const capture = () => new Promise((resolve, reject) => {
+        const timeout = setTimeout(() => reject(new Error('比較画像の動画フレームが届きませんでした')), 5000);
+        const onFrame = () => {
+          clearTimeout(timeout);
+          const still = document.createElement('canvas');
+          still.width = source.width; still.height = source.height;
+          still.getContext('2d').drawImage(video, 0, 0, still.width, still.height);
+          still.toBlob((blob) => {
+            finish();
+            if (!blob) return reject(new Error('比較画像をPNGに変換できませんでした'));
+            save(blob, 'image').then(resolve, reject);
+          }, 'image/png');
+        };
+        if (video.requestVideoFrameCallback) video.requestVideoFrameCallback(onFrame);
+        else video.addEventListener('loadeddata', onFrame, { once: true });
+      });
+      const capturePromise = capture();
+      if (sameStart.checked) {
+        const win = sceneToPause = frame.contentWindow;
+        const firstFrame = win.sceneStats().renderedFrames;
+        win.scenePause(false);
+        await new Promise((resolve, reject) => {
+          let attempts = 0;
+          const waitForDraw = () => {
+            if (win.sceneStats().renderedFrames > firstFrame) {
+              track.requestFrame?.();
+              win.scenePause(true);
+              resolve();
+            } else if (attempts++ > 120) {
+              win.scenePause(true);
+              reject(new Error('比較用の1フレームを描画できませんでした'));
+            } else requestAnimationFrame(waitForDraw);
+          };
+          requestAnimationFrame(waitForDraw);
+        });
+      }
+      await capturePromise;
+    } catch (error) {
+      capturing = false; stickyStatus = true;
+      sceneToPause?.scenePause(true);
+      finish(); status.value = status.textContent = `画像を取り込めませんでした: ${error.message}`;
+    }
+  });
+  document.querySelector('#record').addEventListener('click', (event) => {
+    if (!ready || paused) { status.value = status.textContent = '描画中に押してください'; return; }
+    const button = event.currentTarget, chunks = [];
+    const stream = frame.contentDocument.querySelector('canvas').captureStream(30);
+    const recorder = new MediaRecorder(stream, { mimeType: 'video/webm;codecs=vp9', videoBitsPerSecond: 6500000 });
+    recorder.ondataavailable = (e) => { if (e.data.size) chunks.push(e.data); };
+    recorder.onstop = () => {
+      stream.getTracks().forEach((track) => track.stop());
+      save(new Blob(chunks, { type: 'video/webm' }), 'swim').catch((e) => { status.textContent = e.message; });
+      button.disabled = false; button.textContent = '20秒泳ぎ動画';
+    };
+    recorder.start(); button.disabled = true; button.textContent = '録画中 20秒';
+    setTimeout(() => recorder.stop(), 20000);
+  });
+  load();
+</script>
+</html>

@@ -1,0 +1,103 @@
+{
+  "observed_at": "2026-09-28T02:10:19.416229+09:00",
+  "pid": 24760,
+  "source": {
+    "url": "https://github.com/chaseleantj/deskworlds",
+    "commit": "3950c45ef5798ed2df9f78037994bcddacebbb01",
+    "source_post": "https://x.com/chaseleantj/status/2100663203076128908",
+    "variant": "guppy",
+    "customization": {
+      "variant": "guppy",
+      "revision": "natural-v2",
+      "colors": [
+        "red grass inspired",
+        "gold snakeskin inspired",
+        "blue grass inspired"
+      ],
+      "overlay_sha256": "fba6cf29fe6a5104a3c70f88cd5cff35fcefaf0762db413a53d8495df0912405",
+      "scope": "Natural anatomy, individual pigment, and fin-edge motion; upstream swimming/feeding logic unchanged",
+      "customizer_sha256": "7e2b074995c72bd3f56504bab8768f4f6be09f85607505456290c4dc32e35aaf"
+    }
+  },
+  "preferences": "{\n    paused = 0;\n    world = riverscape;\n}\n",
+  "agent_running": true,
+  "upstream_clean": true,
+  "os_settings_unchanged": true,
+  "visible_native_requested_fps": 20,
+  "load_visible": {
+    "label": "guppy-natural-visible",
+    "at": "2026-09-28T02:08:02.830321+09:00",
+    "elapsed_seconds": 12.03677858300216,
+    "processes": [
+      {
+        "pid": 24760,
+        "cpu_seconds": 2.03,
+        "rss_mib": 68.65625,
+        "command": "/Users/ryoga-atelier/Applications/Deskworlds.app/Contents/MacOS/Deskworlds",
+        "cpu_percent_one_core": 3.6554631039018153
+      },
+      {
+        "pid": 24762,
+        "cpu_seconds": 2.22,
+        "rss_mib": 134.703125,
+        "command": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU",
+        "cpu_percent_one_core": 3.655463103901819
+      },
+      {
+        "pid": 24763,
+        "cpu_seconds": 0.02,
+        "rss_mib": 12.234375,
+        "command": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking",
+        "cpu_percent_one_core": 0.0
+      },
+      {
+        "pid": 24764,
+        "cpu_seconds": 4.44,
+        "rss_mib": 536.515625,
+        "command": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "cpu_percent_one_core": 5.64935206966645
+      }
+    ],
+    "total_cpu_percent_one_core": 12.960278277470085,
+    "sum_rss_mib": 752.109375,
+    "notes": "RSS sum may double-count shared memory; CPU is total CPU time over elapsed time, not GPU utilization or battery life."
+  },
+  "load_covered": {
+    "label": "guppy-natural-covered",
+    "at": "2026-09-28T02:09:04.362068+09:00",
+    "elapsed_seconds": 12.036644791005529,
+    "processes": [
+      {
+        "pid": 24760,
+        "cpu_seconds": 3.22,
+        "rss_mib": 68.59375,
+        "command": "/Users/ryoga-atelier/Applications/Deskworlds.app/Contents/MacOS/Deskworlds",
+        "cpu_percent_one_core": 0.16615926071811277
+      },
+      {
+        "pid": 24762,
+        "cpu_seconds": 3.36,
+        "rss_mib": 134.71875,
+        "command": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU",
+        "cpu_percent_one_core": 0.0
+      },
+      {
+        "pid": 24763,
+        "cpu_seconds": 0.02,
+        "rss_mib": 12.234375,
+        "command": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking",
+        "cpu_percent_one_core": 0.0
+      },
+      {
+        "pid": 24764,
+        "cpu_seconds": 6.01,
+        "rss_mib": 536.671875,
+        "command": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "cpu_percent_one_core": 0.0
+      }
+    ],
+    "total_cpu_percent_one_core": 0.16615926071811277,
+    "sum_rss_mib": 752.21875,
+    "notes": "RSS sum may double-count shared memory; CPU is total CPU time over elapsed time, not GPU utilization or battery life."
+  }
+}

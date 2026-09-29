@@ -1,0 +1,428 @@
+{
+  "variant": "photo-depth-v10",
+  "performance": {
+    "running": {
+      "cpu_percent_one_core_sum": 12.236918194200413,
+      "seconds": 90.0034185,
+      "screens": [
+        {
+          "pixels": [
+            1789,
+            1006
+          ],
+          "frames_start": 14250,
+          "frames_end": 16950,
+          "actual_fps": 29.999000033332223,
+          "all_assets_loaded": true,
+          "last_frame_timing": {
+            "kind": "actual CPU render-submission intervals",
+            "samples": 4096,
+            "segments": 0,
+            "lastFrameAtMs": 566470,
+            "lastGapMs": 29,
+            "windowMs": 136530,
+            "fpsMeasured": 30.00073243975683,
+            "p50Ms": 28,
+            "p95Ms": 43,
+            "maxMs": 45
+          },
+          "loop_at_end": {
+            "fps": 30,
+            "paused": false,
+            "hidden": false,
+            "running": true,
+            "pending": true
+          }
+        },
+        {
+          "pixels": [
+            1665,
+            1081
+          ],
+          "frames_start": 1,
+          "frames_end": 1,
+          "actual_fps": 0.0,
+          "all_assets_loaded": true,
+          "last_frame_timing": {
+            "kind": "actual CPU render-submission intervals",
+            "samples": 0,
+            "segments": 0,
+            "lastFrameAtMs": 1517.0000000000002,
+            "lastGapMs": 0,
+            "windowMs": 0,
+            "fpsMeasured": null,
+            "p50Ms": null,
+            "p95Ms": null,
+            "maxMs": null
+          },
+          "loop_at_end": {
+            "fps": 0,
+            "paused": false,
+            "hidden": false,
+            "running": false,
+            "pending": false
+          }
+        }
+      ],
+      "processes": [
+        {
+          "pid": 1486,
+          "sample_count": 46,
+          "valid_sample_count": 46,
+          "missing_sample_count": 0,
+          "missing_reasons": [],
+          "complete": true,
+          "observed_span_seconds": 90.003150479,
+          "start_elapsed_seconds": 1.5438e-05,
+          "end_elapsed_seconds": 90.003165917,
+          "cpu": {
+            "start_total_ns": 22106695083,
+            "end_total_ns": 25898182249,
+            "delta_seconds": 3.791487166,
+            "mean_percent_one_core": 4.212616053795416,
+            "reason": null
+          },
+          "physical_footprint": {
+            "start_bytes": 21824568,
+            "end_bytes": 21759032,
+            "min_bytes": 21759032,
+            "max_bytes": 21824568,
+            "delta_bytes": -65536,
+            "endpoint_bytes_per_second": -728.1522885722894,
+            "ols_bytes_per_second": -107.61684132035803,
+            "trend": "decreasing",
+            "reason": null
+          }
+        },
+        {
+          "pid": 1488,
+          "sample_count": 46,
+          "valid_sample_count": 46,
+          "missing_sample_count": 0,
+          "missing_reasons": [],
+          "complete": true,
+          "observed_span_seconds": 90.003176771,
+          "start_elapsed_seconds": 3.5979e-05,
+          "end_elapsed_seconds": 90.00321275,
+          "cpu": {
+            "start_total_ns": 16547229124,
+            "end_total_ns": 19608898124,
+            "delta_seconds": 3.061669,
+            "mean_percent_one_core": 3.4017343718766413,
+            "reason": null
+          },
+          "physical_footprint": {
+            "start_bytes": 285213872,
+            "end_bytes": 343917744,
+            "min_bytes": 285213872,
+            "max_bytes": 343983280,
+            "delta_bytes": 58703872,
+            "endpoint_bytes_per_second": 652242.2219536036,
+            "ols_bytes_per_second": 210627.75545860617,
+            "trend": "increasing",
+            "reason": null
+          }
+        },
+        {
+          "pid": 1489,
+          "sample_count": 46,
+          "valid_sample_count": 46,
+          "missing_sample_count": 0,
+          "missing_reasons": [],
+          "complete": true,
+          "observed_span_seconds": 90.003181437,
+          "start_elapsed_seconds": 4.7021e-05,
+          "end_elapsed_seconds": 90.003228458,
+          "cpu": {
+            "start_total_ns": 24395083,
+            "end_total_ns": 24395083,
+            "delta_seconds": 0.0,
+            "mean_percent_one_core": 0.0,
+            "reason": null
+          },
+          "physical_footprint": {
+            "start_bytes": 5276176,
+            "end_bytes": 5276176,
+            "min_bytes": 5276176,
+            "max_bytes": 5276176,
+            "delta_bytes": 0,
+            "endpoint_bytes_per_second": 0.0,
+            "ols_bytes_per_second": 0.0,
+            "trend": "flat",
+            "reason": null
+          }
+        },
+        {
+          "pid": 1490,
+          "sample_count": 46,
+          "valid_sample_count": 46,
+          "missing_sample_count": 0,
+          "missing_reasons": [],
+          "complete": true,
+          "observed_span_seconds": 90.003183479,
+          "start_elapsed_seconds": 5.3542e-05,
+          "end_elapsed_seconds": 90.003237021,
+          "cpu": {
+            "start_total_ns": 901045832,
+            "end_total_ns": 952473291,
+            "delta_seconds": 0.051427459,
+            "mean_percent_one_core": 0.057139599969815866,
+            "reason": null
+          },
+          "physical_footprint": {
+            "start_bytes": 345277352,
+            "end_bytes": 343770024,
+            "min_bytes": 343770024,
+            "max_bytes": 345277352,
+            "delta_bytes": -1507328,
+            "endpoint_bytes_per_second": -16747.496496628894,
+            "ols_bytes_per_second": -7848.786071095102,
+            "trend": "decreasing",
+            "reason": null
+          }
+        },
+        {
+          "pid": 1491,
+          "sample_count": 46,
+          "valid_sample_count": 46,
+          "missing_sample_count": 0,
+          "missing_reasons": [],
+          "complete": true,
+          "observed_span_seconds": 90.003185688,
+          "start_elapsed_seconds": 5.9333e-05,
+          "end_elapsed_seconds": 90.003245021,
+          "cpu": {
+            "start_total_ns": 24620208999,
+            "end_total_ns": 28729239791,
+            "delta_seconds": 4.109030792,
+            "mean_percent_one_core": 4.56542816855854,
+            "reason": null
+          },
+          "physical_footprint": {
+            "start_bytes": 355222464,
+            "end_bytes": 353420224,
+            "min_bytes": 352797632,
+            "max_bytes": 355222464,
+            "delta_bytes": -1802240,
+            "endpoint_bytes_per_second": -20024.180102330425,
+            "ols_bytes_per_second": -1894.7974236490857,
+            "trend": "decreasing",
+            "reason": null
+          }
+        }
+      ]
+    },
+    "paused": {
+      "cpu_percent_one_core_sum": 0.1460296499627438,
+      "seconds": 60.002111083,
+      "screens": [
+        {
+          "pixels": [
+            1789,
+            1006
+          ],
+          "frames_start": 1,
+          "frames_end": 1,
+          "actual_fps": 0.0,
+          "all_assets_loaded": true,
+          "last_frame_timing": {
+            "kind": "actual CPU render-submission intervals",
+            "samples": 0,
+            "segments": 0,
+            "lastFrameAtMs": 722,
+            "lastGapMs": 0,
+            "windowMs": 0,
+            "fpsMeasured": null,
+            "p50Ms": null,
+            "p95Ms": null,
+            "maxMs": null
+          },
+          "loop_at_end": {
+            "fps": 0,
+            "paused": false,
+            "hidden": false,
+            "running": false,
+            "pending": false
+          }
+        },
+        {
+          "pixels": [
+            1665,
+            1081
+          ],
+          "frames_start": 1,
+          "frames_end": 1,
+          "actual_fps": 0.0,
+          "all_assets_loaded": true,
+          "last_frame_timing": {
+            "kind": "actual CPU render-submission intervals",
+            "samples": 0,
+            "segments": 0,
+            "lastFrameAtMs": 734,
+            "lastGapMs": 0,
+            "windowMs": 0,
+            "fpsMeasured": null,
+            "p50Ms": null,
+            "p95Ms": null,
+            "maxMs": null
+          },
+          "loop_at_end": {
+            "fps": 0,
+            "paused": false,
+            "hidden": false,
+            "running": false,
+            "pending": false
+          }
+        }
+      ],
+      "processes": [
+        {
+          "pid": 21138,
+          "sample_count": 31,
+          "valid_sample_count": 31,
+          "missing_sample_count": 0,
+          "missing_reasons": [],
+          "complete": true,
+          "observed_span_seconds": 60.001642,
+          "start_elapsed_seconds": 1.402e-05,
+          "end_elapsed_seconds": 60.00165602,
+          "cpu": {
+            "start_total_ns": 262951916,
+            "end_total_ns": 277011957,
+            "delta_seconds": 0.014060041,
+            "mean_percent_one_core": 0.023432760390123993,
+            "reason": null
+          },
+          "physical_footprint": {
+            "start_bytes": 31097864,
+            "end_bytes": 28722184,
+            "min_bytes": 28705800,
+            "max_bytes": 31097864,
+            "delta_bytes": -2375680,
+            "endpoint_bytes_per_second": -39593.583122275224,
+            "ols_bytes_per_second": -7262.540138527603,
+            "trend": "decreasing",
+            "reason": null
+          }
+        },
+        {
+          "pid": 21139,
+          "sample_count": 31,
+          "valid_sample_count": 31,
+          "missing_sample_count": 0,
+          "missing_reasons": [],
+          "complete": true,
+          "observed_span_seconds": 60.001787417,
+          "start_elapsed_seconds": 3.3916e-05,
+          "end_elapsed_seconds": 60.001821333,
+          "cpu": {
+            "start_total_ns": 404991124,
+            "end_total_ns": 405747291,
+            "delta_seconds": 0.000756167,
+            "mean_percent_one_core": 0.001260240790403119,
+            "reason": null
+          },
+          "physical_footprint": {
+            "start_bytes": 32048448,
+            "end_bytes": 32048448,
+            "min_bytes": 32048448,
+            "max_bytes": 32048448,
+            "delta_bytes": 0,
+            "endpoint_bytes_per_second": 0.0,
+            "ols_bytes_per_second": 0.0,
+            "trend": "flat",
+            "reason": null
+          }
+        },
+        {
+          "pid": 21140,
+          "sample_count": 31,
+          "valid_sample_count": 31,
+          "missing_sample_count": 0,
+          "missing_reasons": [],
+          "complete": true,
+          "observed_span_seconds": 60.001847854,
+          "start_elapsed_seconds": 4.4916e-05,
+          "end_elapsed_seconds": 60.00189277,
+          "cpu": {
+            "start_total_ns": 20940374,
+            "end_total_ns": 20940374,
+            "delta_seconds": 0.0,
+            "mean_percent_one_core": 0.0,
+            "reason": null
+          },
+          "physical_footprint": {
+            "start_bytes": 4244008,
+            "end_bytes": 4244008,
+            "min_bytes": 4244008,
+            "max_bytes": 4244008,
+            "delta_bytes": 0,
+            "endpoint_bytes_per_second": 0.0,
+            "ols_bytes_per_second": 0.0,
+            "trend": "flat",
+            "reason": null
+          }
+        },
+        {
+          "pid": 21141,
+          "sample_count": 31,
+          "valid_sample_count": 31,
+          "missing_sample_count": 0,
+          "missing_reasons": [],
+          "complete": true,
+          "observed_span_seconds": 60.001891021,
+          "start_elapsed_seconds": 5.0833e-05,
+          "end_elapsed_seconds": 60.001941854,
+          "cpu": {
+            "start_total_ns": 803510833,
+            "end_total_ns": 839739916,
+            "delta_seconds": 0.036229083,
+            "mean_percent_one_core": 0.06037990200562216,
+            "reason": null
+          },
+          "physical_footprint": {
+            "start_bytes": 343491472,
+            "end_bytes": 342377360,
+            "min_bytes": 342311824,
+            "max_bytes": 343491472,
+            "delta_bytes": -1114112,
+            "endpoint_bytes_per_second": -18567.94812700275,
+            "ols_bytes_per_second": -11661.396341012598,
+            "trend": "decreasing",
+            "reason": null
+          }
+        },
+        {
+          "pid": 21142,
+          "sample_count": 31,
+          "valid_sample_count": 31,
+          "missing_sample_count": 0,
+          "missing_reasons": [],
+          "complete": true,
+          "observed_span_seconds": 60.001904521,
+          "start_elapsed_seconds": 5.5729e-05,
+          "end_elapsed_seconds": 60.00196025,
+          "cpu": {
+            "start_total_ns": 782143624,
+            "end_total_ns": 818718833,
+            "delta_seconds": 0.036575209,
+            "mean_percent_one_core": 0.06095674677659453,
+            "reason": null
+          },
+          "physical_footprint": {
+            "start_bytes": 323519400,
+            "end_bytes": 322487208,
+            "min_bytes": 322421672,
+            "max_bytes": 323519400,
+            "delta_bytes": -1032192,
+            "endpoint_bytes_per_second": -17202.65395307151,
+            "ols_bytes_per_second": -11800.318985104945,
+            "trend": "decreasing",
+            "reason": null
+          }
+        }
+      ]
+    }
+  },
+  "note": "CPU=100% per core. Physical footprint per PID is not summed. FPS is CPU render submission, not presentation. Paused measurement uses native paused preference plus relaunch, not the status menu. SIGUSR1 snapshot follows all performance measurements."
+}

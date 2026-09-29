@@ -1,0 +1,36 @@
+{
+  "source": "CUA visible scene-stats DOM read during r3 browser QA; compact transcription",
+  "pause_samples": [
+    {
+      "frames": 4198,
+      "waterTime": 139.86609999999587,
+      "paused": true
+    },
+    {
+      "frames": 4198,
+      "waterTime": 139.86609999999587,
+      "paused": true
+    }
+  ],
+  "resumed": {
+    "frames": 5697,
+    "waterTime": 189.80010000000036,
+    "paused": false,
+    "food": {
+      "dropped": 20,
+      "eaten": 12,
+      "dissolved": 8,
+      "pellets": 0
+    },
+    "sandEvents": 47,
+    "bubbles": 28
+  },
+  "cursorResponse": "not demonstrated by this interaction; pointerResponses=0",
+  "console": [
+    {
+      "message": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+      "at": "2026-09-28T11:39:48.287Z",
+      "source_url": null
+    }
+  ]
+}

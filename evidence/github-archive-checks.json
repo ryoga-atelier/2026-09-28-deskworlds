@@ -1,0 +1,81 @@
+{
+  "at": "2026-09-29T22:20:51.054434+09:00",
+  "results": [
+    {
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "cwd": "preview/bronze-gradient-guppy-v29-r16",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "npm notice run deskworlds@1.1.0 check\nnpm notice run node --check serve.mjs && for f in scenes/*/src/*.js scenes/shared/*.js ui/*.js; do node --check \"$f\" || exit 1; done\n"
+    },
+    {
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "preview/bronze-gradient-guppy-v29-r16",
+      "returncode": 0,
+      "stdout": "PASS: gallery axis lock, intent, velocity continuity, gentle completion, interruption, reduced motion, cancellation, ring layout and wrap-around\nPASS: 120 simulated seconds; 24/24 fish explored all three dimensions; 43% of travel was quiet-tail gliding; calm tail beats at most 3.81 Hz; 11261 inspection frames; 36306 fish-frames behind the grass; 74% of hovering fish facing upstream; minimum sampled spacing 0.752; slow approach gave room (1.25 to 1.77) without a startle; a lunge startled 5 fish directly and 19 in all, peaking at 5.17 units per second; a pinch of 8 pellets drew 16 fish over 16.0 seconds, 7 taken in 12 strikes, crowding to 0.65 at the food and opening back out to 1.72.\nPASS: render budgets, zero-size/large targets, 20/30/60 fps pacing at 60/120 Hz, stop/resume, reduced motion, hidden invalidation and zero idle callbacks\nPASS: rear ribbons 770 -> 539; rear triangles 277200 -> 43120; foreground attributes and downstream RNG byte-for-byte unchanged\n{\n  \"pass\": true,\n  \"simulatedSeconds\": 260.0000000000922,\n  \"consumed\": 16,\n  \"maxClownfishHostDistance\": 2.173199927354791,\n  \"time\": 260.0000000000922,\n  \"steps\": 15600,\n  \"population\": {\n    \"clownfish\": 3,\n    \"chromis\": 9,\n    \"anthias\": 7,\n    \"shrimp\": 2\n  },\n  \"food\": 0,\n  \"maxSpeed\": 1.2181632507640368,\n  \"finite\": true\n}\n{\n  \"pass\": true,\n  \"indexedFishModels\": 3,\n  \"limestoneVertices\": 184195,\n  \"limestoneTriangles\": 368290,\n  \"outwardNormalAgreement\": 0.9938255514645987,\n  \"attachmentField\": [\n    385,\n    193\n  ]\n}\n{\n  \"pass\": true,\n  \"roamingSeconds\": 540,\n  \"alarmRecoverySeconds\": 15,\n  \"navigationNodes\": 156,\n  \"reports\": [\n    {\n      \"seed\": 36719,\n      \"minRoamingWidth\": 14.5502005505483,\n      \"minRoamingDistance\": 106.18425287025019,\n      \"maxStep\": 0.02322736838639383,\n      \"maxHost\": 1.9751113969338396\n    },\n    {\n      \"seed\": 42,\n      \"minRoamingWidth\": 11.173721883479875,\n      \"minRoamingDistance\": 111.76751150709805,\n      \"maxStep\": 0.025422118085498675,\n      \"maxHost\": 1.939062746859442\n    },\n    {\n      \"seed\": 9001,\n      \"minRoamingWidth\": 12.79416744019493,\n      \"minRoamingDistance\": 110.97906932422505,\n      \"maxStep\": 0.027828201559178065,\n      \"maxHost\": 1.894170337799194\n    }\n  ]\n}\n{\n  \"pass\": true,\n  \"total\": 385,\n  \"anemones\": [\n    {\n      \"radius\": 1.25,\n      \"count\": 169,\n      \"compact\": false,\n      \"meanLength\": 0.8219881997764822\n    },\n    {\n      \"radius\": 0.7,\n      \"count\": 96,\n      \"compact\": true,\n      \"meanLength\": 0.26541351900848026\n    },\n    {\n      \"radius\": 0.42,\n      \"count\": 48,\n      \"compact\": true,\n      \"meanLength\": 0.16277806574196976\n    },\n    {\n      \"radius\": 0.4,\n      \"count\": 48,\n      \"compact\": true,\n      \"meanLength\": 0.15833469615187046\n    },\n    {\n      \"radius\": 0.26,\n      \"count\": 24,\n      \"compact\": true,\n      \"meanLength\": 0.10528748455843918\n    }\n  ]\n}\nbetta food ok\n",
+      "stderr": "npm notice run deskworlds@1.1.0 test\nnpm notice run node ui/tests/gallery.mjs && node scenes/riverscape/tests/fish-behavior.mjs && node scenes/riverscape/tests/render-policy.mjs && node scenes/riverscape/tests/plant-budget.mjs && node scenes/reefscape/tests/behavior.mjs && node scenes/reefscape/tests/assets.mjs && node scenes/reefscape/tests/locomotion.mjs && node scenes/reefscape/tests/anemone.mjs && node scenes/bettascape/tests/food.mjs\n(node:46050) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n(node:46135) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n(node:46136) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n(node:46137) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n(node:46266) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n(node:46267) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/check-photo-guppy-v29.mjs",
+        "/Users/ryoga-atelier/workspace/apps/2026-09-28-deskworlds/build/github-session-repo/preview/bronze-gradient-guppy-v29-r16"
+      ],
+      "cwd": ".",
+      "returncode": 0,
+      "stdout": "{\"pass\":true,\"finiteFinRoot\":true,\"headToTailTone\":true,\"outerRingPeak\":1,\"upperSeamPeak\":1,\"analCoverageFraction\":0.039184326269492205,\"eyeWidth\":0.04350978136062622,\"largestEyeGap\":0.0013136059948577958,\"mouthRise\":0.02332556387409568}\n",
+      "stderr": "(node:46297) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/check-photo-guppy-v28.mjs",
+        "/Users/ryoga-atelier/workspace/apps/2026-09-28-deskworlds/build/github-session-repo/preview/bronze-gradient-guppy-v29-r16"
+      ],
+      "cwd": ".",
+      "returncode": 0,
+      "stdout": "PASS: bronze layered pigment, naturally varied scales and belly edge, convex slender anatomy, rounded guppy tail\n",
+      "stderr": "(node:46309) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/check-guppy-v17.mjs",
+        "/Users/ryoga-atelier/workspace/apps/2026-09-28-deskworlds/build/github-session-repo/preview/bronze-gradient-guppy-v29-r16"
+      ],
+      "cwd": ".",
+      "returncode": 0,
+      "stdout": "PASS: finite guppy meshes, valid indices, fan outline, no adipose fin, stable varieties, 24 individual patterns, continuous fin phases and attached caudal roots\n",
+      "stderr": "(node:46325) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/check-v17.mjs",
+        "/Users/ryoga-atelier/workspace/apps/2026-09-28-deskworlds/build/github-session-repo/preview/bronze-gradient-guppy-v29-r16"
+      ],
+      "cwd": ".",
+      "returncode": 0,
+      "stdout": "{\"pass\":true,\"tailDepth\":0.10276192799210548,\"abdomenDepth\":0.1808835044503212,\"width\":0.0829627737402916,\"colorCounts\":[3,3,4,2,2,4,3,3],\"renderedNormals\":\"finite/unit\"}\n",
+      "stderr": "(node:46343) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/check-living-water.mjs",
+        "/Users/ryoga-atelier/workspace/apps/2026-09-28-deskworlds/build/github-session-repo/preview/bronze-gradient-guppy-v29-r16"
+      ],
+      "cwd": ".",
+      "returncode": 0,
+      "stdout": "PASS: near-bed motion triggers sand; stationary/mid-water fish do not; bounded pools, cooldown, finite attributes, zero-dt freeze, settling and disposal\n",
+      "stderr": "(node:46349) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n"
+    }
+  ]
+}

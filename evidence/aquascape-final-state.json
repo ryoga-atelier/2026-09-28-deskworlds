@@ -1,0 +1,153 @@
+{
+  "observed_at": "2026-09-28T02:26:38.328229+09:00",
+  "thread_id": "01a0e3a9-82bc-7353-be3f-dacf575f7cea",
+  "cwd": "/Users/ryoga-atelier/workspace/apps/2026-09-28-deskworlds",
+  "source": {
+    "url": "https://github.com/chaseleantj/deskworlds",
+    "commit": "3950c45ef5798ed2df9f78037994bcddacebbb01",
+    "source_post": "https://x.com/chaseleantj/status/2100663203076128908",
+    "variant": "guppy",
+    "customization": {
+      "variant": "guppy",
+      "revision": "planted-tank-v3",
+      "colors": [
+        "red grass inspired",
+        "gold snakeskin inspired",
+        "blue grass inspired"
+      ],
+      "overlay_sha256": "fba6cf29fe6a5104a3c70f88cd5cff35fcefaf0762db413a53d8495df0912405",
+      "scope": "Natural guppy anatomy and planted home aquarium; upstream swimming/feeding logic retained with matching habitat coordinates",
+      "aquascape": {
+        "revision": "planted-tank-v3",
+        "layout_sha256": "044f839cf1680075a9e17659339d306df9fdaa71d438c7fc0be08d8322015e26",
+        "customizer_sha256": "0bc0e42249ed01c45851ddde890cbbf6ff65276a659a8bb5ab168d1aa3b42fe8",
+        "description": "Lower asymmetric planting, open water, compact driftwood with attached moss/fern and matching collision, neutral aquarium light"
+      },
+      "customizer_sha256": "b653dba7edaa0177fb76ea21502e7ee409f54ee297380de5afeea4da51b02bb1"
+    }
+  },
+  "preferences": "{\n    paused = 0;\n    world = riverscape;\n}\n",
+  "agent_running": true,
+  "upstream_clean": true,
+  "os_settings_unchanged": {
+    "/Users/ryoga-atelier/Library/Application Support/com.apple.wallpaper/Store/Index.plist": true,
+    "/Users/ryoga-atelier/Library/Preferences/com.apple.universalaccess.plist": true
+  },
+  "tested_js_matches_installed": {
+    "plants.js": "76d938eab4d6b74dfd7b6e69d7f72e63bc4880139d1f4e17d1ca493366ab1985",
+    "fish-anatomy.js": "fba6cf29fe6a5104a3c70f88cd5cff35fcefaf0762db413a53d8495df0912405",
+    "render-policy.js": "ceb25bfc21670b4a512bf41ab8954513aa5dbf28c1e644b6a6d935a52dbc578c",
+    "water.js": "fcdb88910608b359e78599b74a89e4d735dc8b3cc5aea2802007cc7d636a5f9f",
+    "main.js": "e09442540af9923a8c89999fb60cc06e6d1371af393c70315c0c4947ff30c530",
+    "fish-anatomy-base.js": "b4030ce2b14a99db22912d6ea950106cffc552facae49fa64c68ce17455a3364",
+    "math.js": "177059274ff9d4aaa23d73e70149c1286507a2ed917fa6810c1ac24d3344a008",
+    "fish.js": "94ca52bbaddc8d9e9429c954da15c181063263fb86544c979549e671d45a2882",
+    "food.js": "f022cc28330a59aa997853e9febc5426d97ab0385d02bf07e35f70b1da62871d",
+    "stemplants.js": "510ad83e511f437c0a1259427c7c8b945dd5eba36dd3f0a39cc41c01aea3d997",
+    "aquascape-layout.js": "044f839cf1680075a9e17659339d306df9fdaa71d438c7fc0be08d8322015e26",
+    "broadleaf.js": "c4fb83bf8226204d77f46412705aa02a7bbda2ec465316e191c2aec740c645b7",
+    "composite.js": "d549f4bb8f54aed8fb48fdf629a09e575e9baa22a372b7c25bc0ccb306c2e20f",
+    "environment.js": "494dcda7272b193e57842ad14d45f248fdffd9c39f9be11e6985d81f76e2c78a",
+    "foliage.js": "8ef41b3e3ed5cab9da33c7594c4a6a80727b07e5f12b2d8ef8554288007323bb"
+  },
+  "browser_errors": [],
+  "browser_verified": [
+    "native-aspect preview",
+    "feed click",
+    "pause disables feeding",
+    "resume restores feeding"
+  ],
+  "native_verified": [
+    "CUA scene display",
+    "visible animation",
+    "WebGL2 diagnostic",
+    "window coverage suspension"
+  ],
+  "native_unverified": [
+    "menu Feed/Pause/Resume/Quit clicks",
+    "desktop icon drag",
+    "physical sleep/wake",
+    "logout/login"
+  ],
+  "load_visible": {
+    "label": "aquascape-visible",
+    "at": "2026-09-28T02:25:14.526950+09:00",
+    "elapsed_seconds": 12.026941165997414,
+    "processes": [
+      {
+        "pid": 43608,
+        "cpu_seconds": 0.02,
+        "rss_mib": 12.171875,
+        "command": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking",
+        "cpu_percent_one_core": 0.0
+      },
+      {
+        "pid": 43609,
+        "cpu_seconds": 3.11,
+        "rss_mib": 451.34375,
+        "command": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "cpu_percent_one_core": 8.896692727034413
+      },
+      {
+        "pid": 43603,
+        "cpu_seconds": 1.18,
+        "rss_mib": 68.015625,
+        "command": "/Users/ryoga-atelier/Applications/Deskworlds.app/Contents/MacOS/Deskworlds",
+        "cpu_percent_one_core": 4.07418638901576
+      },
+      {
+        "pid": 43607,
+        "cpu_seconds": 1.4,
+        "rss_mib": 121.53125,
+        "command": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU",
+        "cpu_percent_one_core": 4.656213016018011
+      }
+    ],
+    "total_cpu_percent_one_core": 17.627092132068185,
+    "sum_rss_mib": 653.0625,
+    "notes": "RSS sum may double-count shared memory; CPU is total CPU time over elapsed time, not GPU utilization or battery life."
+  },
+  "load_covered": {
+    "label": "aquascape-covered",
+    "at": "2026-09-28T02:26:11.632112+09:00",
+    "elapsed_seconds": 12.02417333399353,
+    "processes": [
+      {
+        "pid": 43608,
+        "cpu_seconds": 0.02,
+        "rss_mib": 12.234375,
+        "command": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking",
+        "cpu_percent_one_core": 0.0
+      },
+      {
+        "pid": 43609,
+        "cpu_seconds": 4.92,
+        "rss_mib": 451.25,
+        "command": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "cpu_percent_one_core": 0.0
+      },
+      {
+        "pid": 43603,
+        "cpu_seconds": 2.52,
+        "rss_mib": 97.453125,
+        "command": "/Users/ryoga-atelier/Applications/Deskworlds.app/Contents/MacOS/Deskworlds",
+        "cpu_percent_one_core": 0.16633160088817112
+      },
+      {
+        "pid": 43607,
+        "cpu_seconds": 2.67,
+        "rss_mib": 128.921875,
+        "command": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU",
+        "cpu_percent_one_core": 0.0
+      }
+    ],
+    "total_cpu_percent_one_core": 0.16633160088817112,
+    "sum_rss_mib": 689.859375,
+    "notes": "RSS sum may double-count shared memory; CPU is total CPU time over elapsed time, not GPU utilization or battery life."
+  },
+  "visible_native_requested_fps": [
+    30,
+    20
+  ],
+  "covered_native_requested_fps": 0
+}

@@ -1,0 +1,52 @@
+{
+  "source": "CUA native operations after v14 install",
+  "desktop_icon_selection": {
+    "observed": true,
+    "result": "CapCut.app AX selected, no launch"
+  },
+  "finder_window_menu": {
+    "observed": true,
+    "result": "Own new Finder window moved to VX2407 and filled display; closed after v13 covered measurement"
+  },
+  "native_aquarium_window": {
+    "observed": true,
+    "result": "CUA screenshot shows bright pastel guppies and full aquarium"
+  },
+  "dock": {
+    "status": "blocked_tool",
+    "result": "com.apple.dock selection timed out after 5s"
+  },
+  "native_menu": {
+    "status": "blocked_tool",
+    "result": "com.apple.systemuiserver selection timed out after 5s; ctrl+F8 did not expose menu"
+  },
+  "desktop_drag": {
+    "status": "not_performed",
+    "result": "Finder desktop screenshot returned white, icon coordinates unavailable; did not guess drop position"
+  },
+  "system_sleep_wake": {
+    "status": "pending_user_operation"
+  },
+  "relogin": {
+    "status": "pending_user_operation"
+  },
+  "cursor_response": {
+    "status": "pending_real_input"
+  },
+  "video_playback": [
+    {
+      "id": "tank",
+      "duration": 64.968156,
+      "currentTime": 64.968156,
+      "ended": true,
+      "error": null
+    },
+    {
+      "id": "all_eight_turn",
+      "duration": 64.949582,
+      "currentTime": 64.949582,
+      "ended": true,
+      "error": null
+    }
+  ]
+}
