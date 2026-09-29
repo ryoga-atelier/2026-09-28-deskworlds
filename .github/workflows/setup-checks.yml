@@ -41,6 +41,9 @@ jobs:
       - name: Build and verify the Mac application
         if: runner.os == 'macOS'
         run: python setup.py build --platform macos
+      - name: Check retained frames in AppKit and WebKit
+        if: runner.os == 'macOS'
+        run: python scripts/check-native-retained-frame.py
       - name: Exercise Windows command entry
         if: runner.os == 'Windows'
         shell: cmd
@@ -53,4 +56,5 @@ jobs:
             dist/windows/*.zip
             test-results/
             evidence/platform-ci.json
+            evidence/native-retained-frame-test.json
           retention-days: 14
