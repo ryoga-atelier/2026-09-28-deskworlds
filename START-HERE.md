@@ -4,13 +4,13 @@
 
 ## Claude Code・Codexに渡す文
 
-> https://github.com/ryoga-atelier/2026-09-28-deskworlds をこのPCにセットアップしてください。README.md、START-HERE.md、AGENTS.mdを読み、OSと必要な道具を確認してください。採用版の魚・水景・24fpsを保ち、Macでは専用アプリ、WindowsではLively Wallpaperを使って導入し、実画面と操作を確認してください。既存環境は削除せず保存してください。アクセス権・OSの許可が必要なところだけ本人に引き継ぎ、未確認を成功扱いにしないでください。
+> https://github.com/ryoga-atelier/2026-09-28-deskworlds をこのPCにセットアップしてください。README.md、START-HERE.md、AGENTS.mdを読み、OSと必要な道具を確認してください。採用版の魚・水景・24fpsを保ち、Macでは専用アプリ、WindowsではLively Wallpaperを使って導入し、実画面と操作を確認してください。既存環境は削除せず保存してください。OSの許可が必要なところだけ本人に引き継ぎ、未確認を成功扱いにしないでください。
 
-リポジトリはPRIVATEです。受け取る人のGitHubアカウントを招待するか、所有者自身の認証済み環境で開きます。AIがリンクを読めない場合は、本人がGitHubにログインして招待を承諾してください。パスワード・トークンをチャットへ貼る必要はありません。ブラウザーだけで動くクラウドAIには、PCへのインストール権限はありません。対象PCで動くClaude CodeやCodexを使います。
+リポジトリはPUBLICです。閲覧、HTTPSでのGit clone、配布ZIPのダウンロードには、GitHubのアカウント・招待・トークンは不要です。ブラウザーだけで動くクラウドAIには、PCへのインストール権限はありません。対象PCで動くClaude CodeやCodexを使います。OSの許可画面や外部ツールの利用条件は本人が確認します。
 
 ## 取得
 
-Gitと認証が揃っていれば、保存して使い続けるフォルダーで次を実行します。
+Gitを用意し、保存して使い続けるフォルダーで次を実行します。GitHubの認証は不要です。
 
 ~~~sh
 git clone --recurse-submodules https://github.com/ryoga-atelier/2026-09-28-deskworlds.git
@@ -30,7 +30,7 @@ setup-macos.command と setup-windows.cmd も同じ入口です。オプショ�
 
 ## AI担当の手順と完了判定
 
-1. OS、GitHubのアクセス権、Python 3.10以上を確認する。Macの開発ツールやWindowsのLively等が不足していれば、各OSの手順で用意する。認証・利用条件の同意・OSの権限画面は本人に操作してもらう。
+1. OS、Git、Python 3.10以上を確認する。Macの開発ツールやWindowsのLively等が不足していれば、各OSの手順で用意する。利用条件の同意・OSの権限画面は本人に操作してもらう。
 2. doctorを通す。Macはbuildでコンパイルと署名検査、WindowsはbuildでLively ZIPを作る。既存の魚のデザインを変更しない。
 3. 開発用検査をするならNode.js 22以上を用意し、下のverifyを実行する。
 4. installを実行する。Macの旧アプリはrollbackへ移動。WindowsはLivelyライブラリ内の新しい専用フォルダーへ追加し、既存の壁紙や設定を上書きしない。
