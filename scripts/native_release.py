@@ -1,9 +1,9 @@
-"""Keep covered aquariums swimming; retain a frame when sleeping pages are freed.
+"""Pause covered aquariums and retain a frame when their pages are freed.
 
 Applied to the build copy of Wallpaper.swift only (after the passive probe patch);
-the pinned upstream source is never edited. Awake scenes keep swimming at 12 fps
-behind other windows (Balanced stays capped at 24 fps when exposed). Only a display
-or session that is asleep can discard its WKWebView after 60 s, so
+the pinned upstream source is never edited. Scenes pause below 15% exposure,
+use 12 fps below 40%, and keep the Balanced cap of 24 fps when exposed. Covered
+scenes or sleeping displays/sessions discard their WKWebView after 60 s, so
 WebKit can free its WebGL/JS memory. A bounded, opaque native bitmap stays on screen
 until the replacement scene has rendered. Partial coverage must never reveal the
 system wallpaper. A failed snapshot keeps the paused page instead. Pause and Low
@@ -228,13 +228,13 @@ def apply_native_release(source):
       return
     }''')
     source = _swap(source, '      if screen.setRate(rate) { changed = true }',
-        '      if screen.setRate(rate, releasable: !awake) { changed = true }')
+        '      if screen.setRate(rate, releasable: !awake || (!stopped && !lowPower && showing < 0.15)) { changed = true }')
     source = _swap(source,
         '      let rate = still || showing < 0.15 ? 0 : showing < 0.4 ? 20 : full',
-        '      let rate = still ? 0 : showing < 0.4 ? 12 : full')
+        '      let rate = still || showing < 0.15 ? 0 : showing < 0.4 ? 12 : full')
     source = _swap(source,
         '  /// part of it showing, and nothing at all behind a full screen of work or a dark display.',
-        '  /// part of it showing or fully covered. Stop only for Pause, Low Power or sleep.')
+        '  /// part of it showing; pause when almost covered, manually stopped, in Low Power or asleep.')
     # r16: the page draws 24 fps, so sampling the cursor faster only adds page calls.
     source = _swap(source, '    let wanted = min(30, applied)', '    let wanted = min(24, applied)')
     return source

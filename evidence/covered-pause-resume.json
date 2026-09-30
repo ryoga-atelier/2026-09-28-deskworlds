@@ -1,0 +1,1030 @@
+{
+  "source": "SIGUSR2 passive native runtime diagnostics",
+  "date": "2026-09-30",
+  "source_revision": "covered-pause-v1",
+  "collection_note": "The live collector completed its probes but failed when parsing a transient null stats object. This JSON was reconstructed from the retained raw runtime lines with a null-safe parser; no extra UI exposure was needed.",
+  "ui_restored": true,
+  "summary": [
+    {
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "sample_count": 40,
+      "active_samples": 0,
+      "first_active": null,
+      "last_active": null,
+      "min_frames": null,
+      "max_frames": null
+    },
+    {
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "sample_count": 40,
+      "active_samples": 8,
+      "first_active": {
+        "time": "2026-09-30 09:37:33.694",
+        "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+        "pixels": [
+          1789,
+          1006
+        ],
+        "released": false,
+        "retainedFrame": null,
+        "frames": 1,
+        "simulationTime": 0,
+        "fpsMeasured": null,
+        "loop": {
+          "fps": 24,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      },
+      "last_active": {
+        "time": "2026-09-30 09:37:37.169",
+        "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+        "pixels": [
+          1789,
+          1006
+        ],
+        "released": false,
+        "retainedFrame": null,
+        "frames": 85,
+        "simulationTime": 3.5579999999999963,
+        "fpsMeasured": 24.054982817869416,
+        "loop": {
+          "fps": 24,
+          "paused": false,
+          "hidden": false,
+          "running": true,
+          "pending": true
+        }
+      },
+      "min_frames": 1,
+      "max_frames": 85
+    }
+  ],
+  "events": [
+    "2026-09-30 09:34:45.974 Deskworlds[78032:14416281] deskworlds: reloading scene page after release; retaining aquarium frame window=E2900184-01E4-4656-9D65-26F8094C64AB",
+    "2026-09-30 09:34:47.654 Deskworlds[78032:14416281] deskworlds: fresh aquarium frame visible window=E2900184-01E4-4656-9D65-26F8094C64AB",
+    "2026-09-30 09:35:50.312 Deskworlds[78032:14416281] deskworlds: released hidden scene page; retained aquarium frame [1788, 1006] window=E2900184-01E4-4656-9D65-26F8094C64AB",
+    "2026-09-30 09:37:33.069 Deskworlds[78032:14416281] deskworlds: reloading scene page after release; retaining aquarium frame window=E2900184-01E4-4656-9D65-26F8094C64AB",
+    "2026-09-30 09:37:34.542 Deskworlds[78032:14416281] deskworlds: fresh aquarium frame visible window=E2900184-01E4-4656-9D65-26F8094C64AB",
+    "2026-09-30 09:39:04.292 Deskworlds[78032:14416281] deskworlds: released hidden scene page; retained aquarium frame [1788, 1006] window=E2900184-01E4-4656-9D65-26F8094C64AB"
+  ],
+  "samples": [
+    {
+      "time": "2026-09-30 09:37:17.524",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:17.524",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:18.025",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:18.025",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:18.527",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:18.527",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:19.032",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:19.032",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:19.536",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:19.536",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:20.041",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:20.041",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:20.546",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:20.546",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:21.047",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:21.047",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:21.552",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:21.552",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:22.055",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:22.055",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:22.558",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:22.558",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:23.062",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:23.063",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:23.568",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:23.568",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:24.069",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:24.069",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:24.574",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:24.574",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:25.078",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:25.078",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:25.583",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:25.583",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:26.086",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:26.086",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:26.590",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:26.590",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:27.095",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:27.095",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:27.600",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:27.600",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:28.102",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:28.102",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:28.606",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:28.606",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:29.112",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:29.112",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:29.616",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:29.617",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:30.118",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:30.118",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:30.619",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:30.619",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:31.122",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:31.122",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:31.626",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:31.626",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:32.131",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:32.131",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:32.636",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:32.636",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:33.137",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:33.145",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": [
+        300,
+        150
+      ],
+      "released": false,
+      "retainedFrame": null,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:33.642",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:33.694",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": [
+        1789,
+        1006
+      ],
+      "released": false,
+      "retainedFrame": null,
+      "frames": 1,
+      "simulationTime": 0,
+      "fpsMeasured": null,
+      "loop": {
+        "fps": 24,
+        "paused": false,
+        "hidden": false,
+        "running": true,
+        "pending": true
+      }
+    },
+    {
+      "time": "2026-09-30 09:37:34.145",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:34.146",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": [
+        1789,
+        1006
+      ],
+      "released": false,
+      "retainedFrame": null,
+      "frames": 12,
+      "simulationTime": 0.5170000000000001,
+      "fpsMeasured": 24.390243902439025,
+      "loop": {
+        "fps": 24,
+        "paused": false,
+        "hidden": false,
+        "running": true,
+        "pending": true
+      }
+    },
+    {
+      "time": "2026-09-30 09:37:34.649",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:34.650",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": [
+        1789,
+        1006
+      ],
+      "released": false,
+      "retainedFrame": null,
+      "frames": 24,
+      "simulationTime": 1.0300000000000005,
+      "fpsMeasured": 23.858921161825727,
+      "loop": {
+        "fps": 24,
+        "paused": false,
+        "hidden": false,
+        "running": true,
+        "pending": true
+      }
+    },
+    {
+      "time": "2026-09-30 09:37:35.154",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:35.154",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": [
+        1789,
+        1006
+      ],
+      "released": false,
+      "retainedFrame": null,
+      "frames": 36,
+      "simulationTime": 1.5300000000000005,
+      "fpsMeasured": 23.907103825136613,
+      "loop": {
+        "fps": 24,
+        "paused": false,
+        "hidden": false,
+        "running": true,
+        "pending": true
+      }
+    },
+    {
+      "time": "2026-09-30 09:37:35.658",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:35.659",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": [
+        1789,
+        1006
+      ],
+      "released": false,
+      "retainedFrame": null,
+      "frames": 48,
+      "simulationTime": 2.0310000000000006,
+      "fpsMeasured": 23.90640895218718,
+      "loop": {
+        "fps": 24,
+        "paused": false,
+        "hidden": false,
+        "running": true,
+        "pending": true
+      }
+    },
+    {
+      "time": "2026-09-30 09:37:36.163",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:36.164",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": [
+        1789,
+        1006
+      ],
+      "released": false,
+      "retainedFrame": null,
+      "frames": 60,
+      "simulationTime": 2.5309999999999993,
+      "fpsMeasured": 23.944805194805195,
+      "loop": {
+        "fps": 24,
+        "paused": false,
+        "hidden": false,
+        "running": true,
+        "pending": true
+      }
+    },
+    {
+      "time": "2026-09-30 09:37:36.665",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:36.665",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": [
+        1789,
+        1006
+      ],
+      "released": false,
+      "retainedFrame": null,
+      "frames": 72,
+      "simulationTime": 3.0299999999999976,
+      "fpsMeasured": 23.9460370994941,
+      "loop": {
+        "fps": 24,
+        "paused": false,
+        "hidden": false,
+        "running": true,
+        "pending": true
+      }
+    },
+    {
+      "time": "2026-09-30 09:37:37.166",
+      "windowID": "0301451D-DB24-40B8-BB33-AABC2D14DB71",
+      "pixels": null,
+      "released": true,
+      "retainedFrame": true,
+      "frames": null,
+      "simulationTime": null,
+      "fpsMeasured": null,
+      "loop": null
+    },
+    {
+      "time": "2026-09-30 09:37:37.169",
+      "windowID": "E2900184-01E4-4656-9D65-26F8094C64AB",
+      "pixels": [
+        1789,
+        1006
+      ],
+      "released": false,
+      "retainedFrame": null,
+      "frames": 85,
+      "simulationTime": 3.5579999999999963,
+      "fpsMeasured": 24.054982817869416,
+      "loop": {
+        "fps": 24,
+        "paused": false,
+        "hidden": false,
+        "running": true,
+        "pending": true
+      }
+    }
+  ]
+}
