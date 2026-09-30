@@ -1,0 +1,47 @@
+{
+  "at": "2026-09-30T10:11:40.448350+09:00",
+  "seconds_per_phase": 90,
+  "sequence": [
+    "on-covered",
+    "off-after"
+  ],
+  "logical_cores": 18,
+  "physical_ram_bytes": 38654705664,
+  "model_identifier": "Mac17,7",
+  "macos": "26.6.2",
+  "native_revision": "covered-pause-v1",
+  "native_source_sha256": "03704f97a283ba84eae2e86806e5acb49733502486dc59f9f81ef7ab4362ad06",
+  "configuration": "Balanced; 24 fish; 8 colors; both screens covered; unchanged window layout",
+  "cpu": "host_statistics busy/total ticks; app proc_pid_rusage CPU-time delta / wall time / logical cores",
+  "gpu": "IOAccelerator Device Utilization percent; whole Mac; not process-attributed",
+  "memory": "vm_stat: (active + inactive + speculative + wired + compressor - file_backed - purgeable) * page size; estimate excluding reclaimable cache, not Activity Monitor exact parity",
+  "app_memory": "sum of per-process ri_phys_footprint; shared allocations are not deduplicated; percentage is relative to installed RAM, not unique physical occupancy",
+  "attribution": "Exact app binary plus newer WebKit candidates; each measured ON group must disappear when only the aquarium is stopped",
+  "limitations": "Historical pre-installation state is unavailable. OFF keeps app files installed but stops the app and its helpers. Other apps continue running; no causal GPU or system RAM attribution from one comparison.",
+  "initial_probe": {
+    "58EF9CA3-30DD-4483-868D-544BAD4FD590": {
+      "pageReleased": true,
+      "probeEventID": "",
+      "probeReason": "manual",
+      "requestedRate": 0,
+      "retainedFrame": true,
+      "retainedPixels": [
+        1512,
+        982
+      ],
+      "windowID": "58EF9CA3-30DD-4483-868D-544BAD4FD590"
+    },
+    "961197F0-A3E6-401F-A3C5-9CCFECAB2C98": {
+      "pageReleased": true,
+      "probeEventID": "",
+      "probeReason": "manual",
+      "requestedRate": 0,
+      "retainedFrame": true,
+      "retainedPixels": [
+        1788,
+        1006
+      ],
+      "windowID": "961197F0-A3E6-401F-A3C5-9CCFECAB2C98"
+    }
+  }
+}

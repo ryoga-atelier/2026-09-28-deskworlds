@@ -1,0 +1,54 @@
+{
+  "phases": [
+    {
+      "label": "on-covered",
+      "seconds": 90.00456391699845,
+      "sample_count": 45,
+      "system_cpu_percent": 12.156412800793849,
+      "app_cpu_percent_one_core": 0.204461438388509,
+      "app_cpu_percent_all_cores": 0.01135896879936161,
+      "gpu_device_percent_mean": 19.044444444444444,
+      "gpu_device_percent_median": 19,
+      "gpu_device_percent_range": [
+        0,
+        45
+      ],
+      "system_memory_used_bytes_mean": 33369989666.133335,
+      "app_footprint_bytes_sum_mean": 95649083.2,
+      "members": {
+        "19015": "Deskworlds",
+        "19026": "com.apple.WebKit.GPU",
+        "19036": "com.apple.WebKit.Networking"
+      },
+      "system_memory_percent_mean": 86.32840191876447,
+      "app_footprint_percent_of_ram": 0.24744486229287255
+    },
+    {
+      "label": "off-after",
+      "seconds": 90.00219550001202,
+      "sample_count": 45,
+      "system_cpu_percent": 12.632543850956298,
+      "app_cpu_percent_one_core": 0.0,
+      "app_cpu_percent_all_cores": 0.0,
+      "gpu_device_percent_mean": 13.222222222222221,
+      "gpu_device_percent_median": 17,
+      "gpu_device_percent_range": [
+        0,
+        23
+      ],
+      "system_memory_used_bytes_mean": 33397935672.88889,
+      "app_footprint_bytes_sum_mean": 0,
+      "members": {},
+      "system_memory_percent_mean": 86.40069843810282,
+      "app_footprint_percent_of_ram": 0.0
+    }
+  ],
+  "initial_group_validation": null,
+  "measured_group_validation": {
+    "verified_exited_roles": [
+      "Deskworlds",
+      "com.apple.WebKit.GPU",
+      "com.apple.WebKit.Networking"
+    ]
+  }
+}
